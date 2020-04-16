@@ -1,0 +1,33 @@
+drop table  hobby_reply ;
+ drop table  hobby ;
+ drop sequence  hobby_seq;
+ drop sequence  hobby_reply_seq;   --나중에 댓글에사용
+ 
+ create  sequence hobby_seq; 
+ create  sequence hobby_reply_seq;   --나중에 댓글에사용
+
+ create  table hobby (
+  hobby_idx   NUMBER(4) primary key ,
+  name        VARCHAR2(20) ,
+  title       VARCHAR2(20) ,
+  content     VARCHAR2(30) ,
+  gender      VARCHAR2(20) ,
+  hobby       VARCHAR2(40) ,
+  img_file_name  VARCHAR2(40) default 'bear.gif' 
+ ) ;
+
+ commit ;
+ desc hobby ;
+ clear screen ;
+
+
+ create  table hobby_reply (  --댓글
+   rhobby_idx   NUMBER(4) primary key ,
+   rwriter        VARCHAR2(20) ,
+   rmemo       VARCHAR2(30) ,
+   hobby_idx   NUMBER(4),
+   constraint  hobby_reply_fk foreign key(hobby_idx) references hobby(hobby_idx) on delete cascade
+ ) ;
+ 
+ commit  ;
+ desc hobby_reply ; 

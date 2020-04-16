@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+		
+	<typeAliases>
+	   <typeAlias alias="bdto" type="net.shopping.crud.BoardDTO"/>
+	   <typeAlias alias="ldto" type="net.shopping.crud.LoginDTO"/>
+	   <typeAlias alias="rdto" type="net.shopping.crud.reply.BoardReplyDTO"/>
+	   <typeAlias alias="gdto" type="net.shopping.order.GuestDTO"/>
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="config/mybatis/board.xml"/>
+		<mapper resource="config/mybatis/board_reply.xml" />
+		<mapper resource="config/mybatis/guest.xml"/>
+		<mapper resource="config/mybatis/login.xml"/>
+	</mappers>
+</configuration>

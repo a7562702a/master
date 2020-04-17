@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public class HelloDAO implements HelloDAOImp { 
+public class guestDAO implements HelloDAOImp { 
    
 	@Autowired
 	SqlSessionTemplate temp ;

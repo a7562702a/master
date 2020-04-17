@@ -4,7 +4,7 @@
 <configuration>
 		
 	<typeAliases>
-	   <typeAlias alias="hdto" type="net.shopping.hello.HelloDTO"/>
+	   <typeAlias alias="hdto" type="net.shopping.hello.guestDTO"/>
 	   
 	   <typeAlias alias="bdto" type="net.shopping.crud.BoardDTO"/>
 	   <typeAlias alias="ldto" type="net.shopping.crud.LoginDTO"/>

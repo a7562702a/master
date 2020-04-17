@@ -18,7 +18,7 @@
 
 
 	guestEdit.jsp <p>
-	<form method="get" name="myform" action="guestUpdateAF.do">
+	<form method="post" name="myform" action="guestUpdateAF.do">
 	  수정사번:<input type="text" name="sabun" value="${dto.sabun}" readonly> <br>
 	  수정이름:<input type="text" name="name"  value="${dto.name}"> <br>
 	  수정제목:<input type="text" name="title" value="${dto.title}"> <br>
@@ -31,7 +31,7 @@
 	
 
 	<p>
-	<a href="indexGuest.jsp">[index]</a> 
+	<a href="indexBoard.jsp">[index]</a> 
   	<a href="guest.do">[신규등록]</a>
   	<a href="gusetList.do">[전체출력]</a>
   	

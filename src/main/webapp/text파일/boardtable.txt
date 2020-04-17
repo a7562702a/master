@@ -1,10 +1,11 @@
 drop table  hobby_reply ;
  drop table  hobby ;
+ drop table  login ;
  drop sequence  hobby_seq;
- drop sequence  hobby_reply_seq;   --³ªÁß¿¡ ´ñ±Û¿¡»ç¿ë
+ drop sequence  hobby_reply_seq;   --ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½
  
  create  sequence hobby_seq; 
- create  sequence hobby_reply_seq;   --³ªÁß¿¡ ´ñ±Û¿¡»ç¿ë
+ create  sequence hobby_reply_seq;   --ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½
 
  create  table hobby (
   hobby_idx   NUMBER(4) primary key ,
@@ -21,13 +22,22 @@ drop table  hobby_reply ;
  clear screen ;
 
 
- create  table hobby_reply (  --´ñ±Û
+ create  table hobby_reply (  --ï¿½ï¿½ï¿½
    rhobby_idx   NUMBER(4) primary key ,
    rwriter        VARCHAR2(20) ,
    rmemo       VARCHAR2(30) ,
    hobby_idx   NUMBER(4),
    constraint  hobby_reply_fk foreign key(hobby_idx) references hobby(hobby_idx) on delete cascade
  ) ;
+
+
+ create  table login (
+   userid   		VARCHAR2(10) primary key ,
+   pwd        	VARCHAR2(20) 
+ ) ; 
  
+ 
+insert into login values('aaaa','1234') ;
+
  commit  ;
  desc hobby_reply ; 

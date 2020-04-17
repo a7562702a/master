@@ -9,7 +9,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	 <select id="selectDetail" resultType="String" >
-	   select  userid  from  login  where userid=#{userid}  and pwd=#{pwd} 
+	   select  uesrid  from  login  where uesrid=#{uesrid}  and pwd=#{pwd} 
 	</select>
 </mapper>
 	

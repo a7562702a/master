@@ -27,7 +27,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</delete>
 	
 	<update id="update" parameterType="net.shopping.order.GuestDTO">
-		update guest set  name = #{name}, title=#{title}, pay=#{pay}, email=#{email} where sabun = #{data}
+		update guest set  name = #{name}, title=#{title}, pay=#{pay}, email=#{email} where sabun = #{sabun}
 	</update>
 	
 </mapper>

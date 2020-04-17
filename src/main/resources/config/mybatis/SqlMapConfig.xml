@@ -4,6 +4,8 @@
 <configuration>
 		
 	<typeAliases>
+	   <typeAlias alias="hdto" type="net.shopping.hello.HelloDTO"/>
+	   
 	   <typeAlias alias="bdto" type="net.shopping.crud.BoardDTO"/>
 	   <typeAlias alias="ldto" type="net.shopping.crud.LoginDTO"/>
 	   <typeAlias alias="rdto" type="net.shopping.crud.reply.BoardReplyDTO"/>
@@ -11,6 +13,8 @@
 	</typeAliases>
 	
 	<mappers>
+		<mapper resource="config/mybatis/hello.xml"/>
+		
 		<mapper resource="config/mybatis/board.xml"/>
 		<mapper resource="config/mybatis/board_reply.xml" />
 		<mapper resource="config/mybatis/guest.xml"/>

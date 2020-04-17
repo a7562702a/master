@@ -28,14 +28,14 @@ import org.springframework.web.servlet.ModelAndView; //�����Ͽ���
 
 
 @Controller
-public class Controller {	
-	private static final Logger logger=LoggerFactory.getLogger(Controller.class);
+public class guestController {	
+	private static final Logger logger=LoggerFactory.getLogger(guestController.class);
 	
 	//��Ʈ�ѹ��� dao��ü����
 	@Inject
 	@Autowired
 	//BoardDAO dao;  ����
-	HelloDAOImp dao; 
+	guestDAO dao; 
 	
 	
 	

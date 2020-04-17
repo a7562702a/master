@@ -2,7 +2,7 @@ package net.shopping.hello;
 
 import org.springframework.web.multipart.MultipartFile;
 
-public class HelloDTO {
+public class guestDTO {
 	private int xxxx;
 	
 }//class END

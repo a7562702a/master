@@ -1,0 +1,404 @@
+commit ;
+
+insert into hobby values( hobby_seq.nextval, 'aa1', 'bb1', 'memo1', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'aa2', 'bb2', 'memo2', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'aa3', 'bb3', 'memo3', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'aa4', 'bb4', 'memo4', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'aa5', 'bb5', 'memo5', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'aa6', 'bb6', 'memo6', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'aa7', 'bb7', 'memo7', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'aa8', 'bb8', 'memo8', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'aa9', 'bb9', 'memo9', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'aa10', 'bb10', 'memo11', 'male', 'ski', 'bear.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'note1', 'book1', 'cc1', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'note2', 'book2', 'cc2', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'note3', 'book3', 'cc3', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'note4', 'book4', 'cc4', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'note5', 'book5', 'cc5', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'note6', 'book6', 'cc6', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'note7', 'book7', 'cc7', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'note8', 'book8', 'cc8', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'note9', 'book9', 'cc9', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'note10', 'book10', 'cc10', 'female', 'game', 'aaa.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'bc1', 'card1', 'bank1', 'female', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'bc2', 'card2', 'bank2', 'female', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'bc3', 'card3', 'bank3', 'female', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'bc4', 'card4', 'bank4', 'female', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'bc5', 'card5', 'bank5', 'female', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'bc6', 'card6', 'bank6', 'female', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'bc7', 'card7', 'bank7', 'female', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'bc8', 'card8', 'bank8', 'female', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'bc9', 'card9', 'bank9', 'female', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'bc10', 'card10', 'bank10', 'female', 'game', 'bc.gif') ;
+
+
+insert into hobby values( hobby_seq.nextval, 'la1', 'lb1', 'lc1', 'male', 'game', 'bbb.gif') ;
+insert into hobby values( hobby_seq.nextval, 'la2', 'lb2', 'lc2', 'male', 'game', 'bbb.gif') ;
+insert into hobby values( hobby_seq.nextval, 'la3', 'lb3', 'lc3', 'male', 'game', 'bbb.gif') ;
+insert into hobby values( hobby_seq.nextval, 'la4', 'lb4', 'lc4', 'male', 'game', 'bbb.gif') ;
+insert into hobby values( hobby_seq.nextval, 'la5', 'lb5', 'lc5', 'male', 'game', 'bbb.gif') ;
+insert into hobby values( hobby_seq.nextval, 'la6', 'lb6', 'lc6', 'male', 'game', 'bbb.gif') ;
+insert into hobby values( hobby_seq.nextval, 'la7', 'lb7', 'lc7', 'male', 'game', 'bbb.gif') ;
+insert into hobby values( hobby_seq.nextval, 'la8', 'lb8', 'lc8', 'male', 'game', 'bbb.gif') ;
+insert into hobby values( hobby_seq.nextval, 'la9', 'lb9', 'lc9', 'male', 'game', 'bbb.gif') ;
+insert into hobby values( hobby_seq.nextval, 'la10', 'lb10', 'lc10', 'male', 'game', 'bbb.gif') ;
+ commit ;
+
+insert into hobby values( hobby_seq.nextval, 'ek0', 'eb0', 'ec0', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek1', 'eb1', 'ec1', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek2', 'eb2', 'ec2', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek3', 'eb3', 'ec3', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek4', 'eb4', 'ec4', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek5', 'eb5', 'ec5', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek6', 'eb6', 'ec6', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek7', 'eb7', 'ec7', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek8', 'eb8', 'ec8', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek9', 'eb9', 'ec9', 'male', 'game', 'bc.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'ek10', 'eb10', 'ec10', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek11', 'eb11', 'ec11', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek12', 'eb12', 'ec12', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek13', 'eb13', 'ec13', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek14', 'eb14', 'ec14', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek15', 'eb15', 'ec15', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek16', 'eb16', 'ec16', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek17', 'eb17', 'ec17', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek18', 'eb18', 'ec18', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek19', 'eb19', 'ec19', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek20', 'eb20', 'ec20', 'male', 'game', 'bc.gif') ;
+ commit ;
+
+insert into hobby values( hobby_seq.nextval, 'kim', 'lee', 'park', 'male', 'game', 'bear.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'ek21', 'eb21', 'ec21', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek22', 'eb22', 'ec22', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek23', 'eb23', 'ec23', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek24', 'eb24', 'ec24', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek25', 'eb25', 'ec25', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek26', 'eb26', 'ec26', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek27', 'eb27', 'ec27', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek28', 'eb28', 'ec28', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek29', 'eb29', 'ec29', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek30', 'eb30', 'ec30', 'male', 'game', 'bc.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'ek31', 'eb31', 'ec31', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek32', 'eb32', 'ec32', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek33', 'eb33', 'ec33', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek34', 'eb34', 'ec34', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek35', 'eb35', 'ec35', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek36', 'eb36', 'ec36', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek37', 'eb37', 'ec37', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek38', 'eb38', 'ec38', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek39', 'eb39', 'ec39', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek40', 'eb40', 'ec40', 'male', 'game', 'aaa.gif') ;
+
+
+insert into hobby values( hobby_seq.nextval, 'ek21', 'eb21', 'ec21', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek22', 'eb22', 'ec22', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek23', 'eb23', 'ec23', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek24', 'eb24', 'ec24', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek25', 'eb25', 'ec25', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek26', 'eb26', 'ec26', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek27', 'eb27', 'ec27', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek28', 'eb28', 'ec28', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek29', 'eb29', 'ec29', 'male', 'game', 'bc.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek30', 'eb30', 'ec30', 'male', 'game', 'bc.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'ek31', 'eb31', 'ec31', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek32', 'eb32', 'ec32', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek33', 'eb33', 'ec33', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek34', 'eb34', 'ec34', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek35', 'eb35', 'ec35', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek36', 'eb36', 'ec36', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek37', 'eb37', 'ec37', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek38', 'eb38', 'ec38', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek39', 'eb39', 'ec39', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ek40', 'eb40', 'ec40', 'male', 'game', 'aaa.gif') ;
+commit ;
+
+
+insert into hobby values( hobby_seq.nextval, 'nk31', 'eb31', 'ec31', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nk32', 'eb32', 'ec32', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nk33', 'eb33', 'ec33', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nk34', 'eb34', 'ec34', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nk35', 'eb35', 'ec35', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nk36', 'eb36', 'ec36', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nk37', 'eb37', 'ec37', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nk38', 'eb38', 'ec38', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nk39', 'eb39', 'ec39', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nk40', 'eb40', 'ec40', 'male', 'game', 'aaa.gif') ;
+
+
+insert into hobby values( hobby_seq.nextval, 'ate1', 'book1', 'cc1', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ate2', 'book2', 'cc2', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ate3', 'book3', 'cc3', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ate4', 'book4', 'cc4', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ate5', 'book5', 'cc5', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ate6', 'book6', 'cc6', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ate7', 'book7', 'cc7', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ate8', 'book8', 'cc8', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ate9', 'book9', 'cc9', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ate10', 'book10', 'cc10', 'female', 'game', 'aaa.gif') ;
+
+
+insert into hobby values( hobby_seq.nextval, 'te1', 'bk1', 'cc1', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'te2', 'bk2', 'cc2', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'te3', 'bk3', 'cc3', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'te4', 'bk4', 'cc4', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'te5', 'bk5', 'cc5', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'te6', 'bk6', 'cc6', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'te7', 'bk7', 'cc7', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'te8', 'bk8', 'cc8', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'te9', 'bk9', 'cc9', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'te10', 'bk10', 'cc10', 'female', 'game', 'aaa.gif') ;
+commit ;
+
+insert into hobby values( hobby_seq.nextval, 'p731', 'eb31', 'ec31', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'p732', 'eb32', 'ec32', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'p733', 'eb33', 'ec33', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'p734', 'eb34', 'ec34', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'p735', 'eb35', 'ec35', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'p736', 'eb36', 'ec36', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'p737', 'eb37', 'ec37', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'p738', 'eb38', 'ec38', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'p739', 'eb39', 'ec39', 'male', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'p740', 'eb40', 'ec40', 'male', 'game', 'aaa.gif') ;
+
+
+insert into hobby values( hobby_seq.nextval, 'am1', 'book1', 'cc1', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'am2', 'book2', 'cc2', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'am3', 'book3', 'cc3', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'am4', 'book4', 'cc4', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'am5', 'book5', 'cc5', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'am6', 'book6', 'cc6', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'am7', 'book7', 'cc7', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'am8', 'book8', 'cc8', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'am9', 'book9', 'cc9', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'am10', 'book10', 'cc10', 'female', 'game', 'aaa.gif') ;
+
+
+insert into hobby values( hobby_seq.nextval, 'mb1', 'bk1', 'cc1', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'mb2', 'bk2', 'cc2', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'mc3', 'bk3', 'cc3', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'mk4', 'bk4', 'cc4', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'mk5', 'bk5', 'cc5', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'mk6', 'bk6', 'cc6', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'mk7', 'bk7', 'cc7', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'mk8', 'bk8', 'cc8', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'mk9', 'bk9', 'cc9', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'mk10', 'bk10', 'cc10', 'female', 'game', 'aaa.gif') ;
+
+commit ;
+--신규등록 
+insert into hobby values( hobby_seq.nextval, 'cs1', 'bb1', 'memo1', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'cs2', 'bb2', 'memo2', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'cs3', 'bb3', 'memo3', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'cs4', 'bb4', 'memo4', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'cs5', 'bb5', 'memo5', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'cs6', 'bb6', 'memo6', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'cs7', 'bb7', 'memo7', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'cs8', 'bb8', 'memo8', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'cs9', 'bb9', 'memo9', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'cs10', 'bb10', 'memo11', 'male', 'ski', 'bear.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'nt1', 'book1', 'cc1', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt2', 'book2', 'cc2', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt3', 'book3', 'cc3', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt4', 'book4', 'cc4', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt5', 'book5', 'cc5', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt6', 'book6', 'cc6', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt7', 'book7', 'cc7', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt8', 'book8', 'cc8', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt9', 'book9', 'cc9', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt10', 'book10', 'cc10', 'female', 'game', 'aaa.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'xyz1', 'bb1', 'memo1', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xyz2', 'bb2', 'memo2', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xyz3', 'bb3', 'memo3', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xyz4', 'bb4', 'memo4', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xyz5', 'bb5', 'memo5', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xyz6', 'bb6', 'memo6', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xyz7', 'bb7', 'memo7', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xyz8', 'bb8', 'memo8', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xyz9', 'bb9', 'memo9', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xyz10', 'bb10', 'memo11', 'male', 'ski', 'bear.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'nt1A', 'book1', 'cc1', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt2B', 'book2', 'cc2', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt3C', 'book3', 'cc3', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt4D', 'book4', 'cc4', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt5E', 'book5', 'cc5', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt6F', 'book6', 'cc6', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt7G', 'book7', 'cc7', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt8H', 'book8', 'cc8', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt9I', 'book9', 'cc9', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nt10J', 'book10', 'cc10', 'female', 'game', 'aaa.gif') ;
+commit ;
+
+
+insert into hobby values( hobby_seq.nextval, 'xBz1', 'bb1', 'memo1', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xBz2', 'bb2', 'memo2', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xBz3', 'bb3', 'memo3', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xBz4', 'bb4', 'memo4', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xBz5', 'bb5', 'memo5', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xBz6', 'bb6', 'memo6', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xBz7', 'bb7', 'memo7', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xBz8', 'bb8', 'memo8', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xBz9', 'bb9', 'memo9', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'xBz10', 'bb10', 'memo11', 'male', 'ski', 'bear.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'nPt1A', 'book1', 'cc1', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nPt2B', 'book2', 'cc2', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nPt3C', 'book3', 'cc3', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nPt4D', 'book4', 'cc4', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nPt5E', 'book5', 'cc5', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nPt6F', 'book6', 'cc6', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nPt7G', 'book7', 'cc7', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nPt8H', 'book8', 'cc8', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nPt9I', 'book9', 'cc9', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'nPt10J', 'book10', 'cc10', 'female', 'game', 'aaa.gif') ;
+commit ;
+
+
+insert into hobby values( hobby_seq.nextval, 'Bz1', 'bb1', 'memo1', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz2', 'bb2', 'memo2', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz3', 'bb3', 'memo3', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz4', 'bb4', 'memo4', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz5', 'bb5', 'memo5', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz6', 'bb6', 'memo6', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz7', 'bb7', 'memo7', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz8', 'bb8', 'memo8', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz9', 'bb9', 'memo9', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz10', 'bb10', 'memo11', 'male', 'ski', 'bear.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'Pt1A', 'book1', 'cc1', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Pt2B', 'book2', 'cc2', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Pt3C', 'book3', 'cc3', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Pt4D', 'book4', 'cc4', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Pt5E', 'book5', 'cc5', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Pt6F', 'book6', 'cc6', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Pt7G', 'book7', 'cc7', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Pt8H', 'book8', 'cc8', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Pt9I', 'book9', 'cc9', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Pt10J', 'book10', 'cc10', 'female', 'game', 'aaa.gif') ;
+
+
+insert into hobby values( hobby_seq.nextval, 'Bz1', 'bb1', 'memo1', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz2', 'bb2', 'memo2', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz3', 'bb3', 'memo3', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz4', 'bb4', 'memo4', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz5', 'bb5', 'memo5', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz6', 'bb6', 'memo6', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz7', 'bb7', 'memo7', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz8', 'bb8', 'memo8', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz9', 'bb9', 'memo9', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz10', 'bb10', 'memo11', 'male', 'ski', 'bear.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'aa1A', 'book1', 'cc1', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'bb2B', 'book2', 'cc2', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'cc3C', 'book3', 'cc3', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'dd4D', 'book4', 'cc4', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ee5E', 'book5', 'cc5', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ff6F', 'book6', 'cc6', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'kk7G', 'book7', 'cc7', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'pp8H', 'book8', 'cc8', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'qq9I', 'book9', 'cc9', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'yy0J', 'book10', 'cc10', 'female', 'game', 'aaa.gif') ;
+
+
+insert into hobby values( hobby_seq.nextval, 'Bz1', 'bb1', 'msks1', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz2', 'bb2', 'msks2', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz3', 'bb3', 'msks3', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz4', 'bb4', 'msks4', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz5', 'bb5', 'msks5', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz6', 'bb6', 'msks6', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz7', 'bb7', 'msks7', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz8', 'bb8', 'msks8', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz9', 'bb9', 'msks9', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'Bz10', 'bb10', 'msks11', 'male', 'ski', 'bear.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'aa1A', 'bpup1', 'cc1', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'bb2B', 'bpup2', 'cc2', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'cc3C', 'bpup3', 'cc3', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'dd4D', 'bpup4', 'cc4', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ee5E', 'bpup5', 'cc5', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ff6F', 'bpup6', 'cc6', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'kk7G', 'bpup7', 'cc7', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'pp8H', 'bpup8', 'cc8', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'qq9I', 'bpup9', 'cc9', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'yy0J', 'bpup10', 'cc10', 'female', 'game', 'aaa.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'tis1', 'bb1', 'msks1', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'tis2', 'bb2', 'msks2', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'tis3', 'bb3', 'msks3', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'tis4', 'bb4', 'msks4', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'tis5', 'bb5', 'msks5', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'tis6', 'bb6', 'msks6', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'tis7', 'bb7', 'msks7', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'tis8', 'bb8', 'msks8', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'tis9', 'bb9', 'msks9', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'tis10', 'bb10', 'msks11', 'male', 'ski', 'bear.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'aa1A', 'bwsk1', 'cc1', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'bb2B', 'bwsk2', 'cc2', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'cc3C', 'bwsk3', 'cc3', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'dd4D', 'bwsk4', 'cc4', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ee5E', 'bwsk5', 'cc5', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ff6F', 'bwsk6', 'cc6', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'kk7G', 'bwsk7', 'cc7', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'pp8H', 'bwsk8', 'cc8', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'qq9I', 'bwsk9', 'cc9', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'yy0J', 'bwsk10', 'cc10', 'female', 'game', 'aaa.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'ice1', 'bb1', 'msks1', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ice2', 'bb2', 'msks2', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ice3', 'bb3', 'msks3', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ice4', 'bb4', 'msks4', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ice5', 'bb5', 'msks5', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ice6', 'bb6', 'msks6', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ice7', 'bb7', 'msks7', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ice8', 'bb8', 'msks8', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ice9', 'bb9', 'msks9', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ice10', 'bb10', 'msks11', 'male', 'ski', 'bear.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'aa1A', 'bzoom1', 'cc1', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'bb2B', 'bzoom2', 'cc2', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'cc3C', 'bzoom3', 'cc3', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'dd4D', 'bzoom4', 'cc4', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ee5E', 'bzoom5', 'cc5', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ff6F', 'bzoom6', 'cc6', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'kk7G', 'bzoom7', 'cc7', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'pp8H', 'bzoom8', 'cc8', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'qq9I', 'bzoom9', 'cc9', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'yy0J', 'bzoom10', 'cc10', 'female', 'game', 'aaa.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'coffee1', 'bb1', 'msks1', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'coffee2', 'bb2', 'msks2', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'coffee3', 'bb3', 'msks3', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'coffee4', 'bb4', 'msks4', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'coffee5', 'bb5', 'msks5', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'coffee6', 'bb6', 'msks6', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'coffee7', 'bb7', 'msks7', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'coffee8', 'bb8', 'msks8', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'coffee9', 'bb9', 'msks9', 'male', 'ski', 'bear.gif') ;
+insert into hobby values( hobby_seq.nextval, 'coffee10', 'bb10', 'msks11', 'male', 'ski', 'bear.gif') ;
+
+insert into hobby values( hobby_seq.nextval, 'aa1A', 'bmyb1', 'cc1', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'bb2B', 'bmyb2', 'cc2', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'cc3C', 'bmyb3', 'cc3', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'dd4D', 'bmyb4', 'cc4', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ee5E', 'bmyb5', 'cc5', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'ff6F', 'bmyb6', 'cc6', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'kk7G', 'bmyb7', 'cc7', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'pp8H', 'bmyb8', 'cc8', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'qq9I', 'bmyb9', 'cc9', 'female', 'game', 'aaa.gif') ;
+insert into hobby values( hobby_seq.nextval, 'yy0J', 'bmyb10', 'cc10', 'female', 'game', 'aaa.gif') ;
+commit ;
+
+
+
+
+ select  hobby_idx, name,  img_file_name from hobby ;
+ select  hobby_idx, name,title,content,  img_file_name from hobby ;

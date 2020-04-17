@@ -33,15 +33,7 @@
 	 		<beans:ref bean="loginInterceptio"/>
 	 	</interceptor>
 	 </interceptors>
-	 
-<!-- 	 <beans:bean id="loginInterceptio" class="net.shopping.hello.LoginInterceptor" /> -->
-<!-- 	 <interceptors> -->
-<!-- 	 	<interceptor> -->
-<!-- 	 		<mapping path="/helloInsert.do"/> -->
-<!-- 	 		<mapping path="/helloDelete.do"/> -->
-<!-- 	 		<beans:ref bean="loginInterceptio"/> -->
-<!-- 	 	</interceptor> -->
-<!-- 	 </interceptors> -->
+
 	 
 	 <!-- AOP -->
 	 <beans:bean id="bk" class="net.shopping.crud.aop.Banking" />

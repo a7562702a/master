@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title></title>
 	<script type="text/javascript">
-		setTimeout( "location.href='HelloList.do' ", 2000) ; 
+		setTimeout( "location.href='' ", 2000) ; 
 	</script>
 </head>
 <body>

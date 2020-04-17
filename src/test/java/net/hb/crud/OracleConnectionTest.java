@@ -1,4 +1,4 @@
-package net.hb.crud;
+package net.shopping.crud;
 
 import java.sql.Connection;
 import javax.inject.Inject;
@@ -10,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-//@RunWithÀº JUnit ÇÁ·¹ÀÓ ¿öÅ©ÀÇ Å×½ºÆ® ½ÇÇà ¹æ¹ýÀ» È®ÀåÇÒ ¶§ »ç¿ëÇÏ´Â ¾î³ëÅ×ÀÌ¼Ç
-//@ContextConfigurationÀº ÀÚµ¿À¸·Î ¸¸µé¾îÁÙ ¾ÖÇÃ¸®ÄÉÀÌ¼ÇÀÇ ÄÁÅØ½ºÆ®ÀÇ ¼³Á¤ÆÄÀÏ À§Ä¡¸¦ ÁöÁ¤
-//@RunWith, @ContextConfiguration ¾Ö³ëÅ×ÀÌ¼ÇÀº ÇöÀç Å×½ºÆ® ÄÚµå¸¦ ½ÇÇàÇÒ ¶§ ½ºÇÁ¸µÀÌ ·ÎµùµÇ·Î·Ï ÇÏ´Â ºÎºÐ
+//@RunWithï¿½ï¿½ JUnit ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©ï¿½ï¿½ ï¿½×½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¼ï¿½
+//@ContextConfigurationï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+//@RunWith, @ContextConfiguration ï¿½Ö³ï¿½ï¿½ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×½ï¿½Æ® ï¿½Úµå¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½Ç·Î·ï¿½ ï¿½Ï´ï¿½ ï¿½Îºï¿½
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations= {"file:src/main/resources/config/mybatis/dao-context.xml"})
 
@@ -24,7 +24,7 @@ public class OracleConnectionTest {
 		@Test
 		public void dbConnectionTest()  throws Exception{
 		  Connection CN=ds.getConnection();
-		  System.out.println("DB¿¬°á¼º°ø¼º°ø OKOK: " + CN );
+		  System.out.println("DBï¿½ï¿½ï¿½á¼ºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ OKOK: " + CN );
 		  //CN.close();
 		}//end
 }//OracleConnectionTest class END

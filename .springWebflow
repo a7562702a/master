@@ -4,7 +4,7 @@
 	<pluginVersion><![CDATA[3.9.12.202003180620-RELEASE]]></pluginVersion>
 	<configs>
 		<config>
-			<file>src/main/java/net/hb/crud/sdsdg.xml</file>
+			<file>src/main/java/net/shopping/crud/sdsdg.xml</file>
 			<name><![CDATA[sdsdg]]></name>
 		</config>
 	</configs>

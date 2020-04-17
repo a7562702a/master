@@ -12,11 +12,11 @@ public class guestDAO {
 	@Autowired
 	SqlSessionTemplate temp ;
 	
-	public void dbInsert(HelloDTO dto) {
+	public void dbInsert(guestDTO dto) {
 	}//end	
 	
 	
-}//BoardDAO class END
+}
 
 
 

@@ -31,10 +31,8 @@ import org.springframework.web.servlet.ModelAndView; //�����Ͽ���
 public class guestController {	
 	private static final Logger logger=LoggerFactory.getLogger(guestController.class);
 	
-	//��Ʈ�ѹ��� dao��ü����
 	@Inject
 	@Autowired
-	//BoardDAO dao;  ����
 	guestDAO dao; 
 	
 	
@@ -43,9 +41,9 @@ public class guestController {
 	private ServletContext  application;
 	
 	
-	@RequestMapping(value="/board.do", method=RequestMethod.GET)
+	@RequestMapping(value="/#", method=RequestMethod.GET)
 	public String guest_write() {
-	   return "boardWrite";
+	   return "#";
 	}//end
 	
 	

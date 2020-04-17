@@ -1,4 +1,4 @@
-package net.hb.crud;
+package net.shopping.crud;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,8 +17,8 @@ public class TestJunit {
 	   Class.forName("oracle.jdbc.driver.OracleDriver");
 	   String url="jdbc:oracle:thin:@127.0.0.1:1521:XE" ;
 	   Connection CN=DriverManager.getConnection(url,"system","1234");
-	   System.out.println("db¿¬°á¼º°ø¼º°ø 4-14-È­¿äÀÏ success ~~~");
-	}catch(Exception ex){System.out.println("db¿¬°á¿¡·¯:"+ ex);  }	
+	   System.out.println("dbï¿½ï¿½ï¿½á¼ºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 4-14-È­ï¿½ï¿½ï¿½ï¿½ success ~~~");
+	}catch(Exception ex){System.out.println("dbï¿½ï¿½ï¿½á¿¡ï¿½ï¿½:"+ ex);  }	
   }//end
   
 }//class end

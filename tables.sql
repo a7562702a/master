@@ -23,7 +23,8 @@ create table product(
  product_size varchar2(20),
  product_img1 varchar2(100) not null,
  product_img2 varchar2(100),
- product_img3 varchar2(100)
+ product_img3 varchar2(100),
+ product_price number not null
 );
 
 --order table

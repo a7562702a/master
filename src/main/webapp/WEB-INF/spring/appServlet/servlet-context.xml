@@ -25,7 +25,7 @@
 	           
 	           <!-- loginInterception -->
 	
-	<beans:bean id="loginInterceptio" class="net.shopping.crud.LoginInterceptor" />
+	<beans:bean id="loginInterceptio" class="shopping.crud.LoginInterceptor" />
 	 <interceptors>
 	 	<interceptor>
 	 		<mapping path="/boardInsert.do"/>
@@ -34,9 +34,7 @@
 	 	</interceptor>
 	 </interceptors>
 	 
-	 <!-- AOP -->
-	 <beans:bean id="bk" class="net.shopping.crud.aop.Banking" />
-	 <aop:aspectj-autoproxy />
+
 	 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -45,7 +43,7 @@
 	</beans:bean>
 	
 	
-	<context:component-scan base-package="net.shopping.*" />
+	<context:component-scan base-package="shopping.*" />
 	
 </beans:beans>
 

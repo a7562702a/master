@@ -20,7 +20,7 @@
 	           width=750 
 	           height=350  
 	           controls="controls"> 
-	     </video>
+	     </video>	
 	    <img src="resources/images/ddd.gif">
 	</div>
 </body>

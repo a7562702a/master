@@ -29,7 +29,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {   
-   private static final Logger logger=LoggerFactory.getLogger(BoardController.class);
+   private static final Logger logger=LoggerFactory.getLogger(HomeController.class);
    
    
    
@@ -37,8 +37,8 @@ public class HomeController {
    //private ServletContext  application;
    
    
-   @RequestMapping(value="/home.do")
-   public String goHome(Model model) {
+   @RequestMapping("/home.do")
+   public String goHome() {
       return "home";
    }//end
 

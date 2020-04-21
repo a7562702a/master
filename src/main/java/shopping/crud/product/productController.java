@@ -23,28 +23,28 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class ProductController {
+public class productController {
 
 	@Inject
 	@Autowired
-	ProductDAO pdao;
+	productDAO pdao;
 
 	@Autowired
 	private ServletContext application;
 
-	private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
+	private static final Logger logger = LoggerFactory.getLogger(productController.class);
 
 	@RequestMapping(value = "/productList.do", method = RequestMethod.GET)
 	public String showList(HttpServletRequest request, Model model) {
 		int categoryNum = Integer.parseInt(request.getParameter("category"));
-		List<ProductDTO> list = pdao.productList(categoryNum);
+		List<productDTO> list = pdao.productList(categoryNum);
 		model.addAttribute("productList", list);
 		return "productList.do";
 	}// List end
 
 	@RequestMapping(value = "/productDetail.do")
 	public String board_detail(@RequestParam("idx") int data, Model model) {
-		ProductDTO dto = pdao.productDetail(data);
+		productDTO dto = pdao.productDetail(data);
 		model.addAttribute("dto", dto);
 		return "productDetail";
 	}// Detail end

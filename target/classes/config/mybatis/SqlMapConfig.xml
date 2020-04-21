@@ -4,15 +4,13 @@
 <configuration>
 		
 	<typeAliases>
-	   <typeAlias alias="pdto" type="shopping.crud.product.ProductDTO"/>
-	   <typeAlias alias="ldto" type="shopping.crud.LoginDTO"/>
-	   <typeAlias alias="udto" type="shopping.crud.user.UserDTO"/>
-	   <typeAlias alias="odto" type="shopping.crud.order.OrderDTO"/>
+	   <typeAlias alias="pdto" type="shopping.crud.product.productDTO"/>
+<!-- 	   <typeAlias alias="odto" type="shopping.crud.order.orderDTO"/> -->
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="config/mybatis/product.xml"/>
-		<mapper resource="config/mybatis/login.xml"/>
-		<mapper resource="config/mybatis/hello.xml"/>
+		<mapper resource="config/mybatis/join.xml"/>
+<!-- 		<mapper resource="config/mybatis/order.xml"/> -->
 	</mappers>
 </configuration>

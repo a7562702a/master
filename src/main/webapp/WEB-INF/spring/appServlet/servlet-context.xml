@@ -25,14 +25,6 @@
 	           
 	           <!-- loginInterception -->
 	
-	<beans:bean id="loginInterceptio" class="shopping.crud.LoginInterceptor" />
-	 <interceptors>
-	 	<interceptor>
-	 		<mapping path="/boardInsert.do"/>
-	 		<mapping path="/boardDelete.do"/>
-	 		<beans:ref bean="loginInterceptio"/>
-	 	</interceptor>
-	 </interceptors>
 	 
 
 	 

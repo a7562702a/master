@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700&display=swap&subset=korean');
+
+/* ----------------- main-slide ------------------ */
+
+.carousel-inner img{
+    filter: brightness(70%);
+}
+
+
+/* ----------------- Quick_manu ------------------ */
+
+.Quick_manu {
+    width: 100%;
+    padding-top: 30px;
+    margin: 20px auto;
+    margin-bottom: 40px;
+    display: block; 
+}
+
+.Quick_manu li{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 30px;
+}
+
+.Quick_manu strong{
+    display: block;
+    padding-top: 30px;
+    margin-bottom: 5px;
+    color: #333;
+}
+.Quick_manu span{
+    display: inline-block;
+    font-size: 12px;
+    color: #333;
+}
+.Quick_manu li i{
+    color: #4379CD;
+}

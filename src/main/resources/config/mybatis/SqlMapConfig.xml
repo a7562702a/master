@@ -13,6 +13,6 @@
 	<mappers>
 		<mapper resource="config/mybatis/product.xml"/>
 		<mapper resource="config/mybatis/login.xml"/>
-		<mapper resource="config/mybatis/hello.xml"/>
+		<mapper resource="config/mybatis/join.xml"/>
 	</mappers>
 </configuration>

@@ -5,26 +5,31 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="Join">	
 	
-	<insert id="join_add">
-	  insert into users
-	   values( #{user_id},#{user_name},#{user_pwd},#{user_phone},#{user_address1},#{user_address2},#{user_email},sysDate,1})
-	</insert>
-</mapper>
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!--	회원정보 관련	-->
+	<insert id="join_add"  parameterType="shopping.crud.JoinDTO">
+	  insert into users
+	   values( #{user_id},#{user_pwd},#{user_name},#{user_phone},#{user_address1},#{user_address2},#{user_email},SYSDATE,1)
+	</insert>
+	
+	<select id="join_detail" parameterType="String" resultType="shopping.crud.JoinDTO">
+		select * from users where user_id = #{data}
+	</select>
+	
+	<delete id="join_delete" parameterType="String">
+		delete from users where user_id = #{data}
+	</delete>
+	
+	<update id="join_update" parameterType="shopping.crud.JoinDTO">
+		update users set user_pwd = #{user_pwd}, user_phone = #{user_phone}, user_address1= #{user_address1}, user_address2 = #{user_address2} where user_id = #{user_id}
+	</update>
+	
+	
+<!--	로그인 관련	-->
+	<select id="login_select" parameterType="shopping.crud.JoinDTO" resultType="String">
+		select user_id, user_pwd from users where user_id = #{user_id} and user_pwd = #{user_pwd}
+	</select>
+<!-- 	select user_id, user_pwd from users where user_id = 'aaaa' and user_pwd = '1234'; -->
+	
+	
+</mapper>

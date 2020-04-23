@@ -27,7 +27,6 @@ public class Zzim_Controller {
 	private static final Logger logger = LoggerFactory.getLogger(Zzim_Controller.class);
 	
 
-
 	
 	@RequestMapping("/zzimInsert.do")
 	public String zzim_insert(ZzimDTO dto) {

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Zzim">	
+	
+	<select id = "selectZzim" parameterType="shopping.crud.zzim.ZzimDTO" resultType="shopping.crud.zzim.ZzimDTO">
+		select t1.user_id
+		     , t1.zzim_num
+		     , t1.product_id
+		     , t2.product_name
+		     , t1.option1
+		     , t1.option2
+		     , t1.price
+		     , t1.count
+		     , t1.img1     
+		  from zzim t1
+		inner join product t2
+		   on t1.product_id = t2.product_id
+		 where t1.user_id = #{user_id}
+	</select>
+	
+	<insert id="insertZzim">
+		insert into zzim
+  		values (#{user_id},zzim_seq.nextval,#{product_id},#{option1},#{option2},#{price},#{count},#{img1})
+	</insert>
+		
+	<delete id ="deleteZzim">
+	 	delete
+		  from zzim
+		 where zzim_num = #{num}
+	</delete>
+	 
+</mapper>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

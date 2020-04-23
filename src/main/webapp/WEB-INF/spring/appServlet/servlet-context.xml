@@ -28,6 +28,16 @@
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 
 	<!-- loginInterception -->
+	<annotation-driven />
+	<beans:bean id="LoginInterceptio" class="shopping.crud.LoginInterceptor" />
+		<interceptors>
+			<interceptor>
+				<mapping path="/Insert_join.do"/>
+				<mapping path="/UpdateAF_join.do"/>
+				<mapping path="/Delete_join.do"/>
+				<beans:ref bean="LoginInterceptio"/>
+			</interceptor>
+		</interceptors>
 
 
 

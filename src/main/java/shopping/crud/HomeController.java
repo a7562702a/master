@@ -41,6 +41,20 @@ public class HomeController {
    public String goHome() {
       return "home";
    }//end
+   
+   @RequestMapping("/main_bar.do")
+   public ModelAndView mainbar(){
+	   ModelAndView mav = new ModelAndView();
+	   mav.setViewName("main_bar");
+	         return mav;
+   }//end
+   
+   @RequestMapping("/footer.do")
+   public ModelAndView footer(){
+	   ModelAndView mav = new ModelAndView();
+	   mav.setViewName("footer");
+	         return mav;
+   }//end
 
 
 }//BoardController class END

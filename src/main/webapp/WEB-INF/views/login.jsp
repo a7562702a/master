@@ -18,14 +18,11 @@
 
  
  <div id="msg" align="center">
- <img src="./resources/images/top.jpg" width=750><p>
- 
- 
  <table  width=750 border=1 cellspacing=0 align="center">
    <form action="loginprocess.do">
      <tr>
 	  <td width="450"> <img src="resources/images/z1.gif">userid:<img src="resources/images/z1.gif"> </td>
-	  <td width="250"> <input type="text"  name="userid"  value="blue"></td>
+	  <td width="250"> <input type="text"  name="user_id"  value="blue"></td>
 			
 	   <td rowspan=2 align="center">
 	    <input type="submit" value="LOGIN" id="LOGIN" >
@@ -34,16 +31,21 @@
 	
 	<tr>
 	  <td> <img src="resources/images/z1.gif">userpw:<img src="resources/images/z1.gif"> </td>
-	  <td> <input type="text"  name="pwd" value="1234"></td>
+	  <td> <input type="text"  name="user_pwd" value="1234"></td>
 	</tr>
     </form>
  </table>
  
  <hr size=3 color=red>
-   <a href="index.jsp">[index.jsp]</a>
-   <a href="board.do">[하비등록화면]</a>
-   <a href="boardList.do">[하비전체출력]</a>
+<%--  <%= application.getContextPath() %><br> --%>
+<%--  <%= request.getSession().getServletContext().getRealPath("/") %> --%>
+<%--  <%= request.getSession().getServletContext().getRealPath(path) %> --%>
+<%--  <%= application.getRealPath("/login.jsp") %> --%>
+   <a href="km_Test_File.jsp">[index.jsp]</a>
+   <a href="Join.do">[회원가입]</a>
+   <a href="Detail_join.do?idx=aaaa">[개인정보]</a>
    <a href="login.do">[login.do]</a>
+   <a href="logout.do">[로그아웃]</a>
 </div>
 
 

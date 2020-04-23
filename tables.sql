@@ -19,8 +19,8 @@ create table product(
  product_name varchar2(100) not null,
  product_desc varchar2(2000),
  product_category number not null,
- product_color varchar2(20),
- product_size varchar2(20),
+ product_color varchar2(50),
+ product_size varchar2(50),
  product_img1 varchar2(100) not null,
  product_img2 varchar2(100),
  product_img3 varchar2(100),
@@ -30,10 +30,12 @@ create table product(
 --order table
 drop table order_detail;
 create table order_detail(
- order_num varchar(20) not null,
+ opk_num number primary key, --sequence
+ order_num varchar(20) not null, --user_id + ¼ýÀÚ
  user_id varchar2(20) not null,
  product_id varchar2(20) not null,
  product_name varchar2(100) not null,
+ product_img varchar2(100),
  option1 varchar2(20),
  option2 varchar2(20),
  price number not null,
@@ -49,7 +51,7 @@ create table order_detail(
 --product review table
 drop table product_review;
 create table product_review(
- review_num number primary key,
+ review_num number primary key, --sequence
  product_id varchar2(20) not null,
  user_id varchar2(20) not null,
  content varchar2(2000) not null,
@@ -61,14 +63,14 @@ create table product_review(
 --product_question table
 drop table product_quest;
 create table product_quest(
- product_quest_num number primary key,
+ product_quest_num number primary key, --sequence
  product_id varchar2(20) not null,
  pwd number(5) not null,
  title varchar2(100) not null,
  content varchar2(2000) not null
 );
 
---product_questin reply table
+--product_question reply table
 drop table product_quest_rep;
 create table product_quest_rep(
  product_id varchar2(2) not null,
@@ -80,7 +82,7 @@ create table product_quest_rep(
 drop table zzim;
 create table zzim(
  user_id varchar2(20) not null,
- zzim_num number not null,
+ zzim_num number primary key, --sequence
  product_id varchar2(20) not null,
  option1 varchar2(20),
  option2 varchar2(20),

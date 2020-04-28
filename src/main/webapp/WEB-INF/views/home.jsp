@@ -117,8 +117,8 @@
 
 		<div class="second_wrap">
 			<div class="second_wrap_i 01">
-				<a class="text-secondary" href=""> <img alt="1"
-					src="resources/images/1353727_1_big.jpg">
+				<a class="text-secondary" href="productDetail.do?pid=101a00001"> <img alt="1"
+					src="resources/images/101a00001_1.jpg">
 				</a>
 			</div>
 			<div class="second_wrap_i 02">

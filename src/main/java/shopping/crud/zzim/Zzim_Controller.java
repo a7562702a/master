@@ -27,6 +27,10 @@ public class Zzim_Controller {
 	private static final Logger logger = LoggerFactory.getLogger(Zzim_Controller.class);
 	
 
+	@RequestMapping(value="zzim.do",method=RequestMethod.GET)
+	 public String Zzim(Model model){
+		return "zzimList";  
+	}//end
 	
 	@RequestMapping("/zzimInsert.do")
 	public String zzim_insert(ZzimDTO dto) {
@@ -37,7 +41,7 @@ public class Zzim_Controller {
 	
 	@RequestMapping("/zzimList.do")
 	public String zzim_select(HttpServletRequest request, Model model) {
-		List<ZzimDTO> list = zzimDAO.dbSelect("aa");
+		List<ZzimDTO> list = zzimDAO.dbSelect("aaaa");
 		model.addAttribute("list",list);
 		
 	  return "zzimList";

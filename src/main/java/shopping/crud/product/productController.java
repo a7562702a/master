@@ -42,14 +42,22 @@ public class productController {
 		return "productList.do";
 	}// List end
 
-	@RequestMapping(value = "/productDetail.do")
-	public String board_detail(@RequestParam("idx") int data, Model model) {
+	@RequestMapping(value = "/productDetail.do", method = RequestMethod.GET)
+	public String product_detail(@RequestParam("pid") String data, Model model) {
+		System.out.println("조회할 데이터: "+ data);
 		productDTO dto = pdao.productDetail(data);
+		System.out.println("조회된 데이터: "+dto.getProduct_id());
+		System.out.println("colors: "+dto.getProduct_color());
+		System.out.println("sizes: "+dto.getProduct_size());
+
 		model.addAttribute("dto", dto);
+
 		return "productDetail";
 	}// Detail end
 	
-/*------------------------------------------------------------------------
+
+	
+	/*------------------------------------------------------------------------
 
 	@RequestMapping("/productInsert.do")
 	public String board_insert(ProductDTO dto) {
@@ -76,7 +84,7 @@ public class productController {
 ------------------------------------------------------------------------*/
 	
 	@RequestMapping("/productDelete.do")
-	public String board_delete(@RequestParam("idx") int data, Model model) {
+	public String board_delete(@RequestParam("pid") int data, Model model) {
 	  int result =pdao.dbDelete(data);
 	  if(result>0) return "redirect:/productList.do";
 	  else return "redirect:/productDetail.do";

@@ -96,17 +96,17 @@
 		<div class="wrap">
 			<div class="first_wrap">
 				<div class="first_wrap_i 01">
-					<a href="productDetail.do?id=101a00001"> <img alt="1"
+					<a href="productDetail.do?pid=101a00001"> <img alt="1"
 						src="resources/images/101a00001_1.jpg">
 					</a>
 				</div>
 				<div class="first_wrap_i 02">
-					<a href="productDetail.do?id=102b00001"> <img alt="1"
+					<a href="productDetail.do?pid=102b00001"> <img alt="1"
 						src="resources/images/102b00001_1.jpg">
 					</a>
 				</div>
 				<div class="first_wrap_i 03">
-					<a href="productDetail.do?id=201c00001"> <img alt="1"
+					<a href="productDetail.do?pid=201c00001"> <img alt="1"
 						src="resources/images/201c00001_1.jpg">
 					</a>
 				</div>

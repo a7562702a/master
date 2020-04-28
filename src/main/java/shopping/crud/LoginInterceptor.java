@@ -29,8 +29,8 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 		String uri = request.getRequestURI();
 		 System.out.println("LoginInterceptor인셉 uri" + uri);    
 	     //������Ʈ �̸����� ã�ƿ��⶧���� �ּҸ�  http://127.0.0.1:8080/crud/~~.do
-	     int idx = uri.lastIndexOf("/");  //����
-		 uri = uri.substring(idx+1);      //���� 
+	     int uid = uri.lastIndexOf("/");  //����
+		 uri = uri.substring(uid+1);      //���� 
 		 System.out.println("LoginInterceptor인셉 uri" + uri); 
 		
 		boolean flag = false;

@@ -25,8 +25,8 @@ public class productDAO {
 		  return list;
 		}//list end
 	
-	public productDTO productDetail(int pId) {
-		return temp.selectOne("product.detail",pId);
+	public productDTO productDetail(String data) {
+		return temp.selectOne("product.selectDetail",data);
 		
 	}//detail end
 	

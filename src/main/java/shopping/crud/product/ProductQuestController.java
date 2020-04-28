@@ -36,7 +36,7 @@ public class ProductQuestController {
 	}//end
 	
 	@RequestMapping(value="/productQuestDetail.do")
-	public String product_detail(@RequestParam("idx") int data, Model model) {
+	public String product_detail(@RequestParam("qid") int data, Model model) {
 		model.addAttribute("dto",pdao.dbDetail(data));
 		return "redirect:/productQuestList.do";
 	}//end
@@ -55,7 +55,7 @@ public class ProductQuestController {
 				   + "</script>").flush();
 			return "redirect:/productQuestList.do";
 		}
-		return "redirect:/productQuestDetail.do?idx="+dto.getProduct_quest_num();
+		return "redirect:/productQuestDetail.do?qid="+dto.getProduct_quest_num();
 		
 	}
 	

@@ -59,7 +59,7 @@ public class Join_Controller1 {
 	
 	// 개인 회원정보 확인
 	 @RequestMapping("Detail_join.do")
-	 public String  join_detail( @RequestParam("idx") String data , Model model) {
+	 public String  join_detail( @RequestParam("uid") String data , Model model) {
 		JoinDTO dto=joinDAO.dbDetail_join(data);
 		model.addAttribute("dto", dto);
 		return "user_join_detail" ;
@@ -68,9 +68,9 @@ public class Join_Controller1 {
 	 // 회원정보 수정 전 DB 정보 확인
 	 @RequestMapping("/UpdateBF_join.do")
 	public String join_updateBefor(HttpServletRequest request,Model model,HttpSession session ) {
-			session.setAttribute("pathidx", request.getParameter("idx"));
-			session.setAttribute("path", "UpdateBF_join.do?idx="+session.getAttribute("pathidx"));
-		String data= request.getParameter("idx");
+			session.setAttribute("pathidx", request.getParameter("uid"));
+			session.setAttribute("path", "UpdateBF_join.do?uid="+session.getAttribute("pathidx"));
+		String data= request.getParameter("uid");
 		model.addAttribute("dto", joinDAO.dbDetail_join(data));
 		return "user_join_edit"; ///WEB-INF/views/boardDelete.jsp
 	}
@@ -79,7 +79,7 @@ public class Join_Controller1 {
 	@RequestMapping("/UpdateAF_join.do")
 	public String join_updateaffter(JoinDTO dto,HttpSession session) {			   
 	 	joinDAO.dbUpdata_join(dto);
-	 	return "redirect:/Detail_join.do?idx="+dto.getUser_id(); 
+	 	return "redirect:/Detail_join.do?uid="+dto.getUser_id(); 
 	}
 
 	 // 회원 탈퇴
@@ -87,7 +87,7 @@ public class Join_Controller1 {
 	public String join_delete(HttpServletRequest request,HttpSession session) {
 
 		session.setAttribute("path", "Join.do");
-		String data= request.getParameter("idx");
+		String data= request.getParameter("uid");
 		joinDAO.dbDelete_join(data);
 		return "redirect:/Join.do"; ///WEB-INF/views/boardDelete.jsp
 	}

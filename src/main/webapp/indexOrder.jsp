@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title></title>
 	<script type="text/javascript">
-		setTimeout("location.href='orderList.do?idx=aaaa'",2000);
+		setTimeout("location.href='orderList.do?uid=aaaa'",2000);
 	</script>
 </head>
 <body>

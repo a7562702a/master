@@ -42,7 +42,7 @@ public class orderController {
 	}// end
 	
 	@RequestMapping("/orderList.do")
-	public String order_list(@RequestParam("idx")String data,Model model){
+	public String order_list(@RequestParam("oid")String data,Model model){
 		List<orderDTO> product=dao.dbSelectproduct();
 		System.out.println(data);
 		orderDTO users=dao.dbSelectusers(data);
@@ -54,7 +54,7 @@ public class orderController {
 	
 	@RequestMapping("/orderDelete.do")
 	public String order_delete(HttpServletRequest request) {
-		int data=Integer.parseInt(request.getParameter("idx"));
+		int data=Integer.parseInt(request.getParameter("oid"));
 		//dao.dbdelete(data);
 		return "redirect:/orderList.do";
 	}//end

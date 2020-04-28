@@ -26,7 +26,7 @@ public class ProductReviewController {
 	@RequestMapping(value="/productReviewList.do")
 	public String product_select(Model model) {
 		List<ProductQuestDTO> PD = pdao.dbSelect();
-		model.addAttribute("PD",PD);
+		model.addAttribute("PD",PD);	
 		return "ProductReviewList";
 	}//end
 	

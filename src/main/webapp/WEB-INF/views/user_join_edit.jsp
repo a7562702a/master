@@ -23,7 +23,7 @@
         </form>
    <a href="km_Test_File.jsp">[index.jsp]</a>
    <a href="Join.do">[회원가입]</a>
-   <a href="Detail_join.do?idx=aaaa">[개인정보]</a>
+   <a href="Detail_join.do?uid=aaaa">[개인정보]</a>
    <a href="login.do">[login.do]</a>
    <a href="logout.do">[로그아웃]</a>
 	</div>

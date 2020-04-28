@@ -2,7 +2,7 @@ package shopping.crud.product;
 
 import org.springframework.web.multipart.MultipartFile;
 
-public class productDTO {
+public class ProductDTO {
 	private String product_id;
 	private String product_name;
 	private int product_category;

@@ -4,33 +4,33 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="product">	
-	<select id="selectAll"  resultType="shopping.crud.product.productDTO">
+	<select id="selectAll"  resultType="shopping.crud.product.ProductDTO">
 		select * from  product  
 	</select>
 	
-	<select id="selectAll2" parameterType="int"  resultType="shopping.crud.product.productDTO">
+	<select id="selectAll2" parameterType="int"  resultType="shopping.crud.product.ProductDTO">
 		select * from  product where product_category = #{product_category}  
 	</select>
 	
-	 <select id="selectDetail" parameterType="String" resultType="shopping.crud.product.productDTO" >
+	 <select id="selectDetail" parameterType="String" resultType="shopping.crud.product.ProductDTO" >
 	   select  * from product where product_id = #{product_id}
 	</select>
 	
-	<select id="countAll" parameterType="shopping.crud.product.productDTO" resultType="int">
+	<select id="countAll" parameterType="shopping.crud.product.ProductDTO" resultType="int">
 		select count(*) from product where product_category = #{product_category} 
 	</select>
 	
-	<delete id="del" parameterType="shopping.crud.product.productDTO">
+	<delete id="del" parameterType="shopping.crud.product.ProductDTO">
 		delete from product where product_id = #{product_id}
 	</delete> 
 	
-	<update id="edit" parameterType="shopping.crud.product.productDTO">
+	<update id="edit" parameterType="shopping.crud.product.ProductDTO">
 		update product set product_name=#{product_name}, product_desc=#{product_desc}, product_category=#{product_category},
 		product_color=#{product_color}, product_size=#{product_size}, product_img1=#{product_img1}, product_img2=#{product_img2},
 		product_img3=#{product_img3}, product_price=#{product_price} where product_id = #{product_id}
 	</update>
 	
-	<insert id="add" parameterType="shopping.crud.product.productDTO">
+	<insert id="add" parameterType="shopping.crud.product.ProductDTO">
 		insert into product values(#{product_id}, #{product_name},#{product_desc}, #{product_category},#{product_color},
 		#{product_size}, #{product_img1}, #{product_img2}, #{product_img3}, #{product_price})
 	</insert>

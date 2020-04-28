@@ -23,21 +23,21 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class productController {
+public class ProductController {
 
 	@Inject
 	@Autowired
-	productDAO pdao;
+	ProductDAO pdao;
 
 	@Autowired
 	private ServletContext application;
 
-	private static final Logger logger = LoggerFactory.getLogger(productController.class);
+	private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
 
 	@RequestMapping(value = "/productList.do", method = RequestMethod.GET)
 	public String showList(HttpServletRequest request, Model model) {
 		int categoryNum = Integer.parseInt(request.getParameter("category"));
-		List<productDTO> list = pdao.productList(categoryNum);
+		List<ProductDTO> list = pdao.productList(categoryNum);
 		model.addAttribute("productList", list);
 		return "productList.do";
 	}// List end
@@ -45,7 +45,7 @@ public class productController {
 	@RequestMapping(value = "/productDetail.do", method = RequestMethod.GET)
 	public String product_detail(@RequestParam("pid") String data, Model model) {
 		System.out.println("조회할 데이터: "+ data);
-		productDTO dto = pdao.productDetail(data);
+		ProductDTO dto = pdao.productDetail(data);
 		System.out.println("조회된 데이터: "+dto.getProduct_id());
 		System.out.println("colors: "+dto.getProduct_color());
 		System.out.println("sizes: "+dto.getProduct_size());

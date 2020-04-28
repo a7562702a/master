@@ -10,22 +10,22 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @Component
-public class productDAO {
+public class ProductDAO {
 	
 	@Autowired
 	SqlSessionTemplate temp;
 	
-	public List<productDTO> productList( ){
-		  List<productDTO> list=temp.selectList("product.selectAll");
+	public List<ProductDTO> productList( ){
+		  List<ProductDTO> list=temp.selectList("product.selectAll");
 		  return list;
 		}//list end
 	
-	public List<productDTO> productList(int category){
-		  List<productDTO> list=temp.selectList("product.selectAll2", category);
+	public List<ProductDTO> productList(int category){
+		  List<ProductDTO> list=temp.selectList("product.selectAll2", category);
 		  return list;
 		}//list end
 	
-	public productDTO productDetail(String data) {
+	public ProductDTO productDetail(String data) {
 		return temp.selectOne("product.selectDetail",data);
 		
 	}//detail end

@@ -17,20 +17,32 @@ public class ProductQuestDAO {
 @Autowired
 SqlSessionTemplate temp;
 	
- 	public List<ProductQuestDTO> dbSelect( ){
- 		 List<ProductQuestDTO> list=temp.selectList("quest.selectAll");
+ 	public List<ProductQuestDTO> dbSelect(int start, int end){
+ 		 ProductQuestDTO dto = new ProductQuestDTO();
+ 		 dto.setStart(start);
+ 		 dto.setEnd(end);
+ 		 List<ProductQuestDTO> list=temp.selectList("quest.selectAll",dto);
 	  return list;
 	}//end
  	 
+ 	public int dbCount(){
+ 		return temp.selectOne("quest.countAll");
+ 	}//end
+ 	
  	public ProductQuestDTO dbDetail(int data){
  		return temp.selectOne("quest.detail",data);
  	}//end
  	
- 	public int dbpwd(int pwd) {
- 		return temp.selectOne("quest.pwd",pwd);
+ 	public ProductQuestDTO dbpwd(ProductQuestDTO dto) {
+ 		return temp.selectOne("quest.pwd",dto);
  	}//end
 
  	public void dbInsert(ProductQuestDTO dto) {
  		temp.insert("quest.insert",dto);
  	}//end
+ 	
+	public void dbDelete(int questnum) {
+ 		temp.insert("quest.delete",questnum);
+ 	}//end
+	
 }//LoginDAO end

@@ -11,12 +11,14 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
+  <script >
   $( function() {
 	    $( ".accordion" ).accordion({
 	      collapsible: true
 	    });
 	  } );
+  
+	
   </script>
 </head>
 
@@ -41,19 +43,21 @@
 					  <div>
 					    <p>
 					    <c:choose> 
-					    <c:when test="${questpwd==null}">					    
+					    <c:when test="${questpwd==bean.pwd && questnum==bean.product_quest_num}">
+					    	${bean.content} <p>
+					    	<a href="productQuestOut.do">[확인완료]</a><p>
+					    	<a href="productQuestDelete.do?qid=${bean.product_quest_num}">[삭제]</a>
+					    	
+					    	<c:import url="/productquestrep_list.do?pqr=${questnum}" /> 				    	
+					    </c:when>	
+					    <c:otherwise>					    
 						    <form action="productQuestPwd.do">
-						    <input type="hidden" name="product_quest_num" value="${bean.product_quest_num}">
-						    <input type="text" name="pwd">
-						    <button type="submit">ok</button>
+							    <input type="hidden" name="product_quest_num" value="${bean.product_quest_num}">
+							    <input type="password" name="pwd">
+							    <button type="submit" >ok</button>
 						    </form> 
-					    </c:when>
-					    <c:otherwise>
-					    	${bean.content} 
-					    	${bean.pwd} 
-					    	${questpwd}
-					    	<a href="productQuestOut.do">[확인완료]</a>
-					    </c:otherwise>				     
+					    </c:otherwise>
+					    			     
 					    </c:choose> 
 					    </p>
 					  </div>
@@ -62,14 +66,36 @@
 			</tr>
 	    </c:forEach>
 	  </tbody>
+	  
+	  	<!-- 페이징 -->
+	    <tr align="center">
+		<td colspan="5">
+			<!-- 이전 --> 
+			<c:if test="${startpage!=1}">
+				<a href="productQuestList.do?pagePQNum=${startpage-10}">[이전]</a>
+			</c:if>
+			
+			<c:forEach var="i" begin="${startpage}" end="${endpage}">			
+				<c:choose>
+					<c:when test="${i==pageNUM}"><font style='color:red;font-size:20pt;'><button type="button" class="btn btn-outline-dark">${i}</button></font></c:when>
+					<c:otherwise>
+						<a href="productQuestList.do?pagePQNum=${i}"><button type="button" class="btn btn-outline-dark">${i}</button></a>
+					</c:otherwise>
+				</c:choose>
+			</c:forEach>
+				
+			<!-- 다음 -->
+			<c:if test="${endpage<pagecount}">
+				<a href="productQuestList.do?pagePQNum=${startpage+10}">[다음]</a>
+			</c:if>
+		</td>
+	</tr>
+	
 	</table>
-		<a href="productQuest.do">[문의하기]</a>
-	<button type="button" class="btn btn-outline-dark">1</button>
 	<p>
-   <a href="index.jsp">[index.jsp]</a>
-   <a href="board.do">[하비등록화면]</a>
-   <a href="boardList.do">[하비전체출력]</a>
-   <a href="login.do">[login.do]</a>
+	<a href="productQuest.do">[문의하기]</a>
+    <a href="productReviewList.do">[리뷰]</a>
+    <a href="productQuestList.do">[문의]</a>
 </div>
 
 

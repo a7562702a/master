@@ -4,9 +4,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="review">	
-	<select id="selectAll" resultType="shopping.crud.product.ProductReviewDTO">
-		select rownum rrn, r.* from product_review r
+	<select id="selectAll" resultType="shopping.crud.product.ProductReviewDTO" parameterType="shopping.crud.product.ProductReviewDTO">
+		select * from (select rownum rrn, r.* from product_review r) where rrn between #{start} and #{end}
 	</select>
+	
+	<insert id="insert" parameterType="shopping.crud.product.ProductReviewDTO">
+		insert into product_review values(review_num_seq.nextval, #{product_id}, #{user_id}, #{content}, #{point}, #{file1} )
+	</insert>
+	
+	<select id="countAll" resultType="int">
+		select count(*) from product_review
+	</select>
+	
+	<delete id="delete" parameterType="int">
+		delete from product_review where review_num=#{review_num}
+	</delete>
 </mapper>
 	
 

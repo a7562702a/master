@@ -24,12 +24,6 @@
   	</table> 
   	<a href="UpdateBF_join.do?uid=${dto.user_id}"><button>수정</button> </a><br>
   	<a href="Delete_join.do?uid=${dto.user_id}"><button>회원탈퇴</button> </a>
-   <hr>
-   <a href="km_Test_File.jsp">[index.jsp]</a>
-   <a href="Join.do">[회원가입]</a>
-   <a href="Detail_join.do?uid=aaaa">[개인정보]</a>
-   <a href="login.do">[login.do]</a>
-   <a href="logout.do">[로그아웃]</a>
 	</div>
 </body>
 </html>

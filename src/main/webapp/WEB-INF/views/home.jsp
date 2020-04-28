@@ -27,10 +27,11 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+
 </head>
 <body>
 	<!-- main_menu -->
-	<header class="main_menu">
+	<header>
 		<div id="main_bar">
 			<c:import url="/main_bar.do" />
 		</div>
@@ -96,24 +97,46 @@
 		<div class="wrap">
 			<div class="first_wrap">
 				<div class="first_wrap_i 01">
-					<a href="productDetail.do?pid=101a00001"> <img alt="1"
-						src="resources/images/101a00001_1.jpg">
+					<a class="text-secondary" href=""> <img alt="1"
+						src="resources/images/musinsa_banner1.jpg">
+						
 					</a>
 				</div>
 				<div class="first_wrap_i 02">
-					<a href="productDetail.do?pid=102b00001"> <img alt="1"
-						src="resources/images/102b00001_1.jpg">
+					<a class="text-secondary" href=""> <img alt="1"
+						src="resources/images/musinsa_banner3.jpg">
 					</a>
 				</div>
 				<div class="first_wrap_i 03">
-					<a href="productDetail.do?pid=201c00001"> <img alt="1"
-						src="resources/images/201c00001_1.jpg">
+					<a class="text-secondary" href=""> <img alt="1"
+						src="resources/images/musinsa_banner2.jpg">
 					</a>
 				</div>
 			</div>
 		</div>
 
-	</div>
+		<div class="second_wrap">
+			<div class="second_wrap_i 01">
+				<a class="text-secondary" href=""> <img alt="1"
+					src="resources/images/1353727_1_big.jpg">
+				</a>
+			</div>
+			<div class="second_wrap_i 02">
+				<a class="text-secondary" href=""> <img alt="1"
+					src="resources/images/1353727_1_big.jpg">
+				</a>
+			</div>
+			<div class="second_wrap_i 03">
+				<a class="text-secondary" href=""> <img alt="1"
+					src="resources/images/1353727_1_big.jpg">
+				</a>
+			</div>
+			<div class="second_wrap_i 04">
+				<a class="text-secondary" href=""> <img alt="1"
+					src="resources/images/1353727_1_big.jpg">
+				</a>
+			</div>
+		</div>
 
 
 	<!-- footer -->
@@ -122,6 +145,11 @@
 			<c:import url="/footer.do" />
 		</div>
 	</footer>
+
+	</div>
+
+
+
 
 
 </body>

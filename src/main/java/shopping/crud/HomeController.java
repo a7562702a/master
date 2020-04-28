@@ -49,6 +49,16 @@ public class HomeController {
 	         return mav;
    }//end
    
+   @RequestMapping("/my_page.do")
+   public String go_my_page() {
+      return "my_page";
+   }//end
+   
+   @RequestMapping("/customer_center.do")
+   public String go_customer_center() {
+      return "customer_center";
+   }//end
+   
    @RequestMapping("/footer.do")
    public ModelAndView footer(){
 	   ModelAndView mav = new ModelAndView();

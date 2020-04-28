@@ -25,18 +25,25 @@ public class orderController {
     @Autowired
     private ServletContext application;
 	private static final Logger logger = LoggerFactory.getLogger(orderController.class);
+	
+	
+	@RequestMapping(value = "/order.do", method = RequestMethod.GET)
+	public String order_write( ) {
+		return "orderWrite";
+	}//end
 
-	@RequestMapping(value = "/orderInsert.do", method = RequestMethod.GET)
+	@RequestMapping( "/orderInsert.do")
 	public String order_insert(orderDTO dto) {
-		String path=application.getRealPath("/resources/upload");
-		System.out.println(path);
-		String img=dto.getUpload_f().getOriginalFilename();
-		File file=new File(path,img);
-	try {dto.getUpload_f().transferTo(file);}
-	catch(Exception e) {System.out.println("Error:"+e);}
-	    dto.setFile1(img);
-	    System.out.println("컨트롤 물리적파일="+dto.getFile1());
-	    System.out.println();
+//		String path=application.getRealPath("/resources/upload");
+//		System.out.println(path);
+//		String img=dto.getUpload_f().getOriginalFilename();
+//		System.out.println(img);
+//		File file=new File(path,img);
+//	try {dto.getUpload_f().transferTo(file);}
+//	catch(Exception e) {System.out.println("Error:"+e);}
+//	    dto.setFile1(img);
+//	    System.out.println("컨트롤 물리적파일="+dto.getFile1());
+//	    System.out.println();
 	    dao.dbInsert(dto);
 		return "redirect:/orderList2.do";
 	}// end

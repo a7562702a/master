@@ -4,11 +4,12 @@
 <configuration>
 		
 	<typeAliases>
-	   <typeAlias alias="pdto" type="shopping.crud.product.productDTO"/>
+	   <typeAlias alias="pdto" type="shopping.crud.product.ProductDTO"/>
 	   <typeAlias alias="qdto" type="shopping.crud.product.ProductQuestDTO"/>
 	   <typeAlias alias="rdto" type="shopping.crud.product.ProductReviewDTO"/>
 	   <typeAlias alias="qrdto" type="shopping.crud.product.ProductQuestRepDTO"/>
 	   <typeAlias alias="odto" type="shopping.crud.order.orderDTO"/> 
+	   <typeAlias alias="cdto" type="shopping.crud.customerDTO"/> 
 	</typeAliases>
 	
 	<mappers>
@@ -18,5 +19,6 @@
 		<mapper resource="config/mybatis/productreview.xml"/>
 		<mapper resource="config/mybatis/productquest_rep.xml"/>
 		<mapper resource="config/mybatis/order.xml"/> 
+		<mapper resource="config/mybatis/customer.xml"/> 	
 	</mappers>
 </configuration>

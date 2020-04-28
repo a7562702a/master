@@ -73,7 +73,8 @@ create table product_quest(
 --product_question reply table
 drop table product_quest_rep;
 create table product_quest_rep(
- product_id varchar2(2) not null,
+ product_rep_num number primary key,
+ product_id varchar2(20) not null,
  product_quest_num number,
  content varchar2(2000) not null
 );
@@ -104,6 +105,7 @@ create table question(
 --question_reply table
 drop table question_reply;
 create table question_reply(
+ question_reply_num number primary key, --sequence
  question_num number not null,
  title varchar2(100) not null,
  content varchar2(2000) not null,

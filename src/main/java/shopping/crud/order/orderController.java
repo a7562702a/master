@@ -13,15 +13,15 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-public class OrderController {
+public class orderController {
 
 	@Autowired
-	OrderDAO dao;
+	orderDAO dao;
 	
-	private static final Logger logger = LoggerFactory.getLogger(OrderController.class);
+	private static final Logger logger = LoggerFactory.getLogger(orderController.class);
 	
 	@RequestMapping(value="/order.do", method = RequestMethod.GET)
-	public String order_insert(OrderDTO dto) {
+	public String order_insert(orderDTO dto) {
 		
 		return "orderList";
 	}//end

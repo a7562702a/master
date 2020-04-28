@@ -1,5 +1,5 @@
 package shopping.crud.order;
 
-public class OrderDTO {
+public class orderDTO {
   
 }

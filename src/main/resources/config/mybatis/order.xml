@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="Order">	
 	
-	<insert id="add" parameterType="shopping.crud.order.OrderDTO">
+	<insert id="add" parameterType="shopping.crud.order.orderDTO">
 	
 	</insert>
 	 

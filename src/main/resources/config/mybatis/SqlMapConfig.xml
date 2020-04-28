@@ -7,7 +7,7 @@
 	   <typeAlias alias="pdto" type="shopping.crud.product.productDTO"/>
 	   <typeAlias alias="qdto" type="shopping.crud.product.ProductQuestDTO"/>
 	   <typeAlias alias="rdto" type="shopping.crud.product.ProductReviewDTO"/>
-	   <typeAlias alias="odto" type="shopping.crud.order.OrderDTO"/> 
+	   <typeAlias alias="odto" type="shopping.crud.order.orderDTO"/> 
 	   <typeAlias alias="cdto" type="shopping.crud.customerDTO"/> 
 	</typeAliases>
 	

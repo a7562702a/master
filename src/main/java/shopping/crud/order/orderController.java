@@ -1,6 +1,7 @@
 package shopping.crud.order;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -22,15 +23,45 @@ public class orderController {
     @Inject
 	@Autowired
 	orderDAO dao;
+    
     @Autowired
     private ServletContext application;
 	private static final Logger logger = LoggerFactory.getLogger(orderController.class);
 	
 	
-	@RequestMapping(value = "/order.do", method = RequestMethod.GET)
-	public String order_write( ) {
-		return "orderWrite";
+	@RequestMapping("/order.do")
+	public ModelAndView order_write(HttpServletRequest request, ModelAndView mov ) { //바로구매
+		ArrayList<orderDTO> product = new ArrayList<orderDTO>();
+		String pid = request.getParameter("pid");
+		String pimg = request.getParameter("pimg");
+		String[] pname = request.getParameterValues("product_name");
+		String[] poption1 = request.getParameterValues("product_option1");
+		String[] poption2 = request.getParameterValues("product_option2");
+		String[] pcount = request.getParameterValues("count");
+		String[] pprice = request.getParameterValues("product_price");
+
+		
+		for(int i = 0; i<pname.length; i++) {
+			orderDTO odto = new orderDTO();
+			odto.setProduct_id(pid);
+			odto.setProduct_img1(pimg);
+			odto.setProduct_name(pname[i]);
+			odto.setProduct_color(poption1[i]);
+			odto.setProduct_size(poption2[i]);
+			odto.setCount(Integer.parseInt(pcount[i]));
+			odto.setProduct_price(pprice[i]);
+			product.add(odto);
+			System.out.println(product.get(i).getProduct_color() + product.get(i).getProduct_size());
+
+		}
+		System.out.println(product.size());
+	
+		mov.addObject("product",product);
+		mov.setViewName("orderList");
+		return mov;
 	}//end
+	
+
 
 	@RequestMapping( "/orderInsert.do")
 	public String order_insert(orderDTO dto) {

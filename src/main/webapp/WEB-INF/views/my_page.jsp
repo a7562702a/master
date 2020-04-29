@@ -145,21 +145,21 @@
 			<div id="import_menu" style="height: 450px;">
 				<div id="orderGG">
 					<span>action1</span>
-					<c:import url="/orderList.do?oid=${shopping_id}"></c:import>
+<%-- 					<c:import url="/orderList.do?oid=${userId}"></c:import> --%>
 				</div>
 				<div id="zzimGG">
 					<span>action2</span>
-					<<c:import url="/zzimList.do"></c:import>
+<%-- 					<c:import url="/zzimList.do"></c:import> --%>
 				</div>
 				<div id="customerGG">
 					<span>action3</span>
 <%-- 					<c:import url="/customerList.do"></c:import> --%>
-					<c:import url="/Detail_join.do?uid=${shopping_id}">
+					<c:import url="/Detail_join.do?uid=${userId}">
 					</c:import>
 				</div>
 				<div id="Detail_join">
 					<span>action4</span>
-					<c:import url="/Detail_join.do?uid=${shopping_id}">
+					<c:import url="/Detail_join.do?uid=${userId}">
 					</c:import>
 				</div>
 			</div>

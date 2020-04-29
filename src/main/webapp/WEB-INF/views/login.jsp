@@ -25,10 +25,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	
- <style type="text/css">
-    *{font-size:20pt; font-weight:bold;  font-family:  Segoe UI Symbol , comic Sans MS ;  }
-    a{font-size:20pt; font-weight:bold; color:blue; text-decoration:none; }
-    a:hover{font-size:26pt; font-weight:bold; color:green; text-decoration:underline; }
+<style type="text/css">
     #LOGIN{
       font-size:26pt; font-weight:bold;
       background: #FFFF00; height: 120px;
@@ -76,7 +73,7 @@
 	</header>
 
 
-	<div class="contents">
+	<div class="container contents">
  
 		 <div id="msg" align="center">
 		 <table  width=750 border=1 cellspacing=0 align="center">
@@ -100,6 +97,8 @@
 		</div>
 
 	</div>
+	
+		
 	<!-- footer -->
 	<footer>
 		<div id="footer">

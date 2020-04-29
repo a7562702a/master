@@ -29,7 +29,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 		
 		//로그인 확인
 //		HttpSession session1 = request.getSession();
-		String google = (String)session.getAttribute("shopping_id");	
+		String google = (String)session.getAttribute("userId");	
 		System.out.println("LoginInterceptor인셉 세션=" + google);
 		
 		

@@ -5,7 +5,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="quest">	
 	<select id="selectAll" resultType="shopping.crud.product.ProductQuestDTO" parameterType="shopping.crud.product.ProductQuestDTO">
-		select * from (select rownum qrn, q.* from product_quest q) where qrn between #{start} and #{end}
+		select * from (
+		select rownum qrn, q.*, (select count(*) from product_quest_rep r where product_quest_num = q.product_quest_num) as qrrn from product_quest q) where qrn between #{start} and #{end}
 	</select>
 	
 	<select id="detail" parameterType="int" resultType="shopping.crud.product.ProductQuestDTO">

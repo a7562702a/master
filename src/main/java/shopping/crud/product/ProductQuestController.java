@@ -113,8 +113,8 @@ public class ProductQuestController {
 	}//end
 	
 	@RequestMapping("/productQuestDelete.do")
-	public String quest_insert(@RequestParam("qid") int questnum) {
-		pdao.dbDelete(questnum);
+	public String quest_insert(@RequestParam("qqid") int qqid) {
+		pdao.dbDelete(qqid);
 		return "redirect:/productQuestList.do";
 	}//end
 	

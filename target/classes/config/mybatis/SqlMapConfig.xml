@@ -15,6 +15,7 @@
 		<mapper resource="config/mybatis/product.xml"/>
 		<mapper resource="config/mybatis/join.xml"/>
 		<mapper resource="config/mybatis/productquest.xml"/>
+		<mapper resource="config/mybatis/productquest_rep.xml"/>
 		<mapper resource="config/mybatis/productreview.xml"/>
 		<mapper resource="config/mybatis/order.xml"/> 
 		<mapper resource="config/mybatis/customer.xml"/> 

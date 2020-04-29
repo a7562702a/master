@@ -17,7 +17,11 @@
 	      collapsible: true
 	    });
 	  } );
-  
+  $(document).ready(function() {
+     
+      $('.noshow').hide();
+      
+   });
 	
   </script>
 </head>
@@ -38,29 +42,30 @@
 		    <tr>
 		      <th scope="row">${bean.qrn}</th>
 		      <td> 
-					<div class="accordion">
-					  <h3>${bean.title}</h3>
-					  <div>
+					<div class="accordion" >
+					  <h3 style="background-color: white; border: white; color: blue;">${bean.title}<c:if test="${bean.qrrn>0}"><font style="color:red;font-size:8pt">&nbsp;&nbsp;[답변완료]</font></c:if></h3>
+					  <div class="noshow" style="border: 1px soild;">
 					    <p>
 					    <c:choose> 
-					    <c:when test="${questpwd==bean.pwd && questnum==bean.product_quest_num}">
-					    	${bean.content} <p>
-					    	<a href="productQuestOut.do">[확인완료]</a><p>
-					    	<a href="productQuestDelete.do?qid=${bean.product_quest_num}">[삭제]</a>
-					    	
-					    	<c:import url="/productquestrep_list.do?pqr=${questnum}" /> 				    	
-					    </c:when>	
-					    <c:otherwise>					    
-						    <form action="productQuestPwd.do">
-							    <input type="hidden" name="product_quest_num" value="${bean.product_quest_num}">
-							    <input type="password" name="pwd">
-							    <button type="submit" >ok</button>
-						    </form> 
-					    </c:otherwise>
+						    <c:when test="${questpwd==bean.pwd && questnum==bean.product_quest_num}">
+						    	${bean.content} <p>
+						    	<a href="productQuestOut.do">[확인완료]</a><p>
+						    	<a href="productQuestDelete.do?qqid=${bean.product_quest_num}">[삭제]</a>
+						    	
+						    	  <c:import url="/productquestrep_list.do?pqr=${questnum}" />   				    	
+						    </c:when>	
+						    <c:otherwise>					    
+							    <form action="productQuestPwd.do">
+								    <input type="hidden" name="product_quest_num" value="${bean.product_quest_num}">
+								    <input type="password" name="pwd">
+								    <button type="submit" >ok</button>
+							    </form> 
+						    </c:otherwise>
 					    			     
 					    </c:choose> 
 					    </p>
 					  </div>
+					  
 					</div>
 				</td>
 			</tr>

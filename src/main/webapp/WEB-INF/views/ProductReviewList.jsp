@@ -18,6 +18,12 @@
 	      collapsible: true
 	    });
 	  } );
+
+  $(document).ready(function() {
+	    
+      $('.noshow').hide(); 
+   
+   });
   </script>
 </head>
 
@@ -47,8 +53,8 @@
 		      </td>
 		      <td>
 		      	<div class="accordion">
-		      		<h3>${bean.content}</h3>
-		      		<div>	
+		      		<h3 style="background-color: white; border: white; color: blue;">${bean.content}</h3>
+		      		<div class="noshow" >	
 		      			<c:if test="${bean.file1!=null}">
 			  				 <img src="${pageContext.request.contextPath}/resources/upload/${bean.file1}"  width=100 height=50 border="0"><br>
 			  			</c:if>

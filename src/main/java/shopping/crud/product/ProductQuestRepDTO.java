@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 public class ProductQuestRepDTO {
 	
-	private int product_quest_num, rrn;
+	private int product_quest_num, rrn, product_rep_num;
 	private String product_id, content;
 	
 	

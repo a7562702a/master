@@ -6,13 +6,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<insert id="add" parameterType="shopping.crud.product.ProductQuestRepDTO">
 		insert into product_quest_rep
-		values(#{product_id}, #{product_quest_num}, #{content} )     
+		values(product_rep_num_seq.nextval, #{product_id}, #{product_quest_num}, #{content} )     
 	</insert>
 	
 	<select id="selectAll" parameterType="int" resultType="shopping.crud.product.ProductQuestRepDTO">  
 		select rownum rrn, qr.* from product_quest_rep qr where product_quest_num = #{product_quest_num} 
 	</select>
 		
+	<delete id="delete" parameterType="int">
+		delete from product_quest_rep where product_rep_num=#{product_rep_num}
+	</delete>
 	
 </mapper>
 

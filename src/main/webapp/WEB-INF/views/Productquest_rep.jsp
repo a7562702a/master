@@ -26,7 +26,7 @@
  		<td>
  	 		<input type="hidden"  name="product_quest_num"  value="${questnum}"> 
 	 		<input type="hidden"  name="product_id"  value="kim">
-	 		=============댓글===============
+	 		=============답변===============
  		</td>
  	</tr>
  	
@@ -55,7 +55,7 @@
     <td width=100 > ${rdto.product_quest_num}  </td> 
  	<td width=200 > ${rdto.content} </td>
  	  <td width=250 align="right"> 
- 	   <input type="button" onclick="location.href='questreply_delete.do?=qrd${rdto.product_quest_num}'" value="삭제">
+ 	   <input type="button" onclick="location.href='questreply_delete.do?qrd=${rdto.product_rep_num}'" value="삭제">
    
  	 </td>     
   </tr>

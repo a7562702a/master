@@ -81,10 +81,12 @@ public class orderController {
 	
 	@RequestMapping("/orderList.do")
 	public String order_list(@RequestParam("oid")String data,Model model){
-		List<orderDTO> product=dao.dbSelectproduct();
+		//List<orderDTO> product=dao.dbSelectproduct();
+		List<orderDTO> order=dao.dbSelectorder(data);
 		System.out.println(data);
 		orderDTO users=dao.dbSelectusers(data);
-		model.addAttribute("product", product);
+		//model.addAttribute("product", product);
+		model.addAttribute("order", order);
 		model.addAttribute("users",users);
 		
 		return "orderList";

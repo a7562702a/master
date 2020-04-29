@@ -21,12 +21,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		 where t1.user_id = #{user_id}
 	</select>
 	
-	<insert id="insertZzim">
+	<insert id="insertZzim" parameterType="shopping.crud.zzim.ZzimDTO">
 		insert into zzim
   		values (#{user_id},zzim_seq.nextval,#{product_id},#{option1},#{option2},#{price},#{count},#{img1})
 	</insert>
 		
-	<delete id ="deleteZzim">
+	<delete id ="deleteZzim" parameterType="int">
 	 	delete
 		  from zzim
 		 where zzim_num = #{num}

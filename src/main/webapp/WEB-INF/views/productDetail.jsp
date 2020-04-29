@@ -6,53 +6,62 @@
 <head>
 <meta charset="UTF-8">
 <title>무신사:제품상세보기</title>
-<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet"	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <style type="text/css">
 #selectedTR {
-	width:450px;
-	text-line:1.1;
-	text-color:gray;
+	width: 450px;
+	text-line: 1.1;
+	text-color: gray;
 	text-align: center;
 }
 </style>
+<link rel="stylesheet" href="./resources/css/Home_css.css">
 
 <script type="text/javascript">
-
-
 	$(function() {
-		$("#option1").on("change", function(){
+		$("#option1").on("change", function() {
 			$("#option2").val("");
 		});
 
-		$("#option2").on("change", function(){
-			var o1 = $("#option1").val();
-			var o2 = $("#option2").val();
-			if(o1==""||o1==null) return;
-			else if(o2==""||o2==null) return;
-			else{
-				$("#selectedTR > tbody:last").append("<tr><td><input type='text' readonly class='form-control-plaintext' id='product_name' name='product_name' value='${dto.product_name}'></td>"
-						+"<td><input id='product_option1' readonly  class='form-control-plaintext' name='product_option1' value='"+o1+"'></td>"
-						+"<td><input id='product_option2' readonly  class='form-control-plaintext' name='product_option2' value='"+o2+"'></td>"
-						+"<td width='50'><input type='number'class='form-control' id = 'count' name='count' value='1'></td>"
-						+"<td><input id = 'product_price' readonly  class='form-control-plaintext' name='product_price' value='${dto.product_price}'></td>"
-						+"<td><button type='button' class='btn btn-dark btn-sm' id='selectCancle'>X</button></td></tr>");
-				$("#option1").val("");
-				$("#option2").val("");
-			}
-			}); 
+		$("#option2")
+				.on(
+						"change",
+						function() {
+							var o1 = $("#option1").val();
+							var o2 = $("#option2").val();
+							if (o1 == "" || o1 == null)
+								return;
+							else if (o2 == "" || o2 == null)
+								return;
+							else {
+								$("#selectedTR > tbody:last")
+										.append(
+												"<tr><td><input type='text' readonly class='form-control-plaintext' id='product_name' name='product_name' value='${dto.product_name}'></td>"
+														+ "<td><input id='product_option1' readonly  class='form-control-plaintext' name='product_option1' value='"+o1+"'></td>"
+														+ "<td><input id='product_option2' readonly  class='form-control-plaintext' name='product_option2' value='"+o2+"'></td>"
+														+ "<td width='50'><input type='number'class='form-control' id = 'count' name='count' value='1'></td>"
+														+ "<td><input id = 'product_price' readonly  class='form-control-plaintext' name='product_price' value='${dto.product_price}'></td>"
+														+ "<td><button type='button' class='btn btn-dark btn-sm' id='selectCancle'>X</button></td></tr>");
+								$("#option1").val("");
+								$("#option2").val("");
+							}
+						});
 
-		
-		 $("#selectCancle").click(function(e){//취소버튼 클릭
+		$("#selectCancle").click(function(e) {//취소버튼 클릭
 			e.preventDefault();
 			alert('취소버튼클릭:');
 			$(this).parent().parent().remove();
-				}); //end 
+		}); //end 
 
 		$("button#orderBtn").click(function(e) {//바로구매 버튼 클릭시
 			e.preventDefault();
@@ -62,7 +71,7 @@
 				alert('상품을 선택하세요');
 				return;
 			} else {
-				form.attr("action", "order.do");		
+				form.attr("action", "order.do");
 				form.submit();
 			}
 
@@ -71,7 +80,7 @@
 		$("button#zzimBtn").click(function(e) {//찜리스트 추가 버튼 클릭시
 			e.preventDefault();
 			var name1 = $("#product_name").val();
-			var form = $("#formproductSelected");
+			var form = $("form#productSelected");
 			if (name1 == "" || name1 == null) {
 				alert('상품을 선택하세요');
 				return;
@@ -95,13 +104,12 @@
 			<c:import url="/main_bar.do" />
 		</div>
 	</header>
-	
-	<div class="conatainer-float" id="category"></div>
 
-	<div class="container" id="productDetail">
+
+	<div class="container contents" id="productDetail">
 		<div class="row row-cols-2">
 			<div class="col">
-				<img src="${dto.product_img1}" width="500" height="600">
+				<img src="${dto.product_img1}" width="500px" height="600px">
 			</div>
 			<div class="col">
 
@@ -111,7 +119,7 @@
 					</tr>
 					<tr>
 						<th>판매가격</th>
-						<td >${dto.product_price}</td>
+						<td>${dto.product_price}</td>
 					</tr>
 					<tr>
 						<th>적립금</th>
@@ -133,7 +141,7 @@
 					</tr>
 					<tr>
 						<th>옵션1</th>
-						<td><select id="option1" name="option1" size=1 >
+						<td><select id="option1" name="option1" size=1>
 								<option value="">---[필수]색상을 선택하세요---</option>
 								<c:forTokens items="${dto.product_color }" var="colorOption"
 									delims=",">
@@ -155,15 +163,15 @@
 						<td colspan="2"><hr></td>
 					</tr>
 				</table>
-				
-				
-<!-----    선택한 상품 출력, get form   ----->
+
+
+				<!-----    선택한 상품 출력, get form   ----->
 
 				<form id="productSelected" class="form-group" action="" method="get">
-				<input type="hidden" name="pid" value="${dto.product_id}">
-				<input type="hidden" name="pimg" value="${dto.product_img1 }">
-					<table id="selectedTR" >
-					<tbody></tbody>
+					<input type="hidden" name="pid" value="${dto.product_id}">
+					<input type="hidden" name="pimg" value="${dto.product_img1 }">
+					<table id="selectedTR">
+						<tbody></tbody>
 					</table>
 					<p>
 					<div>
@@ -181,40 +189,60 @@
 			</div>
 
 		</div>
-		
-<!------   상품 정보     ------->
-		
+
+		<!------   페이지 네비게이션    ------->
+		<br>
+		<hr>
+		<br>
+		<div class="btn-group form-inline" role="group" align="center">
+			<a href="#product_info" class="btn btn-outline-secondary" role="button">상품 정보</a>
+			<a href="#product_info" class="btn btn-outline-secondary" role="button">상품 후기</a>
+		</div>
+		<br>
+
+
+		<!------   상품 정보     ------->
+
 		<div class="row row-cols-1" id="product_info">
-		
-			<p>
-			<hr>
+
+			<br><br><br>
 			<h4>제품 상세정보</h4>
-			<br><br>
-			
-				<img src="${dto.product_img1 }" style="width:50%; height:50%; margin:1rem;">
-			<br><br>
-				<img src="${dto.product_img2 }" style="width:50%; height:50%; margin:1rem;">
-			<br><br>${dto.product_desc }
-			<br><br>
-				<img src="${dto.product_img3 }" style="width:50%; height:50%; margin:1rem;">
-			<br><br><br><br>
+			<br>
+			<br> <img src="${dto.product_img1 }"
+				style="width: 500px; height: 600px; margin: 1rem;"> <br>
+			<br> <img src="${dto.product_img2 }"
+				style="width: 500px; height: 600px; margin: 1rem;"> <br>
+			<br>${dto.product_desc } <br>
+			<br> <img src="${dto.product_img3 }"
+				style="width: 500px; height: 600px; margin: 1rem;"> <br>
+			<br>
+			<br>
+			<br>
 			<p>
 		</div>
-		
-		
-		
-<!------   상품 문의, 리뷰 게시판    ------->		
 
-		<%-- 		<div class="row row-cols-1" id="product_review">
-		<c:import url="/productReviewList.do" />
-		
+
+
+		<!------   상품 문의, 리뷰 게시판    ------->
+
+		<div class="row row-cols-3 contents" id="product_review">
+			<h2>REVIEW</h2>
+			<c:import url="/productReviewList.do" />
+			<br>
+			<br>
+			<br>
+			<br>
 		</div>
 
-		<div class="row row-cols-1" id="product_question">
-		<c:import url="/productQuestList.do" />
-		
+		<div class="row row-cols-3 contents" id="product_question">
+			<h2>상품문의</h2>
+			<c:import url="/productQuestList.do" />
+			<br>
+			<br>
+			<br>
+			<br>
 		</div>
-		 --%>
+
 
 
 

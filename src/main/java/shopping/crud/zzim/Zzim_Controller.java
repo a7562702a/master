@@ -1,6 +1,7 @@
 package shopping.crud.zzim;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -16,6 +17,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
 
 
 @Controller
@@ -33,11 +36,41 @@ public class Zzim_Controller {
 	}//end
 	
 	@RequestMapping("/zzimInsert.do")
-	public String zzim_insert(ZzimDTO dto) {
-		zzimDAO.dbInsertZzim(dto);
-		
-	  return "zzimList";
+	public ModelAndView zzim_insert(HttpServletRequest request, ModelAndView mov, HttpSession session ) { //바로구매
+		ArrayList<ZzimDTO> product = new ArrayList<ZzimDTO>();
+		//String userId = (String)session.getAttribute("userId");
+		//String userEmail = (String)session.getAttribute("userEmail");
+		String pid = request.getParameter("pid");
+		String pimg = request.getParameter("pimg");
+		String[] pname = request.getParameterValues("product_name");
+		String[] poption1 = request.getParameterValues("product_option1");
+		String[] poption2 = request.getParameterValues("product_option2");
+		String[] pcount = request.getParameterValues("count");
+		String[] pprice = request.getParameterValues("product_price");
+
+		for(int i = 0; i<pname.length; i++) {
+			ZzimDTO dto = new ZzimDTO();
+			//dto.setUser_id(userId);
+			dto.setUser_id("aaaa");	
+			dto.setProduct_id(pid);
+			dto.setImg1(pimg);
+			dto.setProduct_name(pname[i]);
+			dto.setOption1(poption1[i]);
+			dto.setOption2(poption2[i]);
+			dto.setCount(Integer.parseInt(pcount[i]));
+			dto.setPrice(Integer.parseInt(pprice[i]));
+			product.add(dto);
+			//System.out.println(dto.getUser_id()+dto.getOption1());
+			zzimDAO.dbInsertZzim(dto);
+
+		}
+		//System.out.println(product.size());
+	
+		mov.addObject("list",product);
+		mov.setViewName("zzimList");
+		return mov;
 	}//end
+	
 	
 	@RequestMapping("/zzimList.do")
 	public String zzim_select(HttpServletRequest request, Model model) {

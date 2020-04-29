@@ -27,25 +27,55 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+<style type="text/css">
+.nav_cs ul li {
+	list-style: none;
+	padding-left: 0px;
+	float: left;
+	width: <%= 100/6%>%;
+}
 
+#customer_table1 ul li {
+	list-style: none;
+	padding-left: 0px;
+	float: left;
+	width: 10%;
+}
+
+#customer_table1 ul li:last-child {
+	width: 70%;
+}
+
+
+#customer_table2 ul li {
+	list-style: none;
+	padding-left: 0px;
+	float: left;
+	width: 10%;
+}
+
+#customer_table2 ul li:last-child {
+	width: 70%;
+}
+
+
+.btn-link {
+	width: 100%;
+}
+</style>
 </head>
 
 <body>
 	<!-- main_menu -->
-	<header>
-		<div id="main_bar">
-			<c:import url="/main_bar.do" />
-		</div>
-	</header>
+<!-- 	<header> -->
+<!-- 		<div id="main_bar"> -->
+<%-- 			<c:import url="/main_bar.do" /> --%>
+<!-- 		</div> -->
+<!-- 	</header> -->
 
-	<!-- 
-	<div class="contents">
-	
-	</div>
- -->
 
 	<div class="container">
-		<div>
+		<div align="center">
 			<h1>
 				<a href="">CUSTOMER CENTER</a>
 			</h1>
@@ -63,57 +93,64 @@
 			</ul>
 
 		</div>
+<br>
+		<!-- 제품문의 -->
+		<div align="right">문의갯수: ${Gtotal}/${GGtotal} &nbsp;</div>
+		<br>
+		<div id="customer_table1">
+			<div class="accordion" id="accordionExample">
+				<div class="card">
+					<div class="card-header" id="headingOne">
+						<h5 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse"
+								data-target="#collapseOne" aria-expanded="true"
+								aria-controls="collapseOne">
+								<ul>
+									<li>번호</li>
+									<li>분류</li>
+									<li>제목</li>
+								</ul>
+							</button>
+						</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="customer_table2">
+			<c:forEach var="customerdto" items="${listcustomer}">
+				<div class="accordion" id="accordionExample">
+					<div class="card">
+						<div class="card-header" id="headingOne">
+							<h5 class="mb-0">
+								<button class="btn btn-link" type="button"
+									data-toggle="collapse" data-target="#collapseOne"
+									aria-expanded="true" aria-controls="collapseOne">
+									<ul>
+										<li>${customerdto.qna_Num}</li>
+										<li>${customerdto.qna_Kategorie}</li>
+										<li>${customerdto.qna_title}</li>
+									</ul>
+								</button>
+							</h5>
+						</div>
 
-		<!--  -->
-		<div>
-			<table width=800 border=1 cellspacing=0>
-				<tr align="right">
-					<td colspan="3">레코드갯수: ${Gtotal}/${GGtotal} &nbsp;</td>
-				</tr>
-
-				<tr>
-					<td>번호</td>
-					<td>분류</td>
-					<td>제목</td>
-				</tr>
-
-				<c:forEach var="dto_customer" items="${list_customer}">
-					<div class="accordion" id="accordionExample">
-						<div class="card">
-							<div class="card-header" id="headingOne">
-								<h5 class="mb-0">
-									<button class="btn btn-link" type="button"
-										data-toggle="collapse" data-target="#collapseOne"
-										aria-expanded="true" aria-controls="collapseOne">
-										<tr>
-											<td>${dto_customer.QnA_num}</td>
-											<td>${dto_customer.QnA_Kategorie}</td>
-											<td>${dto_customer.QnA_title}</td>
-										</tr>
-									</button>
-								</h5>
-							</div>
-
-							<div id="collapseOne" class="collapse show"
-								aria-labelledby="headingOne" data-parent="#accordionExample">
-								<div class="card-body">${dto_customer.QnA_detail}</div>
-							</div>
+						<div id="collapseOne" class="collapse show"
+							aria-labelledby="headingOne" data-parent="#accordionExample">
+							<div class="card-body">${customerdto.qna_detail}</div>
 						</div>
 					</div>
-				</c:forEach>
-			</table>
+				</div>
+			</c:forEach>
 
 		</div>
+	</div>
 
 
-
-
-
-				<!-- footer -->
-				<footer>
-					<div id="footer">
-						<c:import url="/footer.do" />
-					</div>
-				</footer>
+	<!-- footer -->
+	<footer>
+		<div id="footer">
+			<c:import url="/footer.do" />
+		</div>
+	</footer>
 </body>
 </html>

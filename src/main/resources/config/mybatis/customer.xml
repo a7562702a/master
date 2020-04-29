@@ -10,7 +10,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <!-- 	</select> -->
 	
 	<select id="selectAll" parameterType="shopping.crud.customerDTO" resultType="shopping.crud.customerDTO">
-	   select h.* from  (select * from QnA  where #{skey} like '%' ||  #{sval} ||  '%'  order by QnA_num desc
+	   select h.* from  (select * from QnA  where #{skey} like '%' ||  #{sval} ||  '%'  order by QnA_num 
 	   ) h where QnA_num between #{start} and  #{end} 
 	</select>
 	
@@ -33,7 +33,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<select id="countAllSearch"  parameterType="shopping.crud.customerDTO"  resultType="int" >
 		select count(*) from QnA
-		where ${skey} like '%' || #{sval} || '%'  
+		where ${skey} like '%' || #{sval} || '%'
 	</select>
 
 	

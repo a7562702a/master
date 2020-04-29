@@ -1,12 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>MUSINSA STORE</title>
+
 </head>
 <body>
+
+
+	
  	<div class="container">
  	<table width='700' border='1' cellspacing='0' cellpadding=5>
 	  <tr align="center">
@@ -25,5 +31,7 @@
   	<a href="UpdateBF_join.do?uid=${dto.user_id}"><button>수정</button> </a><br>
   	<a href="Delete_join.do?uid=${dto.user_id}"><button>회원탈퇴</button> </a>
 	</div>
+	
+
 </body>
 </html>

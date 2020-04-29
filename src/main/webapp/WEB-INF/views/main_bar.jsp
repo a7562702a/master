@@ -23,7 +23,7 @@
 <script type="text/javascript">
 $(window).ready(function(){
 	 var sessionCK = "${shopping_id}";
-	if( sessionCK != "null"){
+	if( sessionCK == ""||  sessionCK == "null"|| sessionCK == null){
 		$(document).ready(function(){
 			  $('.user_out').show()
 			  $('.user_in').hide()

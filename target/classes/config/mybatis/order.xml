@@ -24,7 +24,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	 
 	</select>
 	
+	<select id="selectorder" parameterType="shopping.crud.order.orderDTO" resultType="shopping.crud.order.orderDTO">
+	  select * from order_detail where user_id =#{user_id}
+	</select>
 	
+	<update id="orderComplete">
+	
+	
+	
+	</update>
 
 	 
 </mapper>

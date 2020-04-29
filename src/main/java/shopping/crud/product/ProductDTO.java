@@ -1,6 +1,13 @@
 package shopping.crud.product;
 
 import org.springframework.web.multipart.MultipartFile;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+@Data
+@Getter
+@Setter
 
 public class ProductDTO {
 	private String product_id;

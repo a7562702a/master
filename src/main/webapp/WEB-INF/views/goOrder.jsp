@@ -33,18 +33,18 @@
   </td>
   
   </tr>
-  <c:forEach var="order" items="${product}" varStatus="a">
+  <c:forEach var="order" items="${pid}">
 
   <tr><td rowspan="6" align="center"><input type="checkbox" name="product_id" value=""></td></tr>
   <tr>
   <td rowspan="5"  align="center" >
-    <img  src="${order.product_img1}" width="200" height="150" name="upload_f">
+    <img  src="${pageContext.request.contextPath}/resources/upload/${order.product_img1}" width="200" height="150" name="upload_f">
   </td>
   </tr>
-  <tr><td colspan="2">상품이름:<input type="text" readonly name="product_name" value="${order.product_name}" readonly></td></tr>
-  <tr><td colspan="2">상품색상:<input type="text"  readonly name="option1" value="${order.product_color}" ></td></tr>
-  <tr><td colspan="2">상품사이즈:<input type="text" readonly name="option2" value="${order.product_size}" ></td></tr>
-  <tr><td colspan="2">상품가격:<input type="text" readonly name="product_price" id="price" value="${order.product_price }" readonly></td></tr>
+  <tr><td colspan="2">상품이름:<input type="text" name="product_name" value="${order.product_name}" readonly></td></tr>
+  <tr><td colspan="2">상품색상:<input type="text" name="option1" value="${order.product_color}" ></td></tr>
+  <tr><td colspan="2">상품사이즈:<input type="text" name="option2" value="${order.product_size}" ></td></tr>
+  <tr><td colspan="2">상품가격:<input type="text" name="product_price" id="price" value="${order.product_price }" readonly></td></tr>
   
   </c:forEach>
   <tr><td colspan="3">총금액 : <input type="text" name="price"  id = 'pricetotal' size=10 value=""  readonly></td></tr>

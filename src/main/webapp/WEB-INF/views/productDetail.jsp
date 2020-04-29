@@ -24,10 +24,6 @@
 
 <script type="text/javascript">
 
-	$(document).ready(function() {
-		$("#category").load("main_bar.html");
-		$("#footer").load("footer.html");
-	});
 
 	$(function() {
 		$("#option1").on("change", function(){
@@ -41,57 +37,65 @@
 			else if(o2==""||o2==null) return;
 			else{
 				$("#selectedTR > tbody:last").append("<tr><td><input type='text' readonly class='form-control-plaintext' id='product_name' name='product_name' value='${dto.product_name}'></td>"
-						+"<td><input id='product_option1' readonly  class='form-control-plaintext' name='product_option1' value='"+o1+"/"+o2+"'></td>"
+						+"<td><input id='product_option1' readonly  class='form-control-plaintext' name='product_option1' value='"+o1+"'></td>"
+						+"<td><input id='product_option2' readonly  class='form-control-plaintext' name='product_option2' value='"+o2+"'></td>"
 						+"<td width='50'><input type='number'class='form-control' id = 'count' name='count' value='1'></td>"
 						+"<td><input id = 'product_price' readonly  class='form-control-plaintext' name='product_price' value='${dto.product_price}'></td>"
-						+"<td><button type='button' class='btn btn-dark btn-sm' id='selectCancle' onclick='deleteSelect("+this+")''>X</button></td></tr>");
+						+"<td><button type='button' class='btn btn-dark btn-sm' id='selectCancle'>X</button></td></tr>");
 				$("#option1").val("");
 				$("#option2").val("");
 			}
 			}); 
 
 		
-		/* $("#selectedTR>tbody>tr>td>button").click(function(e){//취소버튼 클릭
+		 $("#selectCancle").click(function(e){//취소버튼 클릭
 			e.preventDefault();
 			alert('취소버튼클릭:');
 			$(this).parent().parent().remove();
-				}); //end */
+				}); //end 
 
-		$("#orderBtn").click(function() {//바로구매 버튼 클릭시
+		$("button#orderBtn").click(function(e) {//바로구매 버튼 클릭시
+			e.preventDefault();
 			var name1 = $("#product_name").val();
-			var form = $("#productSelected");
+			var form = $("form#productSelected");
 			if (name1 == "" || name1 == null) {
 				alert('상품을 선택하세요');
 				return;
 			} else {
-				form.method = "get";
-				form.action = "order.do";
+				form.attr("action", "order.do");		
 				form.submit();
 			}
 
 		});
 
-		$("#zzimBtn").click(function() {//찜리스트 추가 버튼 클릭시
+		$("button#zzimBtn").click(function(e) {//찜리스트 추가 버튼 클릭시
+			e.preventDefault();
 			var name1 = $("#product_name").val();
-			var form = $("#productSelected");
+			var form = $("#formproductSelected");
 			if (name1 == "" || name1 == null) {
 				alert('상품을 선택하세요');
 				return;
 			} else {
-				form.method = "get";
-				form.action = "zzimInsert.do";
+				form.attr("action", "zzimInsert.do");
 				form.submit();
 			}
 		}); //end
 
 	});//function end.
 
-	function deleteSelect(hi){
+	/*function deleteSelect(hi){
 		alert('취소버튼클릭:'+hi.html());
-		}
+		}*/
 </script>
 </head>
 <body>
+	<!-- main_menu -->
+	<header>
+		<div id="main_bar">
+			<c:import url="/main_bar.do" />
+		</div>
+	</header>
+	
 	<div class="conatainer-float" id="category"></div>
 
 	<div class="container" id="productDetail">
@@ -151,8 +155,13 @@
 						<td colspan="2"><hr></td>
 					</tr>
 				</table>
-				<form id="productSelected" class="form-group">
+				
+				
+<!-----    선택한 상품 출력, get form   ----->
+
+				<form id="productSelected" class="form-group" action="" method="get">
 				<input type="hidden" name="pid" value="${dto.product_id}">
+				<input type="hidden" name="pimg" value="${dto.product_img1 }">
 					<table id="selectedTR" >
 					<tbody></tbody>
 					</table>
@@ -172,16 +181,29 @@
 			</div>
 
 		</div>
+		
+<!------   상품 정보     ------->
+		
 		<div class="row row-cols-1" id="product_info">
+		
 			<p>
-				<img src="${product_img1 }">
-			<p>
-				<img src="${product_img2 }">
-			<p>${product_desc }
-			<p>
-				<img src="${product_img3 }">
+			<hr>
+			<h4>제품 상세정보</h4>
+			<br><br>
+			
+				<img src="${dto.product_img1 }" style="width:50%; height:50%; margin:1rem;">
+			<br><br>
+				<img src="${dto.product_img2 }" style="width:50%; height:50%; margin:1rem;">
+			<br><br>${dto.product_desc }
+			<br><br>
+				<img src="${dto.product_img3 }" style="width:50%; height:50%; margin:1rem;">
+			<br><br><br><br>
 			<p>
 		</div>
+		
+		
+		
+<!------   상품 문의, 리뷰 게시판    ------->		
 
 		<%-- 		<div class="row row-cols-1" id="product_review">
 		<c:import url="/productReviewList.do" />

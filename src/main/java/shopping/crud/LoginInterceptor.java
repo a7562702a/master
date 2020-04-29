@@ -18,11 +18,18 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 	    //jsp문서에서 세션session내장개체
-
+		HttpSession session= request.getSession();
+	    String referer = request.getHeader("Referer");
+		session.setAttribute("referer", referer);
+		session.setAttribute("pathuid", request.getParameter("uid"));
+		System.out.println("------------------------------------------------------------");
+		System.out.println("회원정보수정 리퍼럴 세션에 저장하기 전 값 ="+ referer);
+		System.out.println("회원정보수정 리퍼럴 세션에 저장하기 후 값 ="+ session.getAttribute(referer));
+		System.out.println("------------------------------------------------------------");
 		
 		//로그인 확인
-		HttpSession session = request.getSession();
-		String google = (String)session.getAttribute("daum");	
+//		HttpSession session1 = request.getSession();
+		String google = (String)session.getAttribute("shopping_id");	
 		System.out.println("LoginInterceptor인셉 세션=" + google);
 		
 		

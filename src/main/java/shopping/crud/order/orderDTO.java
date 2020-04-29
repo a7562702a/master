@@ -17,4 +17,4 @@ public class orderDTO {
 	private String user_name, user_phone, status,file1;
 	private java.util.Date wdate;
 	private MultipartFile upload_f;
-}
+}//orderDTO end

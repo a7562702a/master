@@ -26,10 +26,10 @@
 <script src="http://malsup.github.com/jquery.cycle2.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
 <style type="text/css">
 .contents #my_page_header {
-	width: 100% border: 1px solid #000;
+	width: 100%
+	border: 1px solid #000;
 }
 
 .contents #my_page_header #nav {
@@ -43,7 +43,7 @@
 .contents #my_page_header #import_menu {
 	width: 85%;;
 	height: 100%;
-	/* 	float: right; */
+/* 	float: right; */
 	box-sizing: border-box;
 	background: #0ff;
 }
@@ -56,7 +56,7 @@
 	background-color: #f1f1f1;
 }
 
-.contents #my_page_header #nav li a {
+.contents #my_page_header #nav li a { 
 	display: block;
 	color: #000;
 	padding: 8px 16px;
@@ -76,41 +76,36 @@
 		$('#Detail_join').hide(); //페이지를 로드할 때 숨길 요소
 		
 		$('#action1').click(function() {
-			$('#orderGG').show(); 
+			$('#Detail_join').show(); 
 			$('#zzimGG').hide(); 
 			$('#customerGG').hide(); 
-			$('#Detail_join').hide(); 
+			$('#orderGG').hide(); 
 			return false;
 		});
 		$('#action2').click(function() {
-			$('#orderGG').hide(); 
+			$('#Detail_join').hide(); 
 			$('#zzimGG').show(); 
 			$('#customerGG').hide(); 
-			$('#Detail_join').hide(); 
+			$('#orderGG').hide(); 
 			return false;
 		});
 		$('#action3').click(function() {
-			$('#orderGG').hide(); 
+			$('#Detail_join').hide(); 
 			$('#zzimGG').hide(); 
 			$('#customerGG').show(); 
-			$('#Detail_join').hide(); 
+			$('#orderGG').hide(); 
 			return false;
 		});
 		$('#action4').click(function() {
-			$('#orderGG').hide(); 
-			$('#zzimGG').hide(); 
-			$('#customerGG').hide(); 
-			$('#Detail_join').show(); 
-			return false;
-		});
-		$('#action5').click(function() {
-			$('#orderGG').hide(); 
-			$('#zzimGG').hide(); 
-			$('#customerGG').hide(); 
 			$('#Detail_join').hide(); 
+			$('#zzimGG').hide(); 
+			$('#customerGG').hide(); 
+			$('#orderGG').show(); 
+			
 			return false;
 		});
 	});
+	  
 </script>
 </head>
 
@@ -125,43 +120,48 @@
 	<div class="container contents">
 		<div id="my_page_header">
 			<!-- Nav -->
-			<nav id="nav" style="height: 100%;">
-<!-- 			
-				<!-- List group -->
-				<div class="list-group" id="myList" role="tablist">
-					<a class="list-group-item list-group-item-action active"
-						data-toggle="list" href="#Detail_join" role="tab" style="text-align: center;">회원정보관련</a> <a
-						class="list-group-item list-group-item-action" data-toggle="list"
-						href="#zzimGG" role="tab" style="text-align: center;">찜리스트</a> <a
-						class="list-group-item list-group-item-action" data-toggle="list"
-						href="#customerGG" role="tab" style="text-align: center;">고객문의</a> <a
-						class="list-group-item list-group-item-action" data-toggle="list"
-						href="#orderGG" role="tab" style="text-align: center;">주문내역</a> <a
-						class="list-group-item list-group-item-action"
-						href="logout.do" role="tab" style="text-align: center;">로그아웃</a>
-				</div>
+			<nav id="nav" style="height: 1500px;">
+				<ul class="w3-sidebar w3-bar-block" style="width: 100%;"  align="center">
+					<li><button id="action1">
+						<span class="icon solid fa-envelope">회원정보수정</span></button></li>
+					<li><button id="action2" class="w3-bar-item w3-butto">
+						<span class="icon solid fa-th">찜리스트</span></button></li>
+					<li><button id="action3" class="w3-bar-item w3-butto">
+						<span class="icon solid fa-user">고객문의</span></button></li>
+					<li ><button id="action4" class="w3-bar-item w3-butto">
+						<span class="icon solid fa-home">주문내역</span></button></li>
+					<li><a href="logout.do"><button id="action5">
+						<span class="icon solid fa-envelope">로그아웃</span></button></a></li>
+				</ul>
 
+				
 			</nav>
 
-			<!-- Tab panes -->
-			<div class="tab-content">
-				<div class="tab-pane active" id="Detail_join" role="tabpanel">
+			<div id="import_menu" style="height: 1500px;">
+				<div id="Detail_join">
+					<span>action1</span>
 					<c:import url="/Detail_join.do?uid=${userId}">
-					</c:import></div>
-				<div class="tab-pane" id="zzimGG" role="tabpanel">
-				<c:import url="/zzimList.do"></c:import>
+					</c:import>
 				</div>
-				<div class="tab-pane" id="customerGG" role="tabpanel">
-				<c:import url="/customerList.do"></c:import>
 				</div>
-				<div class="tab-pane" id="orderGG" role="tabpanel">
-<%-- 				<c:import url="/order.do"></c:import> --%>
+				<div id="zzimGG">
+					<span>action2</span>
+					<c:import url="/zzimList.do"></c:import>
 				</div>
+				<div id="customerGG">
+					<span>action3</span>
+					<c:import url="/customerList.do"></c:import>
+				</div>
+				<div id="orderGG">
+					<span>action4</span>
+<%-- 					<c:import url="/order.do"></c:import> --%>
+					<c:import url="/Detail_join.do?uid=${userId}">
+					</c:import>
 			</div>
+
 		</div>
 
 	</div>
-
 
 
 

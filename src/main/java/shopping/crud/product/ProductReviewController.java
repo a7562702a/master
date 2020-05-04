@@ -31,7 +31,7 @@ public class ProductReviewController {
 	
 	
 	@RequestMapping(value="/productReviewList.do")
-	public String productR_select(HttpServletRequest request, Model model) {
+	public String productR_select(HttpServletRequest request, Model model, @RequestParam("prid") String prid) {
 		 String pnum;
 		 int pageNUM, pagecount;
 		 int start, end; 
@@ -62,24 +62,24 @@ public class ProductReviewController {
 	
 		
 		
-		List<ProductReviewDTO> PD = pdao.dbSelect(start,end);
+		List<ProductReviewDTO> PD = pdao.dbSelect(start,end,prid);
 		 model.addAttribute("pageNUM", pageNUM);
 		 model.addAttribute("startpage", startpage);
 		 model.addAttribute("endpage", endpage);
 		 model.addAttribute("pagecount", pagecount);
-		
-		 
+		 model.addAttribute("prid", prid); 
 		 model.addAttribute("PD",PD);
 		 return "ProductReviewList";
 	}//end
 	
 	@RequestMapping(value="/productReview.do")
-	public String productR_write() {	
+	public String productR_write(@RequestParam("prid") String prid,Model model) {
+		model.addAttribute("prid", prid);
 		return "ProductReviewWrite";
 	}//end
 	
 	@RequestMapping("/productReviewInsert.do")
-	public String productR_insert(ProductReviewDTO dto,HttpServletRequest request) {
+	public String productR_insert(ProductReviewDTO dto,HttpServletRequest request,@RequestParam("prid") String prid) {
 		String path=application.getRealPath("/resources/upload");
 		String img=dto.getUpload_f().getOriginalFilename();
 		File file = new File(path, img); 
@@ -88,13 +88,13 @@ public class ProductReviewController {
 		}catch (Exception e) {System.out.println(e);	}		
 		dto.setFile1(img);
 		pdao.dbInsert(dto);
-		return "redirect:/productReviewList.do";
+		return "redirect:/productDetail.do?pid="+prid;
 	}//end
 
 	@RequestMapping("/productReviewDelete.do")
-	public String quest_insert(@RequestParam("rid") int questnum) {
+	public String quest_insert(@RequestParam("rid") int questnum,@RequestParam("prid") String prid) {
 		pdao.dbDelete(questnum);
-		return "redirect:/productReviewList.do";
+		return "redirect:/productDetail.do?pid="+prid;
 	}//end
 	
 }//BoardReplyController class END

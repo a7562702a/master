@@ -17,10 +17,11 @@ public class ProductReviewDAO {
 @Autowired
 SqlSessionTemplate temp;
 	
- 	public List<ProductReviewDTO> dbSelect(int start, int end){
+ 	public List<ProductReviewDTO> dbSelect(int start, int end, String prid){
  		ProductReviewDTO dto = new ProductReviewDTO();
  		dto.setStart(start);
  		dto.setEnd(end);
+ 		dto.setProduct_id(prid);
  		List<ProductReviewDTO> list=temp.selectList("review.selectAll",dto);
 	  return list;
 	}//end

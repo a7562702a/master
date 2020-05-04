@@ -23,7 +23,7 @@ public class ProductQuestRepController {
 	@RequestMapping(value="/questreply.do", method=RequestMethod.GET)
 	public String reply_insert(ProductQuestRepDTO dto) {
 		rdao.dbInsert(dto);
-		return "redirect:/productQuestList.do";
+		return "redirect:/productDetail.do?pid=101a00001";
 	}//end
 	
 	@RequestMapping(value="/productquestrep_list.do", method=RequestMethod.GET)
@@ -39,7 +39,7 @@ public class ProductQuestRepController {
 	@RequestMapping(value="/questreply_delete.do", method=RequestMethod.GET)
 	public String reply_delete(@RequestParam("qrd") int qrd) {
 	  rdao.dbDelete(qrd);
-	  return "redirect:/productQuestList.do";
+	  return "redirect:/productDetail.do?pid=101a00001";
 	}//end
 	
 		

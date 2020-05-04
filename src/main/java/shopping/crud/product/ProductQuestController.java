@@ -32,7 +32,7 @@ public class ProductQuestController {
 	
 	
 	@RequestMapping(value="/productQuestList.do")
-	public String quest_select(HttpServletRequest request, Model model) {
+	public String quest_select(HttpServletRequest request, Model model, @RequestParam("prid") String prid) {
 		String pnum;
 		 int pageNUM, pagecount;
 		 int start, end; 
@@ -63,24 +63,24 @@ public class ProductQuestController {
 	
 		
 		
-		List<ProductQuestDTO> PD = pdao.dbSelect(start,end);
+		List<ProductQuestDTO> PD = pdao.dbSelect(start,end,prid);
 		model.addAttribute("pageNUM", pageNUM);
 		model.addAttribute("startpage", startpage);
 		model.addAttribute("endpage", endpage);
 		model.addAttribute("pagecount", pagecount);
-		
+		model.addAttribute("prid", prid);
 		model.addAttribute("PD",PD);
 		return "ProductQuestList";
 	}//end
 	
 	@RequestMapping(value="/productQuestDetail.do")
-	public String quest_detail(@RequestParam("qid") int data, Model model) {
+	public String quest_detail(@RequestParam("qid") int data, Model model, @RequestParam("prid") String prid) {
 		model.addAttribute("dto",pdao.dbDetail(data));
 		return "redirect:/productQuestList.do";
 	}//end
 	
 	@RequestMapping(value="/productQuestPwd.do")
-	public String quest_pwd(Model model, ProductQuestDTO dto,HttpServletResponse response, HttpSession session) throws Exception{			
+	public String quest_pwd(Model model, ProductQuestDTO dto,HttpServletResponse response, HttpSession session, @RequestParam("prid") String prid) throws Exception{			
 		ProductQuestDTO result=pdao.dbpwd(dto);	
 		session.setAttribute("questpwd",dto.getPwd());
 		session.setAttribute("questnum",dto.getProduct_quest_num());
@@ -92,30 +92,31 @@ public class ProductQuestController {
 				   + "window.history.back();"
 				   + "</script>").flush();
 			return "redirect:/productQuestList.do";
-		}return "redirect:/productQuestDetail.do?qid="+dto.getProduct_quest_num();	
+		}return "redirect:/productDetail.do?pid="+prid;	
 	}
 	
 	@RequestMapping(value="/productQuestOut.do")
-	public String quest_remove( HttpSession session) {	
+	public String quest_remove( HttpSession session, @RequestParam("prid") String prid) {	
 		session.removeAttribute("questpwd");
-		return "redirect:/productQuestList.do";
+		return "redirect:/productDetail.do?pid="+prid;
 	}//end
 	
 	@RequestMapping(value = "/productQuest.do")
-	public String quest_write() {
+	public String quest_write(@RequestParam("prid") String prid,Model model) {
+		model.addAttribute("prid",prid);
 		return "ProductQuestWrite";
 	}//end
 	
 	@RequestMapping("/productQuestInsert.do")
-	public String quest_insert(ProductQuestDTO dto) {
+	public String quest_insert(ProductQuestDTO dto, @RequestParam("prid") String prid) {
 		pdao.dbInsert(dto);
-		return "redirect:/productQuestList.do";
+		return "redirect:/productDetail.do?pid="+prid;
 	}//end
 	
 	@RequestMapping("/productQuestDelete.do")
-	public String quest_insert(@RequestParam("qqid") int qqid) {
+	public String quest_delete(@RequestParam("qqid") int qqid, @RequestParam("prid") String prid) {
 		pdao.dbDelete(qqid);
-		return "redirect:/productQuestList.do";
+		return "redirect:/productDetail.do?pid="+prid;
 	}//end
 	
 }//BoardReplyController class END

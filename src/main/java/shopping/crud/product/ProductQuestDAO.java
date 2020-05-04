@@ -17,10 +17,11 @@ public class ProductQuestDAO {
 @Autowired
 SqlSessionTemplate temp;
 	
- 	public List<ProductQuestDTO> dbSelect(int start, int end){
+ 	public List<ProductQuestDTO> dbSelect(int start, int end, String prid){
  		 ProductQuestDTO dto = new ProductQuestDTO();
  		 dto.setStart(start);
  		 dto.setEnd(end);
+ 		 dto.setProduct_id(prid);
  		 List<ProductQuestDTO> list=temp.selectList("quest.selectAll",dto);
 	  return list;
 	}//end

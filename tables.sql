@@ -120,6 +120,7 @@ create table question(
  file1 varchar2(100)
 );
 
+
 --question_reply table
 drop table question_reply;
 create table question_reply(

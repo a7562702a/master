@@ -47,3 +47,5 @@ commit;
 --상품리뷰 더미1
 
 insert into product_review values(1234,'1234','blue','so good',3,null);
+
+commit;

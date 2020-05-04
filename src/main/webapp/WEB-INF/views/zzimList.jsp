@@ -23,7 +23,7 @@
 				var rowData = new Array();
 				var tdArr = new Array();
 				var checkbox = $("input:checkbox[name=ab1]:checked");
-				
+				var form = $("form#productSelected");
 				// 체크된 체크박스 값을 가져온다
 				checkbox.each(function(i) {
 		
@@ -36,6 +36,7 @@
 					rowData.push(tr.text());
 					
 					// td.eq(0)은 체크박스 이므로  td.eq(1)의 값부터 가져온다.
+					var id = td.eq(1).children().eq(2).val();
 					var img1 = td.eq(1).children().eq(1).val();     //text()+", "
 					var product = td.eq(2).text();
 					var option = td.eq(3).text().split("/");
@@ -43,7 +44,10 @@
 					var option2 = option[1].replace("옵션2 : ","");
 					var count = td.eq(4).children().eq(1).val();                //.text()+", ";
 					var price = td.eq(5).children().eq(0).val();
+
+
 					
+					console.log("id : " + id);
 					console.log("img1 : " + img1);
 					console.log("product : " + product);
 					console.log("option1 : " + option1);
@@ -51,8 +55,20 @@
 					console.log("count : " + count);
 					console.log("price : " + price);
 
+					$("#selectedTR > tbody:last")
+					.append(
+							"<tr><td><input type='hidden' readonly class='form-control-plaintext' id='product_id' name='product_id' value='"+id+"'></td>"
+									+ "<td><input type='hidden' readonly class='form-control-plaintext' id='product_img' name='product_img' value='"+img1+"'></td>"
+									+ "<td><input type='hidden' readonly class='form-control-plaintext' id='product_name' name='product_name' value='"+product+"'></td>"
+									+ "<td><input type='hidden' id='product_option1' readonly  class='form-control-plaintext' name='product_option1' value='"+option1+"'></td>"
+									+ "<td><input type='hidden' id='product_option2' readonly  class='form-control-plaintext' name='product_option2' value='"+option2+"'></td>"
+									+ "<td width='50'><input type='hidden' class='form-control' id = 'count' name='count' value='"+count+"'></td>"
+									+ "<td><input type='hidden' id = 'product_price' readonly  class='form-control-plaintext' name='product_price' value='"+price+"'></td></tr>");
+
 				});
-				
+
+				form.attr("action", "order.do");
+				form.submit();
 			});
 
 			
@@ -156,7 +172,7 @@
 			<c:set var = "price" value ="${zdto.price}"> </c:set>
 			<tr align="center">
 				<td align="center"  style ="width: 50px "><input type="checkbox" class ="zzimcheck" name="ab1" value="${zdto.zzim_num}"></td>
-				<td><img src ="${zdto.img1}" width="75px" height="75px"><input type="hidden" value ="${zdto.img1}"></td>
+				<td><img src ="${zdto.img1}" width="75px" height="75px"><input type="hidden" value ="${zdto.img1}"><input type="hidden" value ="${zdto.product_id}"></td>
 				<td> <a href ="#">${zdto.product_name}</a> </td>
 				<td> 옵션1 : ${zdto.option1 } /<br> 옵션2 : ${zdto.option2 }</td>
 				<td><input type="button" value ="-" onclick="downCount(${status.count});">&nbsp;&nbsp;<input type ="label" id ="count${status.count}" style="text-align:center; width:30px; none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" value ="${zdto.count}" disabled="disabled" >&nbsp;&nbsp;<input type="button" value ="+" onclick="upCount(${status.count});"></td>
@@ -175,6 +191,12 @@
 		<input type ="button" value ="쇼핑 계속">
 		<input type ="button" value ="주문하기" id ="order">
 	</div>
+	
+	<form id="productSelected" class="form-group" action="" method="get">
+		<table id="selectedTR">
+			<tbody></tbody>
+		</table>	
+	</form>
 
 </div>
 </body>

@@ -60,4 +60,7 @@ public class orderDAO {
 	  }//end
 	
 	
+	public void dbdelete(int data) {
+		temp.delete("order.del",data);
+	}
 }//orderDAO end

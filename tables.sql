@@ -47,8 +47,9 @@ create table order_detail(
  orderdate date default sysdate,
  status varchar2(10)
 );
+drop sequence opk_num_seq;
+create sequence opk_num_seq;
 
---product review table
 drop table product_review;
 create table product_review(
  review_num number primary key, --sequence
@@ -58,6 +59,9 @@ create table product_review(
  point number,
  file1 varchar2(100)
 );
+
+drop sequence review_num_seq;
+create sequence review_num_seq;
 
 
 --product_question table
@@ -70,6 +74,10 @@ create table product_quest(
  content varchar2(2000) not null
 );
 
+drop sequence product_quest_num_seq;
+create sequence product_quest_num_seq;
+
+
 --product_question reply table
 drop table product_quest_rep;
 create table product_quest_rep(
@@ -78,6 +86,16 @@ create table product_quest_rep(
  product_quest_num number,
  content varchar2(2000) not null
 );
+
+drop sequence product_rep_num_seq;
+create sequence product_rep_num_seq;
+
+alter table product_quest_rep drop constraint product_quest_num_fk;
+alter table product_quest_rep add  constraint  product_quest_num_fk 
+foreign key(product_quest_num) references product_quest(product_quest_num) 
+on delete cascade;
+
+commit;
 
 --zzimList table
 drop table zzim;

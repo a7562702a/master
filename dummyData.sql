@@ -11,9 +11,12 @@ insert into product values('402e00001', '킹콩 에나멜슬리퍼', '밋밋한 
 commit;
 
 --오더 더미데이터
-insert into order_detail values (1,'aaaa1','aaaa','302d00001','모두의 블루종 JK','resources/images/302d00001_1.jpg','블랙','M',59000,1,'tester','seoul','seoul2','01011223344',sysdate,'A');
-insert into order_detail values (2,'aaaa2','aaaa','101a00001','베이직 셔츠','resources/images/101a00001_1.jpg','베이지','S',29000,1,'tester','seoul','seoul2','01011223344',sysdate,'A');
-insert into order_detail values (3,'aaaa3','aaaa','102b00001', '감각적 티셔츠','resources/images/102b00001_1.jpg','네이비','L',29000,2,'tester','seoul','seoul2','01011223344',sysdate,'B');
+insert into order_detail values (opk_num_seq.nextval,'aaaa00001','aaaa','302d00001','모두의 블루종JK','resources/images/302d00001_1.jpg','블랙','M',59000,1, 'tester','seoul','seoul2','01011223344',sysdate,'A');
+insert into order_detail values (opk_num_seq.nextval,'aaaa00001','aaaa','101a00001','베이직 셔츠', 'resources/images/101a00001_1.jpg','베이지','S',29000,1,'tester','seoul','seoul2','01011223344', sysdate,'A');
+insert into order_detail values (opk_num_seq.nextval,'aa00002','aaaa','102b00001', '감각적 티셔츠','resources/images/102b00001_1.jpg','네이비','L',29000,2,'tester','seoul','seoul2','01011223344',sysdate,'B');
+insert into order_detail values (opk_num_seq.nextval,'aaaa00002','aaaa','101a00001','베이직 셔츠','resources/images/101a00001_1.jpg','베이지','S',29000,1,'tester','seoul','seoul2','01011223344', sysdate,'A');
+
+
 insert into order_detail values (4,'aaaa4','aaaa','402e00001', '킹콩 에나멜슬리퍼','resources/images/402e00001_1.jpg','오렌지','240',19000,1,'tester','seoul','seoul2','01011223344',sysdate,'D');
 insert into order_detail values (5,'ab34','aa34','302d00001','모두의 블루종 JK','resources/images/302d00001_1.jpg','블랙','M',59000,1,'client','seoul','seoul2','01012345678',sysdate,'C');
 insert into order_detail values (6,'aa34','aa34','102b00001','감각적 티셔츠','resources/images/102b00001_1.jpg','네이비','M',29000,1,'client','seoul','seoul2','01012345678',sysdate,'A');

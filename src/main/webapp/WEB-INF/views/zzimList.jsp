@@ -10,6 +10,7 @@
 <meta charset="UTF-8">
 <title> [guestList.jsp] </title>
 <link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="./resources/css/Home_css.css">
 
 	<script type="text/javascript">	
 

@@ -12,6 +12,8 @@
   
         
 </script>
+<link rel="stylesheet" href="./resources/css/Home_css.css">
+<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <style type="text/css">
 .scale{
 transform:scale(1);
@@ -32,7 +34,7 @@ transform:scale(1.2);
 </style>	
 </head>
 <body>
-<div class="container">
+<div class="container contents">
 
 <form name="myform" action="#" method="get" >
 <div align="center"><font size="15" color="blue" >주문목록.배송조회</font></div>
@@ -46,21 +48,21 @@ transform:scale(1.2);
  <table width=900  border=0  cellspacing=1 align="center">
  <tr bgcolor="lightblue"><td colspan="2"><font size="5">배송정보</font></td></tr>
  <tr>
- <td>이름:${users.user_name} </td>
+ <td>이름:${order.user_name} </td>
  </tr>
  <tr>
- <td>배송주소:${users.user_address1}</td>
+ <td>배송주소:${order.user_address1}</td>
  </tr>
  <tr>
- <td>상세주소:${users.user_address2}</td>
+ <td>상세주소:${order.user_address2}</td>
  </tr>
  <tr>
- <td>연락처:${users.user_phone}</td>
+ <td>연락처:${order.user_phone}</td>
  </tr>
  
  <tr align="center" >
 	 <td colspan="3" align="left" >
-	  	배송상황: "배송중"
+	  	배송상황: "${order.status}"
 	 </td >
  </tr>
   

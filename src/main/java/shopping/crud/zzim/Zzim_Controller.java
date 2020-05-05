@@ -38,8 +38,8 @@ public class Zzim_Controller {
 		
 		ArrayList<ZzimDTO> product = new ArrayList<ZzimDTO>();
 		String userId = (String) session.getAttribute("userId");
-		String[] pid = request.getParameterValues("pid");
-		String[] pimg = request.getParameterValues("pimg");
+		String[] pid = request.getParameterValues("product_id");
+		String[] pimg = request.getParameterValues("product_img");
 		String[] pname = request.getParameterValues("product_name");
 		String[] poption1 = request.getParameterValues("product_option1");
 		String[] poption2 = request.getParameterValues("product_option2");

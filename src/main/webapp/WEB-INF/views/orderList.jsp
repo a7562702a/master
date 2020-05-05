@@ -14,6 +14,8 @@
   
         
 </script>
+<link rel="stylesheet" href="./resources/css/Home_css.css">
+<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <style type="text/css">
 .scale{
 transform:scale(1);
@@ -35,7 +37,13 @@ transform:scale(1.2);
 </style>	
 </head>
 <body>
-<div class="container">
+	<!-- main_menu -->
+	<header>
+		<div id="main_bar">
+			<c:import url="/main_bar.do" />
+		</div>
+	</header>
+<div class="container contents">
 
 <form name="myform" action="orderInsert.do" method="get" >
 <font size="15" color="blue" >주문/결제</font>
@@ -65,10 +73,10 @@ transform:scale(1.2);
   
   <td>상품번호 &nbsp;: <input type="text" name="product_id" value="${order.product_id}" readonly></td>
   </tr>
-  <tr><td >상품가격 &nbsp;:<input type="text" name="price" value="${order.product_price }"readonly></td></tr>
+  <tr><td >상품가격 &nbsp;:<input type="text" name="product_price" value="${order.product_price }"readonly></td></tr>
   <tr><td >상품이름 &nbsp;:<input type="text" name="product_name" value="${order.product_name}"readonly></td></tr>
-  <tr><td >상품옵션1:<input type="text" name="option1" value="${order.product_color}"readonly></td></tr>
-  <tr><td >상품옵션2:<input type="text" name="option2" value="${order.product_size}"readonly></td></tr>
+  <tr><td >상품옵션1:<input type="text" name="product_option1" value="${order.product_color}"readonly></td></tr>
+  <tr><td >상품옵션2:<input type="text" name="product_option2" value="${order.product_size}"readonly></td></tr>
   <input type="hidden" value="${total=total+order.product_price }">
   </c:forEach>
 

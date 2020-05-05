@@ -46,7 +46,7 @@
 							else {
 								$("#selectedTR > tbody:last")
 										.append(
-												"<tr><td> <input type=hidden name='pid' value='${dto.product_id}'><input type='hidden' name='pimg' value='${dto.product_img1 }'>"
+												"<tr><td> <input type=hidden name='product_id' value='${dto.product_id}'><input type='hidden' name='product_img' value='${dto.product_img1 }'>"
 														+ "<input type='text' readonly class='form-control-plaintext' id='product_name' name='product_name' value='${dto.product_name}'></td>"
 														+ "<td><input id='product_option1' readonly  class='form-control-plaintext' name='product_option1' value='"+o1+"'></td>"
 														+ "<td><input id='product_option2' readonly  class='form-control-plaintext' name='product_option2' value='"+o2+"'></td>"

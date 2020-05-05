@@ -74,7 +74,7 @@ $(window).ready(function(){
 					<ul class="user_in">
 						<li class="Cart"><a class="text-secondary" href=""> <i
 								class="fa fa-shopping-cart" aria-hidden="true">장바구니</i>
-						</a></li> |
+						</a></li> 
 						<li class="membership"><a class="text-secondary" href="my_page.do">
 								<i class="fa fa-user-circle-o" aria-hidden="true">마이페이지</i>
 						</a></li>
@@ -86,10 +86,10 @@ $(window).ready(function(){
 				<div class="bottom_menu">
 					<ul>
 						<li><a class="text-secondary" href="">NEW</a></li>
-						<li><a class="text-secondary" href="">상의</a></li>
-						<li><a class="text-secondary" href="">하의</a></li>
-						<li><a class="text-secondary" href="">아우터</a></li>
-						<li><a class="text-secondary" href="">잡화</a></li>
+						<li><a class="text-secondary" href="productList.do?category=101">상의</a></li>
+						<li><a class="text-secondary" href="productList.do?category=201">하의</a></li>
+						<li><a class="text-secondary" href="productList.do?category=301">아우터</a></li>
+						<li><a class="text-secondary" href="productList.do?category=401">잡화</a></li>
 					</ul>
 				</div>
 		</nav>

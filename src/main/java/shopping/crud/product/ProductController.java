@@ -39,7 +39,7 @@ public class ProductController {
 		int categoryNum = Integer.parseInt(request.getParameter("category"));
 		List<ProductDTO> list = pdao.productList(categoryNum);
 		model.addAttribute("productList", list);
-		return "productList.do";
+		return "productList";
 	}// List end
 
 	@RequestMapping(value = "/productDetail.do", method = RequestMethod.GET)

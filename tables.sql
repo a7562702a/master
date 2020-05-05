@@ -31,7 +31,7 @@ create table product(
 drop table order_detail;
 create table order_detail(
  opk_num number primary key, --sequence
- order_num varchar(20) not null, --user_id + 숫자
+ order_num varchar2(40) not null, --user_id + 숫자
  user_id varchar2(20) not null,
  product_id varchar2(20) not null,
  product_name varchar2(100) not null,

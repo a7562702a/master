@@ -68,50 +68,6 @@
 	color: white;
 }
 </style>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('#orderGG').show(); //페이지를 로드할 때 표시할 요소
-		$('#zzimGG').hide(); //페이지를 로드할 때 숨길 요소
-		$('#customerGG').hide(); //페이지를 로드할 때 숨길 요소
-		$('#Detail_join').hide(); //페이지를 로드할 때 숨길 요소
-		
-		$('#action1').click(function() {
-			$('#orderGG').show(); 
-			$('#zzimGG').hide(); 
-			$('#customerGG').hide(); 
-			$('#Detail_join').hide(); 
-			return false;
-		});
-		$('#action2').click(function() {
-			$('#orderGG').hide(); 
-			$('#zzimGG').show(); 
-			$('#customerGG').hide(); 
-			$('#Detail_join').hide(); 
-			return false;
-		});
-		$('#action3').click(function() {
-			$('#orderGG').hide(); 
-			$('#zzimGG').hide(); 
-			$('#customerGG').show(); 
-			$('#Detail_join').hide(); 
-			return false;
-		});
-		$('#action4').click(function() {
-			$('#orderGG').hide(); 
-			$('#zzimGG').hide(); 
-			$('#customerGG').hide(); 
-			$('#Detail_join').show(); 
-			return false;
-		});
-		$('#action5').click(function() {
-			$('#orderGG').hide(); 
-			$('#zzimGG').hide(); 
-			$('#customerGG').hide(); 
-			$('#Detail_join').hide(); 
-			return false;
-		});
-	});
-</script>
 </head>
 
 <body>
@@ -130,7 +86,7 @@
 				<!-- List group -->
 				<div class="list-group" id="myList" role="tablist">
 					<a class="list-group-item list-group-item-action active"
-						data-toggle="list" href="#Detail_join" role="tab" style="text-align: center;">회원정보관련</a> <a
+						data-toggle="list" href="#Detail_joinGG" role="tab" style="text-align: center;">회원정보관련</a> <a
 						class="list-group-item list-group-item-action" data-toggle="list"
 						href="#zzimGG" role="tab" style="text-align: center;">찜리스트</a> <a
 						class="list-group-item list-group-item-action" data-toggle="list"
@@ -145,7 +101,7 @@
 
 			<!-- Tab panes -->
 			<div class="tab-content">
-				<div class="tab-pane active" id="Detail_join" role="tabpanel">
+				<div class="tab-pane active" id="Detail_joinGG" role="tabpanel">
 					<c:import url="/Detail_join.do?uid=${userId}">
 					</c:import></div>
 				<div class="tab-pane" id="zzimGG" role="tabpanel">

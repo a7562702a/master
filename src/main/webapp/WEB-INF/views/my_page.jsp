@@ -26,10 +26,10 @@
 <script src="http://malsup.github.com/jquery.cycle2.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
 <style type="text/css">
 .contents #my_page_header {
-	width: 100%
-	border: 1px solid #000;
+	width: 100% border: 1px solid #000;
 }
 
 .contents #my_page_header #nav {
@@ -43,8 +43,9 @@
 .contents #my_page_header #import_menu {
 	width: 85%;;
 	height: 100%;
-/* 	float: right; */
+	/* 	float: right; */
 	box-sizing: border-box;
+	background: #0ff;
 }
 
 .contents #my_page_header #nav ul {
@@ -55,7 +56,7 @@
 	background-color: #f1f1f1;
 }
 
-.contents #my_page_header #nav li a { 
+.contents #my_page_header #nav li a {
 	display: block;
 	color: #000;
 	padding: 8px 16px;
@@ -68,48 +69,30 @@
 }
 </style>
 <script type="text/javascript">
-	$(document).ready(function() {
-		$('#orderGG').show(); //페이지를 로드할 때 표시할 요소
-		$('#zzimGG').hide(); //페이지를 로드할 때 숨길 요소
-		$('#customerGG').hide(); //페이지를 로드할 때 숨길 요소
-		$('#Detail_join').hide(); //페이지를 로드할 때 숨길 요소
-		
-		$('#action1').click(function() {
-			$('#orderGG').show(); 
-			$('#zzimGG').hide(); 
-			$('#customerGG').hide(); 
-			$('#Detail_join').hide(); 
-			return false;
-		});
-		$('#action2').click(function() {
-			$('#orderGG').hide(); 
-			$('#zzimGG').show(); 
-			$('#customerGG').hide(); 
-			$('#Detail_join').hide(); 
-			return false;
-		});
-		$('#action3').click(function() {
-			$('#orderGG').hide(); 
-			$('#zzimGG').hide(); 
-			$('#customerGG').show(); 
-			$('#Detail_join').hide(); 
-			return false;
-		});
-		$('#action4').click(function() {
-			$('#orderGG').hide(); 
-			$('#zzimGG').hide(); 
-			$('#customerGG').hide(); 
-			$('#Detail_join').show(); 
-			return false;
-		});
-		$('#action5').click(function() {
-			$('#orderGG').hide(); 
-			$('#zzimGG').hide(); 
-			$('#customerGG').hide(); 
-			$('#Detail_join').hide(); 
-			return false;
-		});
-	});
+
+
+$(window).ready(function(){
+var stringVal = "${Previous_page}";
+if(stringVal.indexOf("home") !== -1){
+	window.alert("홈에서");
+	$("#zzimG, #zzimGG").addClass("active");
+	$("#zzimG").attr("aria-selected","true");
+}
+else if(stringVal.indexOf("productDetail.do") !== -1){
+	window.alert("구매페이지에서");
+	$("#zzimG, #zzimGG").addClass("active");
+	$("#zzimG").attr("aria-selected","true");
+}
+else if(stringVal.indexOf("zzimInsert.do") !== -1){
+	window.alert("찜리스트에서");
+	$("#orderG, #orderGG").addClass("active");
+	$("#orderG").attr("aria-selected","true");
+}
+else{
+	$("#zzimG, #zzimGG").addClass("active");
+	$("#zzimG").attr("aria-selected","true");
+}
+});
 </script>
 </head>
 
@@ -121,51 +104,50 @@
 		</div>
 	</header>
 
-	<div class="contents">
+	<div class="container contents">
 		<div id="my_page_header">
 			<!-- Nav -->
-			<nav id="nav" style="height: 450px;">
-				<ul class="w3-sidebar w3-bar-block" style="width: 100%;"  align="center">
-					<li ><button id="action1" class="w3-bar-item w3-butto">
-						<span class="icon solid fa-home">주문내역</span></button></li>
-					<li><button id="action2" class="w3-bar-item w3-butto">
-						<span class="icon solid fa-th">찜리스트</span></button></li>
-					<li><button id="action3" class="w3-bar-item w3-butto">
-						<span class="icon solid fa-user">고객문의</span></button></li>
-					<li><button id="action14">
-						<span class="icon solid fa-envelope">회원정보수정</span></button></li>
-					<li><a href="logout.do"><button id="action5">
-						<span class="icon solid fa-envelope">로그아웃</span></button></a></li>
-				</ul>
+			<nav id="nav" style="height: 100%;">
+<!-- 			
+				<!-- List group -->
+				<div class="list-group" id="myList" role="tablist">
+					<a class="list-group-item list-group-item-action"  id="zzimG" 			data-toggle="list"
+						href="#zzimGG" 			role="tab" style="text-align: center;">찜리스트</a> 
+						
+					<a class="list-group-item list-group-item-action"  id="customerG" 		data-toggle="list"
+						href="#customerGG" 		role="tab" style="text-align: center;">고객문의</a> 
+						
+					<a class="list-group-item list-group-item-action"  id="orderG"			data-toggle="list"
+						href="#orderGG" 		role="tab" style="text-align: center;">주문내역</a> 
+						
+					<a class="list-group-item list-group-item-action"  id="Detail_joinG"	data-toggle="list" 
+						href="#Detail_joinGG" 	role="tab" style="text-align: center;">회원정보관련</a> 
+						
+					<a class="list-group-item list-group-item-action"
+						href="logout.do" 		role="tab" style="text-align: center;">로그아웃</a>
+				</div>
 
-				
 			</nav>
 
-			<div id="import_menu" style="height: 450px;">
-				<div id="orderGG">
-					<span>action1</span>
-<%-- 					<c:import url="/orderList.do?oid=${userId}"></c:import> --%>
-				</div>
-				<div id="zzimGG">
-					<span>action2</span>
-<%-- 					<c:import url="/zzimList.do"></c:import> --%>
-				</div>
-				<div id="customerGG">
-					<span>action3</span>
-<%-- 					<c:import url="/customerList.do"></c:import> --%>
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane" id="Detail_joinGG" role="tabpanel">
 					<c:import url="/Detail_join.do?uid=${userId}">
-					</c:import>
+					</c:import></div>
+				<div class="tab-pane" id="zzimGG" role="tabpanel">
+				<c:import url="/zzimList.do"></c:import>
 				</div>
-				<div id="Detail_join">
-					<span>action4</span>
-					<c:import url="/Detail_join.do?uid=${userId}">
-					</c:import>
+				<div class="tab-pane" id="customerGG" role="tabpanel">
+				<c:import url="/customerList.do"></c:import>
+				</div>
+				<div class="tab-pane" id="orderGG" role="tabpanel">
+				<c:import url="/orderList.do"></c:import>
 				</div>
 			</div>
-
 		</div>
 
 	</div>
+
 
 
 
@@ -176,7 +158,6 @@
 			<c:import url="/footer.do" />
 		</div>
 	</footer>
-	</div>
 
 
 

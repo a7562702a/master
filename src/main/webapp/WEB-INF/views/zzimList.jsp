@@ -126,8 +126,9 @@
 	</script>
 </head>
 <body>
-<div class ="container">
-	
+<div class="container contents">
+	<div  align="left" style="margin-left: 14%; background-color: #f9f9fe; padding:1%; padding-left:2%; padding-right:2%; border-radius: 0  20px 20px 0;" >
+		
 	<div>
 		<h1 align="center"> ZZIM LIST</h1>
 	</div>
@@ -156,7 +157,7 @@
 			<c:set var = "price" value ="${zdto.price}"> </c:set>
 			<tr align="center">
 				<td align="center"  style ="width: 50px "><input type="checkbox" class ="zzimcheck" name="ab1" value="${zdto.zzim_num}"></td>
-				<td><img src ="${zdto.img1}" width="75px" height="75px"><input type="hidden" value ="${zdto.img1}"></td>
+				<td><img src ="${zdto.img1}" width="75px" height="75px"><input type="hidden" value ="${zdto.img1}"><input type="hidden" value ="${zdto.product_id}"></td>
 				<td> <a href ="#">${zdto.product_name}</a> </td>
 				<td> 옵션1 : ${zdto.option1 } /<br> 옵션2 : ${zdto.option2 }</td>
 				<td><input type="button" value ="-" onclick="downCount(${status.count});">&nbsp;&nbsp;<input type ="label" id ="count${status.count}" style="text-align:center; width:30px; none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" value ="${zdto.count}" disabled="disabled" >&nbsp;&nbsp;<input type="button" value ="+" onclick="upCount(${status.count});"></td>
@@ -175,7 +176,13 @@
 		<input type ="button" value ="쇼핑 계속">
 		<input type ="button" value ="주문하기" id ="order">
 	</div>
-
+	
+	<form id="productSelected" class="form-group" action="" method="get">
+		<table id="selectedTR">
+			<tbody></tbody>
+		</table>	
+	</form>
+</div>
 </div>
 </body>
 </html>

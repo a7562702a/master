@@ -8,8 +8,6 @@
 <meta charset="UTF-8">
 <title>main_bar</title>
 
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="./resources/css/Home_css.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -72,9 +70,9 @@
 						<li class="membership"><a class="text-secondary"
 							href="my_page.do"> <i class="fa fa-user-circle-o"
 								aria-hidden="true"> 마이페이지</i>
-						</a></li> 
-						<li class="membership"><a class="text-secondary" href="my_page.do">
-								<i class="fa fa-user-circle-o" aria-hidden="true">마이페이지</i>
+						</a></li> |
+						<li class="logout"><a class="text-secondary" href=""> <i
+								class="fa fa-share" aria-hidden="true"> 로그아웃</i>
 						</a></li>
 			</div>
 		</div>
@@ -82,14 +80,18 @@
 
 
 
+
 				<!-- 하단메뉴 -->
 				<div class="bottom_menu">
-					<ul>
+					<ul class="b_list">
 						<li><a class="text-secondary" href="">NEW</a></li>
+						<li><a class="text-secondary" href="">BEST</a></li>
 						<li><a class="text-secondary" href="productList.do?category=101">상의</a></li>
 						<li><a class="text-secondary" href="productList.do?category=201">하의</a></li>
 						<li><a class="text-secondary" href="productList.do?category=301">아우터</a></li>
-						<li><a class="text-secondary" href="productList.do?category=401">잡화</a></li>
+						<li><a class="text-secondary" href="productList.do?category=401">신발</a></li>
+						<li><a class="text-secondary" href="productList.do?category=401">가방</a></li>
+						<li><a class="text-secondary" href="productList.do?category=401">악세사리</a></li>
 					</ul>
 				</div>
 		</nav>

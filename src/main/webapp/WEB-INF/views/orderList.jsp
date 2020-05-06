@@ -10,21 +10,10 @@
 <script type="text/javascript" src="resources/script/cart.js" />
 <meta charset="UTF-8">
 <title> [orderList.jsp] </title>
-	<script type="text/javascript">
-     window.onload=function(){
-    	 var obj = $("[name=product_price]");
-         var chkArray = new Array(); // 배열 선언
-         $('input:text[name=product_price]').each(function() { // text의 value 값을 가지고 온다.
-             var a =   a + this.value;  //이거대신 변수하나 선언해서 더하면 
-         });
-
-         $('#pricetotal').val(a);
-         
-	</script>
-
-
-<link rel="stylesheet" href="./resources/css/Home_css.css">
-<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script type="text/javascript">
+  
+        
+</script>
 <style type="text/css">
 .scale{
 transform:scale(1);
@@ -44,28 +33,22 @@ transform:scale(1.2);
 .sa{font-size:12pt;color:red;}
 .b{margin-left:400pt;}
 </style>	
-
-	
 </head>
 <body>
-	<!-- main_menu -->
-	<header>
-		<div id="main_bar">
-			<c:import url="/main_bar.do" />
-		</div>
-	</header>
-<div class="container contents">
+<div class="container">
 
 <form name="myform" action="orderInsert.do" method="get" >
 <font size="15" color="blue" >주문/결제</font>
 
 <hr size="9" color="grey" style="width:100%" align="left">
 
+<!-- <input type="hidden" name="oid" value="aaaa"> -->
  <table width=900  border=1 cellspacing=2 align="center">
   
   <tr bgcolor="orange">
   <td colspan="3">
-  <font size="6">상품정보</font> 
+  <font size="6">상품정보</font>
+ 
   </td>
   </tr>
   
@@ -82,10 +65,10 @@ transform:scale(1.2);
   
   <td>상품번호 &nbsp;: <input type="text" name="product_id" value="${order.product_id}" readonly></td>
   </tr>
-  <tr><td >상품가격 &nbsp;:<input type="text" name="product_price" value="${order.product_price }"readonly></td></tr>
+  <tr><td >상품가격 &nbsp;:<input type="text" name="price" value="${order.product_price }"readonly></td></tr>
   <tr><td >상품이름 &nbsp;:<input type="text" name="product_name" value="${order.product_name}"readonly></td></tr>
-  <tr><td >상품옵션1:<input type="text" name="product_option1" value="${order.product_color}"readonly></td></tr>
-  <tr><td >상품옵션2:<input type="text" name="product_option2" value="${order.product_size}"readonly></td></tr>
+  <tr><td >상품옵션1:<input type="text" name="option1" value="${order.product_color}"readonly></td></tr>
+  <tr><td >상품옵션2:<input type="text" name="option2" value="${order.product_size}"readonly></td></tr>
   <input type="hidden" value="${total=total+order.product_price }">
   </c:forEach>
 
@@ -97,6 +80,10 @@ transform:scale(1.2);
 
  <table width=900  border=1  cellspacing=0 align="center">
  <tr bgcolor="lightblue"><td colspan="2"><font size="5">배송정보</font></td></tr>
+  <tr>
+ <td>ID:</td>
+ <td><input type="text" name="user_id" value="${user.user_id }" readonly></td>
+ </tr>
  <tr>
  <td>이름:</td>
  <td><input type="text" name="user_name" value="${user.user_name }" readonly></td>
@@ -116,9 +103,10 @@ transform:scale(1.2);
  
    <tr align="center" >
   	 <td colspan="3" align="left" >
-  	  	배송상황: <input type="text" name="status" value="주문중" class="sa" readonly >
+  	  	배송상황: <input type="text" name="status" value="A" class="sa" readonly >
   	</td  >
    </tr>
+  
    <tr>
    <td align="center" colspan="3">
          <input type="submit" value="결제">&nbsp;
@@ -130,14 +118,3 @@ transform:scale(1.2);
 </div> 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-

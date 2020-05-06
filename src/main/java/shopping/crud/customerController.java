@@ -51,7 +51,7 @@ public class customerController {
 		 skey=request.getParameter("keyfield");
 		 sval=request.getParameter("keyword");
 		 if(skey==null || sval==null || skey=="" || sval=="") {
-			 skey="QnA_title"; sval="";
+			 skey="question_title"; sval="";
 		 }
 		 
 		 
@@ -95,8 +95,6 @@ public class customerController {
 		System.out.println("------------------------ 컨트롤러 리스트 체크");
 		System.out.println(listcustomer);
 		System.out.println();
-		System.out.println(listcustomer.get(0).getQna_Num());
-		System.out.println(listcustomer.get(1).getQna_Num());
 		System.out.println("------------------------");
 		
 		mav.addObject("Gtotal", Gtotal); //��ȸ����

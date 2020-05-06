@@ -69,7 +69,8 @@
 
 
 
-	<div class="container">
+	<div class="container contents">
+	<div  align="left" style="margin-left: 14%; background-color: #f9f9fe; padding:1%; padding-left:2%; padding-right:2%; border-radius: 0  20px 20px 0;" >
 		<div align="center">
 			<h1>
 				<a href="">CUSTOMER CENTER</a>
@@ -121,9 +122,9 @@
 									data-toggle="collapse" data-target="#collapseOne"
 									aria-expanded="true" aria-controls="collapseOne">
 									<ul>
-										<li>${customerdto.qna_Num}</li>
-										<li>${customerdto.qna_Kategorie}</li>
-										<li>${customerdto.qna_title}</li>
+										<li>${customerdto.question_num}</li>
+										<li>${customerdto.question_Category}</li>
+										<li>${customerdto.question_title}</li>
 									</ul>
 								</button>
 							</h5>
@@ -131,7 +132,7 @@
 
 						<div id="collapseOne" class="collapse show"
 							aria-labelledby="headingOne" data-parent="#accordionExample">
-							<div class="card-body">${customerdto.qna_detail}</div>
+							<div class="card-body">${customerdto.question_content}</div>
 						</div>
 					</div>
 				</div>
@@ -139,13 +140,7 @@
 
 		</div>
 	</div>
+</div>
 
-
-	<!-- footer -->
-	<footer>
-		<div id="footer">
-			<c:import url="/footer.do" />
-		</div>
-	</footer>
 </body>
 </html>

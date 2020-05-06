@@ -143,12 +143,7 @@
   
   
 <body>
-	<!-- main_menu -->
-	<header>
-		<div id="main_bar">
-			<c:import url="/main_bar.do" />
-		</div>
-	</header>
+
 
 	<div class="container contents">
 	<div  align="left" style="margin-left: 14%; background-color: #f9f9fe; padding:1%; padding-left:2%; padding-right:2%; border-radius: 0  20px 20px 0;" >
@@ -199,8 +194,8 @@
 			<div align="center">
 			<button type="submit" class="btn btn-primary" value="Add" name="submit" onclick="chk()"style="width: 32%;">수정</button>
 			<button type="reset" class="btn btn-primary"  id="RESET" style="width: 32%;">취소</button>
-			<a href="Delete_join.do?uid=${dto.user_id}"><button class="btn btn-primary"  style="width: 32%;">회원탈퇴</button>
-			</a>
+<%-- 			<a href="Delete_join.do?uid=${dto.user_id}"><button class="btn btn-primary"  style="width: 32%;">회원탈퇴</button> --%>
+<!-- 			</a> -->
 			</div>
 		</form>
 		</div>

@@ -4,10 +4,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="order">	
-    <insert id="add" parameterType="shopping.crud.order.orderDTO">
+    <insert id="add">
      insert into order_detail values(
-     opk_num_seq.nextval,#{order_num},#{user_id},#{product_id},#{product_name},#{product_img},#{option1}
-     ,#{option2},#{price},#{count},#{user_name},#{user_address1},#{user_address2},#{user_phone},sysdate,'주문중')
+     order_detail_seq.nextval,#{order_num},#{user_id},#{product_id},#{product_name},#{product_img},#{option1}
+     ,#{option2},#{price},#{count},#{user_name},#{user_address1},#{user_address2},#{user_phone},sysdate,'A')
     
     </insert>
 	
@@ -33,4 +33,3 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <!-- 	</select> -->
 	 
 </mapper>
-	

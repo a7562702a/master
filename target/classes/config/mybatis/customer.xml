@@ -33,7 +33,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<select id="countAllSearch"  parameterType="shopping.crud.customerDTO"  resultType="int" >
 		select count(*) from question
-		whereuser_id = #{user_id} and ${skey} like '%' || #{sval} || '%'
+		where user_id = #{user_id} and ${skey} like '%' || #{sval} || '%'
 	</select>
 
 	

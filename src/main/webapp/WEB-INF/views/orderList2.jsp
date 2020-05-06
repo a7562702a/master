@@ -35,6 +35,7 @@ transform:scale(1.2);
 </head>
 <body>
 <div class="container contents">
+	<div  align="left" style="margin-left: 14%; background-color: #f9f9fe; padding:1%; padding-left:2%; padding-right:2%; border-radius: 0  20px 20px 0;" >
 
 <form name="myform" action="#" method="get" >
 <div align="center"><font size="15" color="blue" >주문목록.배송조회</font></div>
@@ -48,23 +49,18 @@ transform:scale(1.2);
  <table width=900  border=0  cellspacing=1 align="center">
  <tr bgcolor="lightblue"><td colspan="2"><font size="5">배송정보</font></td></tr>
  <tr>
- <td>이름:${order.user_name} </td>
+ <td>이름:${users.user_name} </td>
  </tr>
  <tr>
- <td>배송주소:${order.user_address1}</td>
+ <td>배송주소:${users.user_address1}</td>
  </tr>
  <tr>
- <td>상세주소:${order.user_address2}</td>
+ <td>상세주소:${users.user_address2}</td>
  </tr>
  <tr>
- <td>연락처:${order.user_phone}</td>
+ <td>연락처:${users.user_phone}</td>
  </tr>
- 
- <tr align="center" >
-	 <td colspan="3" align="left" >
-	  	배송상황: "${order.status}"
-	 </td >
- </tr>
+
   
   
  </table><p>
@@ -78,16 +74,17 @@ transform:scale(1.2);
   </tr>
   
   <c:set var="total" value="0" ></c:set>
-  <c:forEach var="order" items="${order}" varStatus="status">
+  <c:forEach var="order" items="${orders}" varStatus="status">
   <tr>
-  <td rowspan="5" align="center">${order.order_num }</td>
-  <td rowspan="5" align="center"><img  src="${order.product_img}" width="200" height="150" class="scale"  ></td>
+  <td rowspan="6" align="center">${order.order_num }</td>
+  <td rowspan="6" align="center"><img  src="${order.product_img}" width="200" height="150" class="scale"  ></td>
   <td>상품번호 &nbsp;:${order.product_id}</td>
   </tr>
   <tr><td >상품가격 &nbsp;:<span class="total">${order.price }</span>원</td></tr>
   <tr><td >상품이름 &nbsp;:${order.product_name}</td></tr>
   <tr><td >상품옵션1:${order.option1}</td></tr>
   <tr><td >상품옵션2:${order.option2}</td></tr>
+  <tr><td >배송상황:${order.status}</td></tr>
   <input type="hidden" value="${total=total+order.price }">
   </c:forEach>
   <tr><td colspan="3"> 총금액: ${total }<span id="sum">0</span> 원</td></tr>
@@ -95,5 +92,6 @@ transform:scale(1.2);
  </table><p>
  </form>
 </div> 
+</div>
 </body>
 </html>

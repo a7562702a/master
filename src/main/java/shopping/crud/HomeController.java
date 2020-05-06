@@ -58,6 +58,11 @@ public class HomeController {
 	    System.out.println(Previous_page);
 	    System.out.println("========================= 이전페이지 확인");
 		session.setAttribute("Previous_page", Previous_page);
+		
+//		String data=request.getParameter("idx");
+//		if(data!=null || data !="") {
+//			 return "my_page?idx="+data;
+//		}
       return "my_page";
    }//end
    

@@ -5,7 +5,8 @@
 <meta charset="UTF-8">
 <title></title>
 	<script type="text/javascript">
-		setTimeout("location.href='Join.do'",2000);
+	setTimeout("location.href='orderList.do'",2000);
+// 	setTimeout("location.href='Join.do'",2000);
 // 		setTimeout("location.href='Detail_join.do?uid=aaaa'",2000);
 // 		setTimeout("location.href='login.do'",2000);
 	</script>

@@ -45,7 +45,7 @@
 			</a>
 			<div class="search">
 				<span class="new_search1">
-					<form action="" method="post" name="search">
+					<form action="#" method="post" name="search">
 						<fieldset class="new_search2">
 							<input name="search" onkeydown="CheckKey_search();" value=""
 								class="MS_search_word search_top1" /> <a class="text-secondary"
@@ -59,21 +59,25 @@
 
 			<div class="user_action pull-right">
 				<ul class="user_out">
-						<li class="sign in"><a class="text-secondary" href=""> <i
-								class="fa fa-arrow-right" aria-hidden="true"> 회원가입</i>
-						</a></li> |
-						<li class="login"><a class="text-secondary" href="login.do">
-								<i class="fa fa-sign-in" aria-hidden="true"> 로그인</i>
+						<li class="sign in">
+							<a class="text-secondary" href="Join.do"> 
+							<i class="fa fa-arrow-right" aria-hidden="true"> 회원가입</i>
+						</a></li>
+						<li class="login">
+							<a class="text-secondary" href="login.do">
+							<i class="fa fa-sign-in" aria-hidden="true"> 로그인</i>
 						</a></li>
 					</ul>
 					<ul class="user_in">
-						<li class="membership"><a class="text-secondary"
-							href="my_page.do"> <i class="fa fa-user-circle-o"
-								aria-hidden="true"> 마이페이지</i>
-						</a></li> |
-						<li class="logout"><a class="text-secondary" href=""> <i
-								class="fa fa-share" aria-hidden="true"> 로그아웃</i>
+						<li class="membership">
+							<a class="text-secondary" href="my_page.do">
+							<i class="fa fa-user-circle-o" aria-hidden="true"> 마이페이지</i>
 						</a></li>
+						<li class="logout">
+							<a class="text-secondary" href="logout.do"> 
+							<i class="fa fa-share" aria-hidden="true"> 로그아웃</i>
+						</a></li>
+					</ul>
 			</div>
 		</div>
 

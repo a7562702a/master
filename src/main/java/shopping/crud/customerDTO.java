@@ -10,8 +10,8 @@ import lombok.Setter;
 @Setter
 
 public class customerDTO {
-	private int qna_Num;
-	private String qna_Kategorie, qna_title, qna_detail, user_id, file1;
+	private int question_num;
+	private String question_Category, question_title , question_content , user_id, question_file ;
 	private int rn, rcnt;
 	private int start, end;  
 	private String skey, sval;

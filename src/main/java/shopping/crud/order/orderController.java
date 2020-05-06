@@ -79,6 +79,7 @@ public class orderController {
 			Model model) {
 
 		String user_id = (String) session.getAttribute("userId");
+//		String user_id="aaaa";
 		String order_num = dao.dbSelectorder(user_id);
 		String a = null;
 		if (order_num == "" || order_num == null) {
@@ -99,10 +100,10 @@ public class orderController {
 		String[] pid = request.getParameterValues("product_id");
 		String[] pimg = request.getParameterValues("product_img");
 		String[] pname = request.getParameterValues("product_name");
-		String[] poption1 = request.getParameterValues("product_option1");
-		String[] poption2 = request.getParameterValues("product_option2");
+		String[] poption1 = request.getParameterValues("option1");
+		String[] poption2 = request.getParameterValues("option2");
 		String[] pcount = request.getParameterValues("count");
-		String[] pprice = request.getParameterValues("product_price");
+		String[] pprice = request.getParameterValues("price");
 
 		for (int i = 0; i < pname.length; i++) {
 			orderDTO odto = new orderDTO();
@@ -132,18 +133,19 @@ public class orderController {
 		} // for end
 
 		try {
-
+			System.out.println("여기다 여기 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			response.setContentType("text/html; charset=utf-8");
-			response.getWriter().append("<script> var result=confirm('상품이 결제되었습니다. 주문내역을 확인하시겠습니까?);"
+			response.getWriter().append("<script> var result=confirm('상품이 결제되었습니다. 주문내역을 확인하시겠습니까?');"
 							+ "if(result){location.href='my_page.do';}"
 							+ "else{ location.href='home.do'; } </script>").flush();
-			
+			System.out.println("db기다 여기 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		return "redirect:my_page.do";
+		return "my_page";
+//		return "redirect:my_page.do?idx="+user_id;
 	}// end
 
 	@RequestMapping("/orderList.do")

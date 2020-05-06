@@ -31,7 +31,6 @@
 .contents #my_page_header {
 	width: 100% border: 1px solid #000;
 }
-
 .contents #my_page_header #nav {
 	width: 15%;;
 	height: 100%;
@@ -39,7 +38,6 @@
 	box-sizing: border-box;
 	background: #f1f1f1;
 }
-
 .contents #my_page_header #import_menu {
 	width: 85%;;
 	height: 100%;
@@ -47,7 +45,6 @@
 	box-sizing: border-box;
 	background: #0ff;
 }
-
 .contents #my_page_header #nav ul {
 	list-style-type: none;
 	margin: 0;
@@ -55,42 +52,49 @@
 	width: 250px;
 	background-color: #f1f1f1;
 }
-
 .contents #my_page_header #nav li a {
 	display: block;
 	color: #000;
 	padding: 8px 16px;
 	text-decoration: none;
 }
-
 .contents #my_page_header #nav li a.active {
 	background-color: #4CAF50;
 	color: white;
 }
 </style>
 <script type="text/javascript">
-
-
 $(window).ready(function(){
 var stringVal = "${Previous_page}";
 if(stringVal.indexOf("home") !== -1){
 	window.alert("홈에서");
 	$("#zzimG, #zzimGG").addClass("active");
 	$("#zzimG").attr("aria-selected","true");
+	session.removeAttribute("Previous_page");
 }
-else if(stringVal.indexOf("orderInstert.do") !== -1){
-	window.alert("구매페이지에서");
-	$("#zzimG, #zzimGG").addClass("active");
-	$("#zzimG").attr("aria-selected","true");
-}
-else if(stringVal.indexOf("zzimInsert.do") !== -1){
-	window.alert("찜리스트에서");
+else if(stringVal.indexOf("productDetail") !== -1){
+	window.alert("상품페이지에서");
 	$("#orderG, #orderGG").addClass("active");
 	$("#orderG").attr("aria-selected","true");
+	session.removeAttribute("Previous_page");
 }
-else{
+else if(stringVal.indexOf("zzim") !== -1){
+	window.alert("찜페이지에서");
 	$("#zzimG, #zzimGG").addClass("active");
 	$("#zzimG").attr("aria-selected","true");
+	session.removeAttribute("Previous_page");
+}
+else if(stringVal.indexOf("orderInsert.do") !== -1){
+	window.alert("주문페이지에서");
+	$("#orderG, #orderGG").addClass("active");
+	$("#orderG").attr("aria-selected","true");
+	session.removeAttribute("Previous_page");
+}
+else{
+	window.alert("외부페이지에서");
+	$("#zzimG, #zzimGG").addClass("active");
+	$("#zzimG").attr("aria-selected","true");
+	session.removeAttribute("Previous_page");
 }
 });
 </script>
@@ -124,7 +128,7 @@ else{
 						href="#Detail_joinGG" 	role="tab" style="text-align: center;">회원정보관련</a> 
 						
 					<a class="list-group-item list-group-item-action"
-						href="logout.do" 		role="tab" style="text-align: center;">로그아웃</a>
+						href="Delete_join.do?uid=${dto.user_id}" 		role="tab" style="text-align: center;">회원탈퇴</a>
 				</div>
 
 			</nav>

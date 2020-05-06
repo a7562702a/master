@@ -64,15 +64,15 @@ $(window).ready(function(){
 
 				<div class="user_action pull-right">
 					<ul class="user_out">
-						<li class="Cart"><a class="text-secondary" href=""> <i
+						<li class="Cart"><a class="text-secondary" href="/my_page.do"> <i
 								class="fa fa-shopping-cart" aria-hidden="true">장바구니</i>
-						</a></li> |
+						</a></li> 
 						<li class="login"><a class="text-secondary" href="login.do"> <i
 								class="fa fa-sign-in" aria-hidden="true">로그인</i>
 						</a></li>
 					</ul>
 					<ul class="user_in">
-						<li class="Cart"><a class="text-secondary" href=""> <i
+						<li class="Cart"><a class="text-secondary" href="/my_page.do"> <i
 								class="fa fa-shopping-cart" aria-hidden="true">장바구니</i>
 						</a></li> 
 						<li class="membership"><a class="text-secondary" href="my_page.do">

@@ -68,6 +68,32 @@
 	color: white;
 }
 </style>
+<script type="text/javascript">
+
+
+$(window).ready(function(){
+var stringVal = "${Previous_page}";
+if(stringVal.indexOf("home") !== -1){
+	window.alert("홈에서");
+	$("#zzimG, #zzimGG").addClass("active");
+	$("#zzimG").attr("aria-selected","true");
+}
+else if(stringVal.indexOf("productDetail.do") !== -1){
+	window.alert("구매페이지에서");
+	$("#zzimG, #zzimGG").addClass("active");
+	$("#zzimG").attr("aria-selected","true");
+}
+else if(stringVal.indexOf("zzimInsert.do") !== -1){
+	window.alert("찜리스트에서");
+	$("#orderG, #orderGG").addClass("active");
+	$("#orderG").attr("aria-selected","true");
+}
+else{
+	$("#zzimG, #zzimGG").addClass("active");
+	$("#zzimG").attr("aria-selected","true");
+}
+});
+</script>
 </head>
 
 <body>
@@ -85,23 +111,27 @@
 <!-- 			
 				<!-- List group -->
 				<div class="list-group" id="myList" role="tablist">
-					<a class="list-group-item list-group-item-action active"
-						data-toggle="list" href="#Detail_joinGG" role="tab" style="text-align: center;">회원정보관련</a> <a
-						class="list-group-item list-group-item-action" data-toggle="list"
-						href="#zzimGG" role="tab" style="text-align: center;">찜리스트</a> <a
-						class="list-group-item list-group-item-action" data-toggle="list"
-						href="#customerGG" role="tab" style="text-align: center;">고객문의</a> <a
-						class="list-group-item list-group-item-action" data-toggle="list"
-						href="#orderGG" role="tab" style="text-align: center;">주문내역</a> <a
-						class="list-group-item list-group-item-action"
-						href="logout.do" role="tab" style="text-align: center;">로그아웃</a>
+					<a class="list-group-item list-group-item-action"  id="zzimG" 			data-toggle="list"
+						href="#zzimGG" 			role="tab" style="text-align: center;">찜리스트</a> 
+						
+					<a class="list-group-item list-group-item-action"  id="customerG" 		data-toggle="list"
+						href="#customerGG" 		role="tab" style="text-align: center;">고객문의</a> 
+						
+					<a class="list-group-item list-group-item-action"  id="orderG"			data-toggle="list"
+						href="#orderGG" 		role="tab" style="text-align: center;">주문내역</a> 
+						
+					<a class="list-group-item list-group-item-action"  id="Detail_joinG"	data-toggle="list" 
+						href="#Detail_joinGG" 	role="tab" style="text-align: center;">회원정보관련</a> 
+						
+					<a class="list-group-item list-group-item-action"
+						href="logout.do" 		role="tab" style="text-align: center;">로그아웃</a>
 				</div>
 
 			</nav>
 
 			<!-- Tab panes -->
 			<div class="tab-content">
-				<div class="tab-pane active" id="Detail_joinGG" role="tabpanel">
+				<div class="tab-pane" id="Detail_joinGG" role="tabpanel">
 					<c:import url="/Detail_join.do?uid=${userId}">
 					</c:import></div>
 				<div class="tab-pane" id="zzimGG" role="tabpanel">
@@ -111,7 +141,7 @@
 				<c:import url="/customerList.do"></c:import>
 				</div>
 				<div class="tab-pane" id="orderGG" role="tabpanel">
-<%-- 				<c:import url="/order.do"></c:import> --%>
+				<c:import url="/orderList.do"></c:import>
 				</div>
 			</div>
 		</div>

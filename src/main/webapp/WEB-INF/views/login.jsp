@@ -25,23 +25,17 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	
-<style type="text/css">
-    #LOGIN{
-      font-size:26pt; font-weight:bold;
-      background: #FFFF00; height: 120px;
-    }             
-  </style>
   
   <script type="text/javascript">
   function chk() {
 	  	//아이디 입력조건
-	  	var id_pattern = /^[a-zA-Z0-9_-]{4,9}$/
+	  	var id_pattern = /^[a-zA-Z0-9_-.]{4,15}$/
 		var userid = document.login_form.user_id;
 		var useridStr = userid.value;
 		var useridLen = useridStr.length;
 		if(useridStr ==''){
 			document.getElementById('user_id').setCustomValidity('ID 입력해주세요');
-		}else if(useridLen <4 || useridLen >8){
+		}else if(useridLen <4 || useridLen >15){
 			document.getElementById('user_id').setCustomValidity('4자리 이상, 8자리 이하로 입력해주세요');
 		}else if(!id_pattern.test(useridStr)){
 			document.getElementById('user_id').setCustomValidity('영어, 숫자만으로 입력하시기 바랍니다.');

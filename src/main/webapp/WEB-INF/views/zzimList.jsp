@@ -10,6 +10,7 @@
 <meta charset="UTF-8">
 <title> [guestList.jsp] </title>
 <link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="./resources/css/Home_css.css">
 
 	<script type="text/javascript">	
 
@@ -23,7 +24,7 @@
 				var rowData = new Array();
 				var tdArr = new Array();
 				var checkbox = $("input:checkbox[name=ab1]:checked");
-				
+				var form = $("form#productSelected");
 				// 체크된 체크박스 값을 가져온다
 				checkbox.each(function(i) {
 		
@@ -36,6 +37,7 @@
 					rowData.push(tr.text());
 					
 					// td.eq(0)은 체크박스 이므로  td.eq(1)의 값부터 가져온다.
+					var id = td.eq(1).children().eq(2).val();
 					var img1 = td.eq(1).children().eq(1).val();     //text()+", "
 					var product = td.eq(2).text();
 					var option = td.eq(3).text().split("/");
@@ -43,7 +45,10 @@
 					var option2 = option[1].replace("옵션2 : ","");
 					var count = td.eq(4).children().eq(1).val();                //.text()+", ";
 					var price = td.eq(5).children().eq(0).val();
+
+
 					
+					console.log("id : " + id);
 					console.log("img1 : " + img1);
 					console.log("product : " + product);
 					console.log("option1 : " + option1);
@@ -51,8 +56,20 @@
 					console.log("count : " + count);
 					console.log("price : " + price);
 
+					$("#selectedTR > tbody:last")
+					.append(
+							"<tr><td><input type='hidden' readonly class='form-control-plaintext' id='product_id' name='product_id' value='"+id+"'></td>"
+									+ "<td><input type='hidden' readonly class='form-control-plaintext' id='product_img' name='product_img' value='"+img1+"'></td>"
+									+ "<td><input type='hidden' readonly class='form-control-plaintext' id='product_name' name='product_name' value='"+product+"'></td>"
+									+ "<td><input type='hidden' id='product_option1' readonly  class='form-control-plaintext' name='product_option1' value='"+option1+"'></td>"
+									+ "<td><input type='hidden' id='product_option2' readonly  class='form-control-plaintext' name='product_option2' value='"+option2+"'></td>"
+									+ "<td width='50'><input type='hidden' class='form-control' id = 'count' name='count' value='"+count+"'></td>"
+									+ "<td><input type='hidden' id = 'product_price' readonly  class='form-control-plaintext' name='product_price' value='"+price+"'></td></tr>");
+
 				});
-				
+
+				form.attr("action", "order.do");
+				form.submit();
 			});
 
 			
@@ -126,9 +143,8 @@
 	</script>
 </head>
 <body>
-<div class="container contents">
-	<div  align="left" style="margin-left: 14%; background-color: #f9f9fe; padding:1%; padding-left:2%; padding-right:2%; border-radius: 0  20px 20px 0;" >
-		
+<div class ="container">
+	
 	<div>
 		<h1 align="center"> ZZIM LIST</h1>
 	</div>
@@ -182,7 +198,7 @@
 			<tbody></tbody>
 		</table>	
 	</form>
-</div>
+
 </div>
 </body>
 </html>

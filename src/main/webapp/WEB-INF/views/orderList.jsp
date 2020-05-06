@@ -5,6 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="resources/script/cart.js" />
 <meta charset="UTF-8">
 <title> [orderList.jsp] </title>
 	<script type="text/javascript">
@@ -19,6 +22,29 @@
          
 	</script>
 
+
+<link rel="stylesheet" href="./resources/css/Home_css.css">
+<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<style type="text/css">
+.scale{
+transform:scale(1);
+-webkit-transform:scale(1);
+-moz-transform:scale(1);
+-ms-transform:scale(1);
+-o-transform:scale(1);
+transition:all 0.1s ease-in-out;
+}
+.scale:hover{
+transform:scale(1.2);
+-webkit-transform:scale(1.2);
+-moz-transform:scale(1.2);
+-ms-transform:scale(1.2);
+-o-transform:scale(1.2);
+}
+.sa{font-size:12pt;color:red;}
+.b{margin-left:400pt;}
+</style>	
+
 	
 </head>
 <body>
@@ -29,15 +55,18 @@
 		</div>
 	</header>
 <div class="container contents">
-<form name="myform" action="">
+
+<form name="myform" action="orderInsert.do" method="get" >
 <font size="15" color="blue" >주문/결제</font>
-<hr size="9" color="grey" style="width:60%" align="left">
- <table width=900  border=2  cellspacing=1 >
-  <tr bgcolor="orange">
-  <td colspan="4">
-  <font size="6">상품정보</font>
-  </td>
+
+<hr size="9" color="grey" style="width:100%" align="left">
+
+ <table width=900  border=1 cellspacing=2 align="center">
   
+  <tr bgcolor="orange">
+  <td colspan="3">
+  <font size="6">상품정보</font> 
+  </td>
   </tr>
   
   <c:set var="total" value="0" />
@@ -53,10 +82,10 @@
   
   <td>상품번호 &nbsp;: <input type="text" name="product_id" value="${order.product_id}" readonly></td>
   </tr>
-  <tr><td >상품가격 &nbsp;:<input type="text" name="price" value="${order.product_price }"readonly></td></tr>
+  <tr><td >상품가격 &nbsp;:<input type="text" name="product_price" value="${order.product_price }"readonly></td></tr>
   <tr><td >상품이름 &nbsp;:<input type="text" name="product_name" value="${order.product_name}"readonly></td></tr>
-  <tr><td >상품옵션1:<input type="text" name="option1" value="${order.product_color}"readonly></td></tr>
-  <tr><td >상품옵션2:<input type="text" name="option2" value="${order.product_size}"readonly></td></tr>
+  <tr><td >상품옵션1:<input type="text" name="product_option1" value="${order.product_color}"readonly></td></tr>
+  <tr><td >상품옵션2:<input type="text" name="product_option2" value="${order.product_size}"readonly></td></tr>
   <input type="hidden" value="${total=total+order.product_price }">
   </c:forEach>
 
@@ -64,9 +93,9 @@
   
  </table><p>
  
- <hr size="2" color="grey" style="width:60%" align="left" >
+ <hr size="2" color="grey" style="width:100%" align="left" >
 
- <table width=900  border=1  cellspacing=0>
+ <table width=900  border=1  cellspacing=0 align="center">
  <tr bgcolor="lightblue"><td colspan="2"><font size="5">배송정보</font></td></tr>
  <tr>
  <td>이름:</td>

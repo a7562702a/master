@@ -90,7 +90,7 @@
 <body>
  	<div class="container">
 		<font color=blue>[ProductReviewWrite.jsp]</font> <p>
-	 	<form name="myform" action="productReviewInsert.do" enctype="multipart/form-data" method="post">
+	 	<form name="myform" action="productReviewInsert.do?prid=${prid}" enctype="multipart/form-data" method="post">
 	 	<table class="table table-hover" style="border: 1px solid #D8D8D8;">
 		
 		
@@ -110,8 +110,8 @@
 				
 			</tr>
 			<tr>
-				<td><input type="hidden" name="product_id" value="100a100"></td>
-				<td><input type="hidden" name="user_id" value="blue"></td>
+				<td><input type="hidden" name="product_id" value="${prid}"></td>
+				<td><input type="text" name="user_id" value="${userId}"></td>
 			</tr>
 			<tr>
 				<td class="td1">내용</td>
@@ -128,8 +128,7 @@
 
 		<p>
 	  	<a href="productReview.do">[글쓰기]</a>
-    	<a href="productReviewList.do">[리뷰]</a>
-   	 	<a href="productQuestList.do">[문의]</a>
+   
 	</div>
 </body>
 </html>

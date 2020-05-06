@@ -75,25 +75,26 @@
 
 	<div class="container contents">
  
-		 <div id="msg" align="center">
-		 <table  width=750 border=1 cellspacing=0 align="center">
+		 <div id="msg" align="left" style="margin-left: 35%; margin-right: 35%; background-color: #f9f9fe; padding:1%; padding-left:2%; padding-right:2%; border-radius: 20px;" >
+		   <h1 align="center">로그인</h1>
 		   <form action="loginprocess.do" name="login_form">
-		     <tr>
-			  <td width="450"> userid:</td>
-			  <td width="250"> <input type="text"  name="user_id" id="user_id" placeholder="ID" required oninput="setCustomValidity('')"></td>
-					
-			  <td rowspan=2 align="center">
-			    <input type="submit" value="LOGIN" id="LOGIN" onclick="chk()">
-			  </td>
-			</tr>
-			
-			<tr>
-			  <td>userpw:</td>
-			  <td> <input type="password"  name="user_pwd" id="user_pwd" placeholder="Password" required oninput="setCustomValidity('')"></td>
-			</tr>
+		    	<div class="form-group">
+			   		<label  for="exampleInputEmail1">아이디</label><br>
+			   		<input type="text"  name="user_id" id="user_id" placeholder="ID" required oninput="setCustomValidity('')" style="width: 100%; border-radius: 5px;">
+			 	</div>
+			 	<div class="form-group">
+   	 			<label for="exampleInputPassword1">비밀번호</label><br>
+				<input type="password"  name="user_pwd" id="user_pwd" placeholder="Password" required oninput="setCustomValidity('')"  style="width: 100%; border-radius: 5px;">
+				</div>
+				<div class="form-group form-check">
+				<input type="checkbox" class="form-check-input" id="exampleCheck1">
+				<label class="form-check-label" for="exampleCheck1">아이디 저장</label>
+				</div>
+				<div align="center">
+				<button type="submit" class="btn btn-primary"  id="LOGIN" onclick="chk()" style="width: 45%;">로그인</button>
+				<button type="reset" class="btn btn-primary"  id="RESET" style="width: 45%;">취소</button>
+				</div>
 		    </form>
-		 </table>
-		
 		</div>
 
 	</div>

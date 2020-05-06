@@ -143,7 +143,7 @@ public class orderController {
 			e.printStackTrace();
 		}
 
-		return "my_page.do";
+		return "redirect:my_page.do";
 	}// end
 
 	@RequestMapping("/orderList.do")
@@ -157,14 +157,14 @@ public class orderController {
 		model.addAttribute("orders", order);
 		model.addAttribute("users", users);
 
-		return "my_page.do";
+		return "redirect:my_page.do";
 	}// end
 
 	@RequestMapping("/orderDelete.do")
 	public String order_delete(HttpServletRequest request) {
 		int data = Integer.parseInt(request.getParameter("idx"));
 		dao.dbdelete(data);
-		return "redirect:/orderList.do";
+		return "redirect:my_page.do";
 	}// end
 
 }// BoardReplyController class END

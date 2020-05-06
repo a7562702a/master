@@ -134,7 +134,7 @@ public class orderController {
 
 			response.setContentType("text/html; charset=utf-8");
 			response.getWriter().append("<script> var result=confirm('상품이 결제되었습니다. 주문내역을 확인하시겠습니까?);"
-							+ "if(result){location.href='orderList.do';}"
+							+ "if(result){location.href='my_page.do';}"
 							+ "else{ location.href='home.do'; } </script>").flush();
 			
 		} catch (IOException e) {
@@ -142,7 +142,7 @@ public class orderController {
 			e.printStackTrace();
 		}
 
-		return "my_page";
+		return "my_page.do";
 	}// end
 
 	@RequestMapping("/orderList.do")
@@ -156,7 +156,7 @@ public class orderController {
 		model.addAttribute("orders", order);
 		model.addAttribute("users", users);
 
-		return "orderList2";
+		return "my_page.do";
 	}// end
 
 	@RequestMapping("/orderDelete.do")

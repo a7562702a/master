@@ -46,8 +46,7 @@
 
 						<img src="${product.product_img1 }" class="card-img-top" alt="...">
 						<div class="card-body">
-							<h5 class="card-title">${product.product_name }:
-								${status.index }</h5>
+							<h5 class="card-title">${product.product_name }</h5>
 							<p class="card-text text-muted">
 								size: ${product.product_size }<br> color:
 								${product.product_color }

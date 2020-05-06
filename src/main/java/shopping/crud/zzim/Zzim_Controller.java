@@ -30,7 +30,7 @@ public class Zzim_Controller {
 
 	@RequestMapping(value = "zzim.do", method = RequestMethod.GET)
 	public String Zzim(Model model) {
-		return "zzimList";
+		return "redirect:my_page.do";
 	}// end
 
 	@RequestMapping("/zzimInsert.do")
@@ -78,11 +78,12 @@ public class Zzim_Controller {
 	}//zzim_Insert end
 
 	@RequestMapping("/zzimList.do")
-	public String zzim_select(HttpServletRequest request, Model model, HttpSession session ) {
+	public ModelAndView zzim_select(HttpServletRequest request, ModelAndView mav, HttpSession session ) {
 		List<ZzimDTO> list = zzimDAO.dbSelect((String)session.getAttribute("userId"));
-		model.addAttribute("list", list);
+		mav.addObject("list", list);
+		mav.setViewName("zzimList");
 
-		return "redirect:my_page.do";
+		return mav;
 	}// end
 
 	@RequestMapping("/zzimDelete.do")

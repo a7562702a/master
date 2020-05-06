@@ -66,12 +66,7 @@
 </head>
 
 <body>
-	<!-- main_menu -->
-<!-- 	<header> -->
-<!-- 		<div id="main_bar"> -->
-<%-- 			<c:import url="/main_bar.do" /> --%>
-<!-- 		</div> -->
-<!-- 	</header> -->
+
 
 
 	<div class="container">

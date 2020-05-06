@@ -78,7 +78,7 @@ if(stringVal.indexOf("home") !== -1){
 	$("#zzimG, #zzimGG").addClass("active");
 	$("#zzimG").attr("aria-selected","true");
 }
-else if(stringVal.indexOf("productDetail.do") !== -1){
+else if(stringVal.indexOf("orderInstert.do") !== -1){
 	window.alert("구매페이지에서");
 	$("#zzimG, #zzimGG").addClass("active");
 	$("#zzimG").attr("aria-selected","true");

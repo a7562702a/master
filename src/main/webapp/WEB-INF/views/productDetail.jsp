@@ -24,6 +24,12 @@
 	text-color: gray;
 	text-align: center;
 }
+
+p {
+	width: 100%;
+	margin: 0 auto;
+	
+}
 </style>
 <link rel="stylesheet" href="./resources/css/Home_css.css">
 
@@ -74,7 +80,7 @@
 			} else {
 				form.attr("action", "order.do");
 				form.submit();
-				
+
 			}
 
 		});
@@ -167,10 +173,10 @@
 				</table>
 
 
-<!--------    선택한 상품 출력, get form   -------->
+				<!--------    선택한 상품 출력, get form   -------->
 
 				<form id="productSelected" class="form-group" action="" method="get">
-					
+
 					<table id="selectedTR">
 						<tbody></tbody>
 					</table>
@@ -195,59 +201,76 @@
 		<br>
 		<hr>
 		<br>
-		<div class="btn-group form-inline" role="group" align="center">
-			<a href="#product_info" class="btn btn-outline-secondary" role="button">상품 정보</a>
-			<a href="#product_info" class="btn btn-outline-secondary" role="button">상품 후기</a>
+		<div class="btn-group form-inline contents row w-50" role="group"
+			align="center">
+			<a href="#product_info" class="btn btn-outline-secondary"
+				role="button">상품 정보</a> <a href="#product_review"
+				class="btn btn-outline-secondary" role="button">상품 후기</a> <a
+				href="#product_question" class="btn btn-outline-secondary"
+				role="button">상품 문의</a>
 		</div>
 		<br>
 
 
 		<!------   상품 정보     ------->
 
-		<div class="row row-cols-1" id="product_info">
-
-			<br><br><br>
-			<h4>제품 상세정보</h4>
-			<br>
-			<br> <img src="${dto.product_img1 }"
-				style="width: 500px; height: 600px; margin: 1rem;"> <br>
-			<br> <img src="${dto.product_img2 }"
-				style="width: 500px; height: 600px; margin: 1rem;"> <br>
-			<br>${dto.product_desc } <br>
-			<br> <img src="${dto.product_img3 }"
-				style="width: 500px; height: 600px; margin: 1rem;"> <br>
-			<br>
-			<br>
-			<br>
+		<div class="row w-100 contents" id="product_info">
 			<p>
+				<h4>상품정보</h4>
+
+			</p>
+			
+
+
+
+			<p>
+				<br>
+				<br> <img src="${dto.product_img1 }" class="d-block"
+					style="width: 500px; height: auto; margin:0 auto;"> <br>
+			</p>
+			<p>
+				<br>
+				<br> <img src="${dto.product_img2 }" class="d-block"
+					style="width: 500px; height: auto; margin:0 auto;"> <br>
+			</p>
+			<p>
+				<br>
+				<br>${dto.product_desc } <br>
+			</p>
+			<p>
+				<br>
+				<br> <img src="${dto.product_img3 }" class="d-block"
+					style="width: 500px; height: auto; margin:0 auto;"> <br>
+			</p>
+			<p></p>
 		</div>
 
 
 
 		<!------   상품 문의, 리뷰 게시판    ------->
 
-		<div class="row row-cols-3 contents" id="product_review">
+		<div class="row w-100 contents" id="product_review">
 			<h2>REVIEW</h2>
-			<c:import url="/productReviewList.do" />
-			<br>
-			<br>
-			<br>
-			<br>
+			<c:import url="/productReviewList.do?prid=${product_id }" />
+			<br> <br> <br> <br>
 		</div>
 
-		<div class="row row-cols-3 contents" id="product_question">
+		<div class="row w-100 contents" id="product_question">
 			<h2>상품문의</h2>
-			<c:import url="/productQuestList.do" />
-			<br>
-			<br>
-			<br>
-			<br>
+			<c:import url="/productQuestList.do?prid=${product_id }" />
+			<br> <br> <br> <br>
 		</div>
 
 
 
-
+<br>
 	</div>
+		<!-- footer -->
+	<header>
+		<div id="footer">
+			<c:import url="/footer.do" />
+		</div>
+	</header>
 
 
 </body>

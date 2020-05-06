@@ -1,19 +1,11 @@
 package shopping.crud;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.URLEncoder;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
 
 import javax.inject.Inject;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,16 +23,12 @@ import org.springframework.web.servlet.ModelAndView; //�����Ͽ���
 public class customerController {	
 	private static final Logger logger=LoggerFactory.getLogger(customerController.class);
 	
-	//��Ʈ�ѹ��� dao��ü����
+	
 	@Inject
 	@Autowired
 	customerDAO dao; 
 	
-	
-	
-	@Autowired
-	private ServletContext  application;
-	
+		
 	
 	@RequestMapping(value="/customer.do", method=RequestMethod.GET)
 	public String goCustomer() {
@@ -48,8 +36,9 @@ public class customerController {
 	}
 
 	@RequestMapping("/customerList.do")
-	public String board_select(HttpServletRequest request ,Model model) {
+	public ModelAndView board_select(HttpServletRequest request ,ModelAndView mav, HttpSession session) {
 		 String pnum;
+		 String user_id = (String) session.getAttribute("userId");
 		 int pageNUM, pagecount;
 		 int start, end; 
 		 int startpage, endpage;  
@@ -76,9 +65,9 @@ public class customerController {
 		 
 		pageNUM=Integer.parseInt(pnum); //[21]~[27����]~[30]
 		
-		int GGtotal = dao.dbCount_customer(); //��ü���ڵ尹�� 342��
-		int Gtotal = dao.dbCountSearch_customer(skey, sval); //��ȸ���ڵ尹��
-		int Stotal = dao.dbCountSearch_customer(skey, sval); //��ȸ���ڵ尹��
+		int GGtotal = dao.dbCount_customer(user_id); //��ü���ڵ尹�� 342��
+		int Gtotal = dao.dbCountSearch_customer(skey, sval, user_id); //��ȸ���ڵ尹��
+		int Stotal = dao.dbCountSearch_customer(skey, sval, user_id); //��ȸ���ڵ尹��
 		
 		start=(pageNUM-1)*10+1;
 		end=pageNUM*10;
@@ -94,7 +83,7 @@ public class customerController {
 		
 //		List<customerDTO> list_customer = dao.dbSelect_customer();
 //		List<customerDTO> list_customer = dao.dbSelect_customer(start,end);
-		List<customerDTO> listcustomer = dao.dbSelect_customer(start,end,skey,sval);
+		List<customerDTO> listcustomer = dao.dbSelect_customer(start,end,skey,sval,user_id);
 
 		System.out.println("------------------------");
 		System.out.println(start + "컨트롤러");
@@ -110,17 +99,19 @@ public class customerController {
 		System.out.println(listcustomer.get(1).getQna_Num());
 		System.out.println("------------------------");
 		
-		model.addAttribute("Gtotal", Gtotal); //��ȸ����
-		model.addAttribute("GGtotal", GGtotal); //��ü����
-		model.addAttribute("listcustomer", listcustomer);
-		model.addAttribute("pageNUM", pageNUM);
-		model.addAttribute("startpage", startpage);
-		model.addAttribute("endpage", endpage);
-		model.addAttribute("pagecount", pagecount);
-		model.addAttribute("skey", skey);
-		model.addAttribute("sval", sval);	
-		model.addAttribute("returnpage", returnpage);
-	    return "customer_center"; 
+		mav.addObject("Gtotal", Gtotal); //��ȸ����
+		mav.addObject("GGtotal", GGtotal); //��ü����
+		mav.addObject("listcustomer", listcustomer);
+		mav.addObject("pageNUM", pageNUM);
+		mav.addObject("startpage", startpage);
+		mav.addObject("endpage", endpage);
+		mav.addObject("pagecount", pagecount);
+		mav.addObject("skey", skey);
+		mav.addObject("sval", sval);	
+		mav.addObject("returnpage", returnpage);
+		mav.addObject("user_id",user_id);
+		mav.setViewName("customer_center");
+	    return mav; 
 	}//end
 
 	

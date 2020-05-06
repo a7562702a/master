@@ -31,7 +31,7 @@ create table product(
 drop table order_detail;
 create table order_detail(
  opk_num number primary key, --sequence
- order_num varchar2(40) not null, --user_id + ����
+ order_num varchar2(40) not null, --user_id + ????
  user_id varchar2(20) not null,
  product_id varchar2(20) not null,
  product_name varchar2(100) not null,
@@ -110,16 +110,22 @@ create table zzim(
  img1 varchar2(100)
 );
 
+drop sequence zzim_seq;
+create sequence zzim_seq;
+
+
 --question write table
 drop table question;
 create table question(
- question_num number primary key,
+ question_num number primary key, --sequence
  user_id varchar2(20) not null,
  title varchar2(100) not null,
  content varchar2(2000) not null,
  file1 varchar2(100)
 );
 
+drop sequence question_seq;
+create sequence question_seq;
 
 --question_reply table
 drop table question_reply;
@@ -130,7 +136,8 @@ create table question_reply(
  content varchar2(2000) not null,
  file1 varchar2(100)
 );
-
+drop sequence question_rep_seq;
+create sequence question_rep_seq;
 
 
 commit;

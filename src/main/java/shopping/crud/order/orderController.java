@@ -147,17 +147,18 @@ public class orderController {
 	}// end
 
 	@RequestMapping("/orderList.do")
-	public String order_list(HttpSession session, HttpServletRequest request, Model model) {
+	public ModelAndView order_list(HttpSession session, HttpServletRequest request, ModelAndView mav) {
 		// List<orderDTO> product=dao.dbSelectproduct();
 		String data = (String) session.getAttribute("userId");
 		List<orderDTO> order = dao.dbSelectorder1(data);
 		System.out.println(data);
 		orderDTO users = dao.dbSelectusers(data);
 		System.out.println(users);
-		model.addAttribute("orders", order);
-		model.addAttribute("users", users);
+		mav.addObject("orders", order);
+		mav.addObject("users", users);
+		mav.setViewName("orderList2");
 
-		return "redirect:my_page.do";
+		return mav;
 	}// end
 
 	@RequestMapping("/orderDelete.do")

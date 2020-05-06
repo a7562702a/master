@@ -49,7 +49,7 @@ public class ProductController {
 		System.out.println("조회된 데이터: "+dto.getProduct_id());
 		System.out.println("colors: "+dto.getProduct_color());
 		System.out.println("sizes: "+dto.getProduct_size());
-
+		model.addAttribute("prid",data);
 		model.addAttribute("dto", dto);
 
 		return "productDetail";

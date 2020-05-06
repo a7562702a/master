@@ -59,7 +59,9 @@
 			  				 <img src="${pageContext.request.contextPath}/resources/upload/${bean.file1}"  width=100 height=50 border="0"><br>
 			  			</c:if>
 			  			${bean.content} <p>
-			  			<a href="productReviewDelete.do?rid=${bean.review_num}&prid=${prid}">[삭제]</a>	
+			  			<c:if test="${bean.user_id==userId}">
+			  				<a href="productReviewDelete.do?rid=${bean.review_num}&prid=${prid}">[삭제]</a>	
+			  			</c:if>
 		      		</div>
 		      	</div>
 		      </td>

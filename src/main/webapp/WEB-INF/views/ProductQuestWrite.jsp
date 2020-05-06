@@ -34,7 +34,7 @@
 <body>
  	<div class="container">
 		<font color=blue>[ProductQuestWrite.jsp]</font> <p>
-	 	<form name="myform" action="productQuestInsert.do?prid=${prid}" method="post">
+	 	<form name="myform" action="productQuestInsert.do" >
 	 	<table class="table table-hover" style="border: 1px solid #D8D8D8;">	
 			<tr>				
 				<td class="td1">비밀번호</td>
@@ -49,7 +49,7 @@
 				<td class="td2"><textarea name="content" rows="12" cols="57" placeholder="내용을 적어주세요.2000자 내" class="noborder"></textarea></td>
 			</tr>
 			<tr>				
-				<td><input type="hidden" name="product_id" value="${prid}"></td> 		
+				<td><input type="text" name="product_id" value="kim"></td> 		
 			</tr>	
 		</table>	
 	 	  <input type="button" class="button" value="작성완료" onclick="check();">&nbsp;&nbsp;
@@ -57,7 +57,9 @@
 	 	</form>
 
 		<p>
-	 	
+	 	 <a href="productReview.do">[글쓰기]</a>
+     	 <a href="productReviewList.do">[리뷰]</a>
+   	 	 <a href="productQuestList.do">[문의]</a>
 	</div>
 </body>
 </html>

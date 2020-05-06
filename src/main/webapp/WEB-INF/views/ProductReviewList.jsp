@@ -59,9 +59,7 @@
 			  				 <img src="${pageContext.request.contextPath}/resources/upload/${bean.file1}"  width=100 height=50 border="0"><br>
 			  			</c:if>
 			  			${bean.content} <p>
-			  			<c:if test="${bean.user_id==userId}">
-			  				<a href="productReviewDelete.do?rid=${bean.review_num}&prid=${prid}">[삭제]</a>	
-			  			</c:if>
+			  			<a href="productReviewDelete.do?rid=${bean.review_num}">[삭제]</a>	
 		      		</div>
 		      	</div>
 		      </td>
@@ -105,7 +103,9 @@
 	
 	
 	<p>
-	 <a href="productReview.do?prid=${prid}">[글쓰기]</a>
+	 <a href="productReview.do">[글쓰기]</a>
+     <a href="productReviewList.do">[리뷰]</a>
+   	 <a href="productQuestList.do">[문의]</a>
 </div>
 
 

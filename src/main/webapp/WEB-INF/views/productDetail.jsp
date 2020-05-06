@@ -46,8 +46,7 @@
 							else {
 								$("#selectedTR > tbody:last")
 										.append(
-												"<tr><td> <input type=hidden name='product_id' value='${dto.product_id}'><input type='hidden' name='product_img' value='${dto.product_img1 }'>"
-														+ "<input type='text' readonly class='form-control-plaintext' id='product_name' name='product_name' value='${dto.product_name}'></td>"
+												"<tr><td><input type='text' readonly class='form-control-plaintext' id='product_name' name='product_name' value='${dto.product_name}'></td>"
 														+ "<td><input id='product_option1' readonly  class='form-control-plaintext' name='product_option1' value='"+o1+"'></td>"
 														+ "<td><input id='product_option2' readonly  class='form-control-plaintext' name='product_option2' value='"+o2+"'></td>"
 														+ "<td width='50'><input type='number'class='form-control' id = 'count' name='count' value='1'></td>"
@@ -74,7 +73,6 @@
 			} else {
 				form.attr("action", "order.do");
 				form.submit();
-				
 			}
 
 		});
@@ -167,10 +165,11 @@
 				</table>
 
 
-<!--------    선택한 상품 출력, get form   -------->
+				<!-----    선택한 상품 출력, get form   ----->
 
 				<form id="productSelected" class="form-group" action="" method="get">
-					
+					<input type="hidden" name="pid" value="${dto.product_id}">
+					<input type="hidden" name="pimg" value="${dto.product_img1 }">
 					<table id="selectedTR">
 						<tbody></tbody>
 					</table>

@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="review">	
 	<select id="selectAll" resultType="shopping.crud.product.ProductReviewDTO" parameterType="shopping.crud.product.ProductReviewDTO">
-		select * from (select rownum rrn, r.* from product_review r where product_id=#{product_id}) where rrn between #{start} and #{end}
+		select * from (select rownum rrn, r.* from product_review r) where rrn between #{start} and #{end}
 	</select>
 	
 	<insert id="insert" parameterType="shopping.crud.product.ProductReviewDTO">

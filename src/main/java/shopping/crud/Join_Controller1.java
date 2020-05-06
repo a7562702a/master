@@ -79,7 +79,7 @@ public class Join_Controller1 {
 	public String join_delete(HttpServletRequest request, HttpSession session) {
 		String data = request.getParameter("uid");
 		joinDAO.dbDelete_join(data);
-		return "redirect:/home.do"; /// WEB-INF/views/boardDelete.jsp
+		return "redirect:/Join.do"; /// WEB-INF/views/boardDelete.jsp
 	}
 
 	// 로그인

@@ -14,7 +14,6 @@ import javax.inject.Inject;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -51,13 +50,7 @@ public class HomeController {
    }//end
    
    @RequestMapping("/my_page.do")
-   public String go_my_page(HttpServletResponse response, HttpSession session,
-			HttpServletRequest request) {
-	    String Previous_page = request.getHeader("Referer");
-	    System.out.println("========================= 이전페이지 확인");
-	    System.out.println(Previous_page);
-	    System.out.println("========================= 이전페이지 확인");
-		session.setAttribute("Previous_page", Previous_page);
+   public String go_my_page() {
       return "my_page";
    }//end
    

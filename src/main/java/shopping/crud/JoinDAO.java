@@ -41,8 +41,8 @@ public void dbUpdata_join(JoinDTO dto) {
 }
 
 public String dbSelect_login(JoinDTO dto){
-	System.out.println(  "JoinDAO");
-	System.out.println(dto);
+	System.out.println(dto.getUser_id() + "JoinDAO");
+	System.out.println(dto.getUser_pwd());
 	  return  (String)temp.selectOne("Join.login_select",dto);
 	}//end
 }//LoginDAO end

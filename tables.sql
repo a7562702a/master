@@ -31,7 +31,7 @@ create table product(
 drop table order_detail;
 create table order_detail(
  opk_num number primary key, --sequence
- order_num varchar(20) not null, --user_id + ¼ýÀÚ
+ order_num varchar2(40) not null, --user_id + ï¿½ï¿½ï¿½ï¿½
  user_id varchar2(20) not null,
  product_id varchar2(20) not null,
  product_name varchar2(100) not null,
@@ -47,8 +47,9 @@ create table order_detail(
  orderdate date default sysdate,
  status varchar2(10)
 );
+drop sequence opk_num_seq;
+create sequence opk_num_seq;
 
---product review table
 drop table product_review;
 create table product_review(
  review_num number primary key, --sequence
@@ -58,6 +59,9 @@ create table product_review(
  point number,
  file1 varchar2(100)
 );
+
+drop sequence review_num_seq;
+create sequence review_num_seq;
 
 
 --product_question table
@@ -70,6 +74,10 @@ create table product_quest(
  content varchar2(2000) not null
 );
 
+drop sequence product_quest_num_seq;
+create sequence product_quest_num_seq;
+
+
 --product_question reply table
 drop table product_quest_rep;
 create table product_quest_rep(
@@ -78,6 +86,16 @@ create table product_quest_rep(
  product_quest_num number,
  content varchar2(2000) not null
 );
+
+drop sequence product_rep_num_seq;
+create sequence product_rep_num_seq;
+
+alter table product_quest_rep drop constraint product_quest_num_fk;
+alter table product_quest_rep add  constraint  product_quest_num_fk 
+foreign key(product_quest_num) references product_quest(product_quest_num) 
+on delete cascade;
+
+commit;
 
 --zzimList table
 drop table zzim;
@@ -101,6 +119,7 @@ create table question(
  content varchar2(2000) not null,
  file1 varchar2(100)
 );
+
 
 --question_reply table
 drop table question_reply;

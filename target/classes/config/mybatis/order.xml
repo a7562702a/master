@@ -10,26 +10,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
      ,#{option2},#{price},#{count},#{user_name},#{user_address1},#{user_address2},#{user_phone},sysdate,'A')
     
     </insert>
-	
-<!-- 	<select id="selectproduct" parameterType="shopping.crud.order.orderDTO" resultType="shopping.crud.order.orderDTO"> -->
-<!-- 	  select * from product  -->
-<!-- 	</select> -->
-	
 	<select id="selectusers" parameterType="shopping.crud.order.orderDTO" resultType="shopping.crud.order.orderDTO">
 	  select * from users where user_id  = #{user_id}
 	 
 	</select>
 	
-	<select id="selectorder" parameterType="String" resultType="String">
-	  select Max(order_num) from order_detail where user_id=#{user_id}
-	</select>
-	
 	<select id="selectorder1" parameterType="shopping.crud.order.orderDTO" resultType="shopping.crud.order.orderDTO">
 	  select * from order_detail where user_id=#{user_id}
 	</select>
-	
-<!-- 	<select id="selectorderusers" parameterType="String" resultType="String"> -->
-<!-- 	  select Max(order_num) from order_detail where user_id=#{user_id} -->
-<!-- 	</select> -->
+	<select id="selectorder" parameterType="String" resultType="String">
+	  select Max(order_num) from order_detail where user_id=#{user_id}
+	</select>
 	 
 </mapper>

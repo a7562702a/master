@@ -11,7 +11,7 @@
 <body>
 
 	<div align="center">
-		<font size=6 color=blue><b>Spring.....Waiting...Loading...</b></font> <p>
+		<font size=6 color=blue><b>Waiting...Loading...</b></font> <p>
 	  
 	</div>
 </body>

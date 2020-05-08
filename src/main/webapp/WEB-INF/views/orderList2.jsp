@@ -66,13 +66,11 @@ transform:scale(1.2);
  </table><p>
  
   <table width=900  border=1 cellspacing=2 align="center">
-  
   <tr bgcolor="orange">
   <td colspan="3">
   <font size="6">주문상품정보</font>
   </td>
   </tr>
-  
   <c:set var="total" value="0" ></c:set>
   <c:forEach var="order" items="${orders}" varStatus="status">
   <tr>
@@ -89,6 +87,7 @@ transform:scale(1.2);
   </c:forEach>
   <tr><td colspan="3"> 총금액: ${total }<span id="sum">0</span> 원</td></tr>
   <tr><td colspan="3" align="center"><input type="button" value="Homepage" onclick="location.href='home.do'"></td></tr>
+  <tr><td colspan="3" align="center"><input type="button" value="문의" onclick="location.href='customerList.do'"></td></tr>
  </table><p>
  </form>
 </div> 

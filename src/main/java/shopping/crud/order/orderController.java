@@ -41,7 +41,6 @@ public class orderController {
 	@RequestMapping("/order.do")
 	public ModelAndView order_write(HttpServletResponse response, HttpSession session, HttpServletRequest request,
 			ModelAndView mov) { // 바로구매
-
 		ArrayList<orderDTO> product = new ArrayList<orderDTO>();
 		String[] pid = request.getParameterValues("product_id");
 		String[] pimg = request.getParameterValues("product_img");
@@ -77,9 +76,7 @@ public class orderController {
 	@RequestMapping("/orderInsert.do")
 	public String order_insert(HttpServletResponse response, HttpSession session, HttpServletRequest request,
 			Model model) {
-
 		String user_id = (String) session.getAttribute("userId");
-//		String user_id="aaaa";
 		String order_num = dao.dbSelectorder(user_id);
 		String a = null;
 		if (order_num == "" || order_num == null) {
@@ -95,8 +92,7 @@ public class orderController {
 		System.out.println(String.format("%05d", count));
 		String ordernum = user_id + String.format("%05d", count);
 		System.out.println("hi:" + ordernum);
-
-		// ArrayList<orderDTO> order = new ArrayList<orderDTO>();
+		
 		String[] pid = request.getParameterValues("product_id");
 		String[] pimg = request.getParameterValues("product_img");
 		String[] pname = request.getParameterValues("product_name");
@@ -107,7 +103,6 @@ public class orderController {
 
 		for (int i = 0; i < pname.length; i++) {
 			orderDTO odto = new orderDTO();
-
 			odto.setProduct_id(pid[i]);
 			odto.setProduct_img(pimg[i]);
 			odto.setProduct_name(pname[i]);
@@ -121,7 +116,6 @@ public class orderController {
 			odto.setUser_address1(request.getParameter("user_address1"));
 			odto.setUser_address2(request.getParameter("user_address2"));
 			odto.setUser_phone(request.getParameter("user_phone"));
-			// order.add(odto);
 			try {
 				dao.dbInsert(odto);
 				System.out.println("inserted");
@@ -143,14 +137,14 @@ public class orderController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		return "my_page";
-//		return "redirect:my_page.do?idx="+user_id;
+
 	}// end
 
 	@RequestMapping("/orderList.do")
 	public ModelAndView order_list(HttpSession session, HttpServletRequest request, ModelAndView mav) {
 		// List<orderDTO> product=dao.dbSelectproduct();
+		
 		String data = (String) session.getAttribute("userId");
 		List<orderDTO> order = dao.dbSelectorder1(data);
 		System.out.println(data);

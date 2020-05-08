@@ -110,14 +110,15 @@ create table zzim(
  img1 varchar2(100)
 );
 
---question write table
+--question information table
 drop table question;
 create table question(
- question_num number primary key, --sequence
- user_id varchar2(20) not null,
- title varchar2(100) not null,
- content varchar2(2000) not null,
- file1 varchar2(100)
+ question_num number primary key,
+ user_id varchar2(100) null,
+ question_Category varchar2(100) null,
+ question_title varchar2(100) null,
+ question_content varchar2(2000) null,
+ question_file varchar2(2000) null
 );
 
 drop sequence question_seq;

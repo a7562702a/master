@@ -1,3 +1,4 @@
+--product table
 insert into product values('101a00001','베이직 셔츠','하나쯤 가지고 있어야 할 베이직한 반팔 셔츠!<p>시원한 재질로 미리 여름 대비하세요 :-) <p>', 101, '베이지,블랙,네이비', 'S,M,L', 'resources/images/101a00001_1.jpg', 'resources/images/101a00001_2.jpg', 'resources/images/101a00001_2.jpg', 29000);
 insert into product values('102b00001', '감각적 티셔츠', '하나쯤 가지고 있어야 할 베이직한 반팔 셔츠!<p>시원한 재질로 미리 여름 대비하세요 :-) <p>', 102, '네이비', 'M,L', 'resources/images/102b00001_1.jpg', 'resources/images/102b00001_2.jpg', 'resources/images/102b00001_2.jpg', 29000);
 insert into product values('201c00001', '와이드 슬릿 슬랙스', '아직도 와이드 슬릿 슬랙스가 없다고?!<p>하나 장만하고 인싸되자 :-) <p>', 201, '블랙','S,M,L', 'resources/images/201c00001_1.jpg', 'resources/images/201c00001_1.jpg', 'resources/images/201c00001_1.jpg', 27500);
@@ -6,7 +7,42 @@ insert into product values('301d00001', '가을 체크재킷', '아직도 체크
 insert into product values('302d00001', '모두의 블루종 JK', '아직도 블루종이 없다고?!<p>하나 장만하고 인싸되자 :-) <p>', 302, '블랙,카키,브라운','S,M,L', 'resources/images/302d00001_1.jpg', 'resources/images/302d00001_1.jpg', 'resources/images/302d00001_1.jpg', 59000);
 insert into product values('401e00001', '기본에코백', '에코백 없는 사람은 있어도 하나만 있는 사람은 없다! <p>다다익선 일러스트 프린트 에코백 :-) <p>', 401, '네이비,아이보리','기본', 'resources/images/401e00001_1.jpg', 'resources/images/401e00001_1.jpg', 'resources/images/401e00001_1.jpg', 9000);
 insert into product values('402e00001', '킹콩 에나멜슬리퍼', '밋밋한 슬리퍼는 가라! 대세는 킹콩이다! <p>힙한 에나멜 슬리퍼 하나 장만하세요 :-) <p>', 401, '레드,오렌지,그린', '240,250,260,270', 'resources/images/402e00001_1.jpg', 'resources/images/402e00001_1.jpg', 'resources/images/402e00001_1.jpg', 19000);
-========================================================
+
+--users table
 insert into users values( 'aaaa','1234','tester','01011223344','seoul','seoul2','test@shopping.com',SYSDATE,1);
 insert into users values( 'ab34','1234','client','01012345678','seoul','seoul2','test@shopping.com',SYSDATE,1);
 insert into users values( 'admin.master','1234','admin','01077777777','seoul','seoul2','admin@shopping.com',SYSDATE,1);
+
+--order table
+insert into order_detail values (order_detail_seq.nextval,'aaaa1','aaaa','302d00001','모두의 블루종 JK','resources/images/302d00001_1.jpg','블랙','M',59000,1,'tester','seoul','seoul2','01011223344',sysdate,'A');
+insert into order_detail values (order_detail_seq.nextval,'aaaa2','aaaa','101a00001','베이직 셔츠','resources/images/101a00001_1.jpg','베이지','S',29000,1,'tester','seoul','seoul2','01011223344',sysdate,'A');
+insert into order_detail values (order_detail_seq.nextval,'aaaa3','aaaa','102b00001', '감각적 티셔츠','resources/images/102b00001_1.jpg','네이비','L',29000,2,'tester','seoul','seoul2','01011223344',sysdate,'B');
+insert into order_detail values (order_detail_seq.nextval,'aaaa4','aaaa','402e00001', '킹콩 에나멜슬리퍼','resources/images/402e00001_1.jpg','오렌지','240',19000,1,'tester','seoul','seoul2','01011223344',sysdate,'D');
+insert into order_detail values (order_detail_seq.nextval,'ab34','aa34','302d00001','모두의 블루종 JK','resources/images/302d00001_1.jpg','블랙','M',59000,1,'client','seoul','seoul2','01012345678',sysdate,'C');
+insert into order_detail values (order_detail_seq.nextval,'aa34','aa34','102b00001','감각적 티셔츠','resources/images/102b00001_1.jpg','네이비','M',29000,1,'client','seoul','seoul2','01012345678',sysdate,'A');
+
+--zzim table
+   insert into zzim values ('aaaa',1,'101a00001','베이지','S',29000,1,'resources/images/101a00001_1.jpg');
+   insert into zzim values ('aaaa',2,'102b00001','네이비','L',29000,1,'resources/images/102b00001_1.jpg');
+   insert into zzim values ('aaaa',3,'201c00001','블랙','S',27500,2,'resources/images/201c00001_1.jpg');
+   insert into zzim values ('aaaa',4,'202c00001','블랙','S',35000,1,'resources/images/201c00001_1.jpg');
+   insert into zzim values ('aaaa',5,'301d00001','브라운','M',69000,1,'resources/images/301d00001_1.jpg');
+   insert into zzim values ('aaaa',6,'302d00001','카키','L',59000,2,'resources/images/302d00001_1.jpg');
+   insert into zzim values ('aaaa',7,'101a00001','블랙','S',29000,1,'resources/images/101a00001_1.jpg');
+   insert into zzim values ('aaaa',8,'401e00001','아이보리','S',9000,1,'resources/images/401e00001_1.jpg');
+   insert into zzim values ('aaaa',9,'302d00001','네이비','L',59000,1,'resources/images/302d00001_1.jpg');
+   insert into zzim values ('ab34',10,'101a00001','베이지','S',29000,1,'resources/images/101a00001_1.jpg');
+
+--procuct_review  table
+insert into product_review values(1234,'1234','blue','so good',3,null);
+
+--question table
+insert into question values(1,'aaaa', '변경/취소', '주문한상품 취소하고 싶습니다. 어떻게해야 하나요?', '고객님께서 직접 취소 가능한 서비스는 제공되지 않아 번거로우시더라도 고객센터 변경/취소 게시판에 취소 요청하는 주문 건 날짜와 금액을 기재해주시면 처리해드리겠습니다.','') ;
+
+insert into question values(2,'aaaa', '배송/기타', '당일발송 상품을 시켰는데 안오네요.', '당일발송이 시행되는 제품은 상시 구비상품이나, 일부 품목은 당일배송의 메리트와 고객님들의 사랑에 힘입어
+구비되어있는 수량이 일시 소진된 후 재생산에 들어가 부득이 당일배송이 시행되지 않을 수 있습니다.
+물론 이런 경우 사이트 내에서 알림 또는 카테고리 수정이 이루어지나 한번에 많은 일을
+정해진 시간내에 처리해야 하는 업무 특성상 다소간의 대처가 늦어질수 있으니
+고객님들의 따뜻한 이해와 격려를 부탁드립니다. <br> 당일배송은 당일 오전에 주문하여 저녁에 받는 시스템으로 운영하고 있지 않습니다.<br><br> 당일 발송 상품과 일반 배송 상품이 합쳐 주문 접수되면 당일발송이 유효하지 않게 되어 일반 발송일 기준으로 처리되니 이점 착안해주시길 당부드립니다.<br> (당일 접수건의 경우 평일 4시 이전 입금 확인 완료 된 주문건 기준으로 발송되며, 4시 이후 결제건은 익일 발송처리가 되고 있습니다. <br> 참고로 자사에서 정상발송 하였더라도 지역 택배사의 물량 상태에 따라 도착일은 변동 될 수 있으니 이 점 참고 부탁드립니다.)','') ;
+
+insert into question values(3,'aaaa', '교환/반품', '모든 상품이 교환/반품이 가능한가요?', '전자상거래법의 의거하여 교환/반품이 가능한 쇼핑몰입니다. <br><br> 단, 전자상거래법의 의거하여 교환/반품이 불가능한 경우 <br><br> 1. 소비자에게 책임이 있는 사유로 재화등이 멸실되거나 훼손된 경우. <br>(다만, 재화등의 내용을 확인하기 위하여 포장 등을 훼손한 경우는 제외한다.)<br><br>2. 소비자의 사용 또는 일부 소비로 재화등의 가치가 현저히 감소한 경우<br><br>3. 시간이 지나 다시 판매하기 곤란할 정도로 재화등의 가치가 현저히 감소한 경우<br><br>4. 복제가 가능한 재화등의 포장을 훼손한 경우<br><br><br>반송시 바코드 스티거 붙어있는 속 폴리백도 잊지말고 보내주셔야합니다.','') ;

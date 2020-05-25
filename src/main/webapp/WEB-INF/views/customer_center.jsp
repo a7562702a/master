@@ -73,7 +73,7 @@
 	<div  align="left" style="margin-left: 14%; background-color: #f9f9fe; padding:1%; padding-left:2%; padding-right:2%; border-radius: 0  20px 20px 0;" >
 		<div align="center">
 			<h1>
-				<a href="">CUSTOMER CENTER</a>
+				<a href="my_page.do">MY PAGE</a>
 			</h1>
 		</div>
 

@@ -43,7 +43,7 @@
 					var option = td.eq(3).text().split("/");
 					var option1 = option[0].replace("옵션1 : ","");
 					var option2 = option[1].replace("옵션2 : ","");
-					var count = td.eq(4).children().eq(1).val();                //.text()+", ";
+					var count = td.eq(4).children().eq(1).val();    //.text()+", ";
 					var price = td.eq(5).children().eq(0).val();
 
 
@@ -177,7 +177,13 @@
 				<td><img src ="${zdto.img1}" width="75px" height="75px"><input type="hidden" value ="${zdto.img1}"><input type="hidden" value ="${zdto.product_id}"></td>
 				<td> <a href ="#">${zdto.product_name}</a> </td>
 				<td> 옵션1 : ${zdto.option1 } /<br> 옵션2 : ${zdto.option2 }</td>
-				<td><input type="button" value ="-" onclick="downCount(${status.count});">&nbsp;&nbsp;<input type ="label" id ="count${status.count}" style="text-align:center; width:30px; none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" value ="${zdto.count}" disabled="disabled" >&nbsp;&nbsp;<input type="button" value ="+" onclick="upCount(${status.count});"></td>
+				
+				<td>
+				<input type="button" value ="-" onclick="downCount(${status.count});">&nbsp;&nbsp;
+				<input type ="label" id ="count${status.count}" style="text-align:center; width:30px; none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" value ="${zdto.count}" disabled="disabled" >&nbsp;&nbsp;
+				<input type="button" value ="+" onclick="upCount(${status.count});">
+				</td>
+				
 				<td><input type ="label" id ="price${status.count}" style="text-align:center; none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" value ="${price}" disabled="disabled" ></td>
 				<td><a href ="zzimDelete.do?id=${zdto.zzim_num}">삭제하기</a></td>
 			</tr>

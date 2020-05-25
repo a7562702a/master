@@ -11,8 +11,9 @@
 <body>
 
 	<div align="center">
-		<font size=6 color=blue><b>Waiting...Loading...</b></font> <p>
-	  
+		<font size=20pt color=blue><b>Waiting...Loading...We are coming</b></font> <p>
+	    <img src="./resources/images/Untitled1_1.png"><p>
+	    <font size="20pt" color="blue">Have a nice day!!</font>
 	</div>
 </body>
 </html>

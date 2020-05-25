@@ -90,7 +90,7 @@ public class orderController {
 		count++;
 
 		System.out.println(String.format("%05d", count));
-		String ordernum = user_id + String.format("%05d", count);
+		String ordernum = user_id + String.format("%05d", count);//%05d:%意思是填充命令语，0意思是用数字0填充，5意思是第五位之前，d意思是用整数
 		System.out.println("hi:" + ordernum);
 		
 		String[] pid = request.getParameterValues("product_id");
